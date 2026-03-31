@@ -3,72 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Daily Digest</title>
+  <title>daily digest</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════
        CSS CUSTOM PROPERTIES
        ═══════════════════════════════════════════ */
     :root {
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body: 'Crimson Pro', Georgia, serif;
-      --font-ui: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
 
-      --sidebar-width: 280px;
-      --content-max-width: 740px;
-      --mobile-bar-height: 56px;
-      --transition-speed: 0.3s;
-      --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --sidebar-width: 260px;
+      --content-max-width: 700px;
+      --mobile-bar-height: 48px;
+      --transition-speed: 0.15s;
+      --transition-ease: ease;
     }
 
     [data-theme="light"] {
-      --bg-primary: #FAF8F3;
-      --bg-surface: #FFFFFF;
-      --bg-sidebar: #F5F1EA;
-      --bg-hover: #EDE8DF;
-      --bg-active: #E6E0D4;
-      --text-primary: #1C1917;
-      --text-secondary: #6B6560;
-      --text-tertiary: #9C9590;
-      --border-color: #DDD7CC;
-      --border-light: #EBE7DF;
-      --accent-ai: #1A7A56;
-      --accent-ai-bg: #E8F5EE;
-      --accent-ai-subtle: #D0EADB;
-      --accent-money: #B45309;
-      --accent-money-bg: #FEF3E2;
-      --accent-money-subtle: #FDE5C0;
-      --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.06);
-      --shadow-md: 0 4px 12px rgba(28, 25, 23, 0.08);
-      --shadow-lg: 0 12px 40px rgba(28, 25, 23, 0.12);
-      --grain-opacity: 0.03;
-      --divider-art: url("data:image/svg+xml,%3Csvg width='80' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4h24l4-4 4 4h24l4-4 4 4h16' stroke='%23C4BEB4' fill='none' stroke-width='0.75'/%3E%3C/svg%3E");
+      --bg-primary: #FFFFFF;
+      --bg-surface: #FAFAFA;
+      --bg-sidebar: #FAFAFA;
+      --bg-hover: #F0F0F0;
+      --bg-active: #E8E8E8;
+      --text-primary: #1a1a1a;
+      --text-secondary: #666666;
+      --text-tertiary: #999999;
+      --border-color: #E0E0E0;
+      --border-light: #F0F0F0;
+      --accent-ai: #16a34a;
+      --accent-ai-bg: #f0fdf4;
+      --accent-ai-subtle: #dcfce7;
+      --accent-money: #d97706;
+      --accent-money-bg: #fffbeb;
+      --accent-money-subtle: #fef3c7;
+      --shadow-sm: none;
+      --shadow-md: 0 1px 4px rgba(0,0,0,0.08);
+      --shadow-lg: 0 4px 16px rgba(0,0,0,0.12);
     }
 
     [data-theme="dark"] {
-      --bg-primary: #141210;
-      --bg-surface: #1C1A17;
-      --bg-sidebar: #1A1816;
-      --bg-hover: #252220;
-      --bg-active: #2E2B28;
-      --text-primary: #EDE7DB;
-      --text-secondary: #9C9590;
-      --text-tertiary: #6B6560;
-      --border-color: #2E2B28;
-      --border-light: #232120;
-      --accent-ai: #3DCC8A;
-      --accent-ai-bg: #1A2E24;
-      --accent-ai-subtle: #1F3A2C;
-      --accent-money: #F59E0B;
-      --accent-money-bg: #2A2010;
-      --accent-money-subtle: #352A14;
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
-      --grain-opacity: 0.015;
-      --divider-art: url("data:image/svg+xml,%3Csvg width='80' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4h24l4-4 4 4h24l4-4 4 4h16' stroke='%234A4540' fill='none' stroke-width='0.75'/%3E%3C/svg%3E");
+      --bg-primary: #0a0a0a;
+      --bg-surface: #111111;
+      --bg-sidebar: #0f0f0f;
+      --bg-hover: #1a1a1a;
+      --bg-active: #222222;
+      --text-primary: #e0e0e0;
+      --text-secondary: #888888;
+      --text-tertiary: #555555;
+      --border-color: #222222;
+      --border-light: #1a1a1a;
+      --accent-ai: #4ade80;
+      --accent-ai-bg: #0a1f0f;
+      --accent-ai-subtle: #14532d;
+      --accent-money: #fbbf24;
+      --accent-money-bg: #1a1500;
+      --accent-money-subtle: #422006;
+      --shadow-sm: none;
+      --shadow-md: 0 1px 4px rgba(0,0,0,0.3);
+      --shadow-lg: 0 4px 16px rgba(0,0,0,0.5);
     }
 
     /* ═══════════════════════════════════════════
@@ -81,33 +75,19 @@
     }
 
     html {
-      font-size: 16px;
-      scroll-behavior: smooth;
+      font-size: 14px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
     body {
-      font-family: var(--font-body);
+      font-family: var(--font-mono);
       background-color: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.6;
       transition: background-color var(--transition-speed) var(--transition-ease),
                   color var(--transition-speed) var(--transition-ease);
       overflow-x: hidden;
-    }
-
-    /* Subtle grain texture overlay */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: var(--grain-opacity);
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
     }
 
     button {
@@ -127,16 +107,15 @@
       text-decoration: underline;
     }
 
-    /* Custom scrollbar */
+    /* Scrollbar */
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 4px;
     }
     ::-webkit-scrollbar-track {
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
       background: var(--border-color);
-      border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: var(--text-tertiary);
@@ -171,66 +150,64 @@
     }
 
     .sidebar-header {
-      padding: 2rem 1.5rem 1.5rem;
+      padding: 1.5rem 1.25rem 1.25rem;
       border-bottom: 1px solid var(--border-color);
     }
 
     .masthead {
-      font-family: var(--font-display);
-      font-weight: 300;
-      font-size: 1.1rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--text-primary);
-      line-height: 1.2;
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.02em;
     }
 
     .masthead-main {
       display: block;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: none;
-      margin-top: 0.1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 0.15rem;
+      letter-spacing: -0.02em;
     }
 
     .masthead-rule {
       display: block;
-      width: 40px;
-      height: 2px;
-      background: var(--text-primary);
-      margin-top: 0.8rem;
+      width: 24px;
+      height: 1px;
+      background: var(--text-tertiary);
+      margin-top: 0.6rem;
     }
 
     /* Categories */
     .sidebar-section {
-      padding: 1.25rem 1.5rem;
+      padding: 1rem 1.25rem;
       border-bottom: 1px solid var(--border-color);
     }
 
     .sidebar-section-title {
-      font-family: var(--font-ui);
+      font-family: var(--font-mono);
       font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-tertiary);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .category-btn {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.6rem;
       width: 100%;
-      padding: 0.65rem 0.85rem;
-      border-radius: 8px;
-      font-family: var(--font-ui);
-      font-size: 0.875rem;
-      font-weight: 500;
+      padding: 0.4rem 0.6rem;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 400;
       color: var(--text-secondary);
-      transition: all 0.2s ease;
-      margin-bottom: 0.25rem;
+      transition: all 0.1s ease;
+      margin-bottom: 0.15rem;
     }
 
     .category-btn:hover {
@@ -241,6 +218,7 @@
     .category-btn.active {
       color: var(--text-primary);
       font-weight: 600;
+      background: var(--bg-hover);
     }
 
     .category-btn.active[data-category="ai-daily"] {
@@ -252,15 +230,10 @@
     }
 
     .category-indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 1px;
       flex-shrink: 0;
-      transition: transform 0.2s ease;
-    }
-
-    .category-btn:hover .category-indicator {
-      transform: scale(1.3);
     }
 
     .category-indicator.ai {
@@ -275,19 +248,19 @@
     .date-list {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
     }
 
     .date-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.5rem 0.85rem;
-      border-radius: 6px;
-      font-family: var(--font-ui);
-      font-size: 0.825rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
       color: var(--text-secondary);
-      transition: all 0.2s ease;
+      transition: all 0.1s ease;
       cursor: pointer;
     }
 
@@ -303,26 +276,25 @@
     }
 
     .date-item-day {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: var(--text-tertiary);
       font-weight: 400;
     }
 
     .date-jump-wrapper {
-      margin-top: 1rem;
-      position: relative;
+      margin-top: 0.75rem;
     }
 
     .date-jump {
       width: 100%;
-      padding: 0.5rem 0.75rem;
+      padding: 0.35rem 0.5rem;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      background: var(--bg-surface);
+      border-radius: 2px;
+      background: var(--bg-primary);
       color: var(--text-primary);
-      font-family: var(--font-ui);
-      font-size: 0.8rem;
-      transition: border-color 0.2s ease;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      transition: border-color 0.1s ease;
       outline: none;
     }
 
@@ -333,7 +305,7 @@
     /* Sidebar footer */
     .sidebar-footer {
       margin-top: auto;
-      padding: 1rem 1.5rem;
+      padding: 0.75rem 1.25rem;
       border-top: 1px solid var(--border-color);
       display: flex;
       align-items: center;
@@ -343,13 +315,13 @@
     .theme-toggle {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 0.75rem;
-      border-radius: 6px;
-      font-family: var(--font-ui);
-      font-size: 0.75rem;
+      gap: 0.4rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
       color: var(--text-tertiary);
-      transition: all 0.2s ease;
+      transition: all 0.1s ease;
     }
 
     .theme-toggle:hover {
@@ -358,21 +330,21 @@
     }
 
     .theme-toggle-icon {
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       position: relative;
     }
 
     .theme-toggle-icon svg {
       position: absolute;
       inset: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition: opacity 0.15s ease, transform 0.15s ease;
     }
 
-    [data-theme="light"] .theme-icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); }
-    [data-theme="light"] .theme-icon-sun { opacity: 1; transform: rotate(0) scale(1); }
-    [data-theme="dark"] .theme-icon-sun { opacity: 0; transform: rotate(90deg) scale(0.5); }
-    [data-theme="dark"] .theme-icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+    [data-theme="light"] .theme-icon-moon { opacity: 0; transform: scale(0.5); }
+    [data-theme="light"] .theme-icon-sun { opacity: 1; transform: scale(1); }
+    [data-theme="dark"] .theme-icon-sun { opacity: 0; transform: scale(0.5); }
+    [data-theme="dark"] .theme-icon-moon { opacity: 1; transform: scale(1); }
 
     /* ═══════════════════════════════════════════
        MAIN CONTENT
@@ -411,24 +383,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.85rem 0;
+      padding: 0.6rem 0;
     }
 
     .content-nav {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
 
     .nav-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
       color: var(--text-secondary);
-      transition: all 0.2s ease;
+      transition: all 0.1s ease;
     }
 
     .nav-btn:hover:not(:disabled) {
@@ -437,18 +409,18 @@
     }
 
     .nav-btn:disabled {
-      opacity: 0.3;
+      opacity: 0.25;
       cursor: not-allowed;
     }
 
     .nav-btn svg {
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
     }
 
     .content-date-display {
-      font-family: var(--font-ui);
-      font-size: 0.825rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-primary);
       min-width: 180px;
@@ -458,14 +430,14 @@
     .content-category-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 4px;
-      font-family: var(--font-ui);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      gap: 0.35rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: lowercase;
     }
 
     .content-category-badge.ai-daily {
@@ -479,9 +451,9 @@
     }
 
     .content-category-badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      border-radius: 1px;
     }
 
     .content-category-badge.ai-daily .content-category-badge-dot {
@@ -505,54 +477,51 @@
 
     /* Edition header */
     .edition-header {
-      padding: 2.5rem 0 2rem;
-      border-bottom: 2px solid var(--text-primary);
-      margin-bottom: 2rem;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1.5rem;
     }
 
     .edition-label {
-      font-family: var(--font-ui);
+      font-family: var(--font-mono);
       font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
+      font-weight: 400;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-tertiary);
-      margin-bottom: 0.75rem;
-    }
-
-    .edition-title {
-      font-family: var(--font-display);
-      font-size: 2.8rem;
-      font-weight: 600;
-      line-height: 1.15;
-      color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
+    .edition-title {
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
     .edition-date {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       font-weight: 300;
       color: var(--text-secondary);
-      font-style: italic;
     }
 
     .edition-rule {
       display: block;
       width: 100%;
-      height: 12px;
-      margin-top: 1.5rem;
-      background-image: var(--divider-art);
-      background-repeat: repeat-x;
-      background-position: center;
-      background-size: auto 8px;
+      height: 1px;
+      margin-top: 1rem;
+      background: var(--border-color);
     }
 
     /* Article content styling */
     .article-content {
       opacity: 0;
-      transform: translateY(8px);
-      animation: contentFadeIn 0.5s ease forwards;
+      transform: translateY(4px);
+      animation: contentFadeIn 0.3s ease forwards;
     }
 
     @keyframes contentFadeIn {
@@ -563,81 +532,82 @@
     }
 
     .article-content h1 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 600;
-      line-height: 1.2;
-      margin: 2rem 0 1rem;
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 2rem 0 0.75rem;
       color: var(--text-primary);
+      letter-spacing: -0.01em;
     }
 
     .article-content h2 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 600;
-      line-height: 1.25;
-      margin: 2.5rem 0 0.75rem;
-      padding-top: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 2rem 0 0.6rem;
+      padding-top: 1.25rem;
       border-top: 1px solid var(--border-light);
       color: var(--text-primary);
     }
 
     .article-content h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-family: var(--font-mono);
+      font-size: 1rem;
       font-weight: 600;
-      line-height: 1.3;
-      margin: 1.5rem 0 0.5rem;
+      line-height: 1.4;
+      margin: 1.25rem 0 0.4rem;
       color: var(--text-primary);
     }
 
     .article-content p {
-      font-family: var(--font-body);
-      font-size: 1.1rem;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
       color: var(--text-primary);
     }
 
     .article-content blockquote {
-      margin: 1.5rem 0;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--border-color);
+      margin: 1.25rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 2px solid var(--border-color);
       background: var(--bg-surface);
-      border-radius: 0 6px 6px 0;
+      border-radius: 0;
     }
 
     .article-content blockquote p {
       font-style: italic;
-      font-size: 1.05rem;
+      font-size: 0.85rem;
       color: var(--text-secondary);
       margin-bottom: 0;
     }
 
     .article-content ul, .article-content ol {
-      margin: 1rem 0 1.5rem 1.5rem;
+      margin: 0.75rem 0 1.25rem 1.25rem;
     }
 
     .article-content li {
-      font-family: var(--font-body);
-      font-size: 1.1rem;
-      line-height: 1.75;
-      margin-bottom: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 0.35rem;
     }
 
     .article-content code {
-      font-size: 0.9em;
-      padding: 0.15em 0.4em;
+      font-size: 0.85em;
+      padding: 0.1em 0.35em;
       background: var(--bg-hover);
-      border-radius: 3px;
+      border-radius: 2px;
     }
 
     .article-content pre {
-      margin: 1.5rem 0;
-      padding: 1.25rem;
+      margin: 1.25rem 0;
+      padding: 1rem;
       background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 2px;
       overflow-x: auto;
     }
 
@@ -648,23 +618,21 @@
 
     .article-content hr {
       border: none;
-      height: 12px;
-      margin: 2rem 0;
-      background-image: var(--divider-art);
-      background-repeat: repeat-x;
-      background-position: center;
-      background-size: auto 8px;
+      height: 1px;
+      margin: 1.5rem 0;
+      background: var(--border-color);
     }
 
     .article-content img {
       max-width: 100%;
       height: auto;
-      border-radius: 4px;
-      margin: 1.5rem 0;
+      border-radius: 2px;
+      margin: 1.25rem 0;
     }
 
     .article-content a {
       color: var(--accent-ai);
+      text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
@@ -683,32 +651,32 @@
 
     /* Loading skeleton */
     .loading-skeleton {
-      animation: contentFadeIn 0.3s ease forwards;
+      animation: contentFadeIn 0.2s ease forwards;
     }
 
     .skeleton-line {
-      height: 16px;
+      height: 12px;
       background: linear-gradient(90deg, var(--bg-hover) 25%, var(--border-light) 50%, var(--bg-hover) 75%);
       background-size: 200% 100%;
       animation: shimmer 1.5s ease-in-out infinite;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      border-radius: 1px;
+      margin-bottom: 10px;
     }
 
     .skeleton-line.title {
-      height: 36px;
-      width: 60%;
-      margin-bottom: 20px;
+      height: 24px;
+      width: 50%;
+      margin-bottom: 16px;
     }
 
     .skeleton-line.subtitle {
-      height: 20px;
-      width: 40%;
-      margin-bottom: 32px;
+      height: 14px;
+      width: 35%;
+      margin-bottom: 24px;
     }
 
     .skeleton-line:nth-child(odd) { width: 100%; }
-    .skeleton-line:nth-child(even) { width: 85%; }
+    .skeleton-line:nth-child(even) { width: 80%; }
 
     @keyframes shimmer {
       0% { background-position: 200% 0; }
@@ -719,29 +687,29 @@
     .empty-state {
       text-align: center;
       padding: 4rem 2rem;
-      animation: contentFadeIn 0.5s ease forwards;
+      animation: contentFadeIn 0.3s ease forwards;
       opacity: 0;
     }
 
     .empty-state-icon {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 1.5rem;
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1.25rem;
       color: var(--text-tertiary);
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
     .empty-state-title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 500;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
       color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .empty-state-text {
-      font-family: var(--font-ui);
-      font-size: 0.875rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
       color: var(--text-tertiary);
       max-width: 360px;
       margin: 0 auto;
@@ -750,31 +718,30 @@
 
     /* Welcome state */
     .welcome-state {
-      text-align: center;
-      padding: 6rem 2rem;
-      animation: contentFadeIn 0.6s ease forwards;
+      text-align: left;
+      padding: 4rem 0;
+      animation: contentFadeIn 0.3s ease forwards;
       opacity: 0;
     }
 
     .welcome-state .masthead-welcome {
-      font-family: var(--font-display);
-      font-size: 3.5rem;
-      font-weight: 300;
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 400;
       color: var(--text-primary);
-      line-height: 1.15;
-      margin-bottom: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
     }
 
     .welcome-state .masthead-welcome strong {
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .welcome-state p {
-      font-family: var(--font-body);
-      font-size: 1.15rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       color: var(--text-secondary);
       max-width: 480px;
-      margin: 0 auto;
       line-height: 1.7;
     }
 
@@ -792,7 +759,7 @@
       border-bottom: 1px solid var(--border-color);
       z-index: 200;
       align-items: center;
-      padding: 0 1rem;
+      padding: 0 0.75rem;
       transition: background-color var(--transition-speed) var(--transition-ease);
     }
 
@@ -800,22 +767,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
+      width: 32px;
+      height: 32px;
+      border-radius: 2px;
       color: var(--text-primary);
     }
 
     .mobile-menu-btn svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
 
     .mobile-title {
       flex: 1;
       text-align: center;
-      font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-primary);
     }
@@ -824,9 +791,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
+      width: 32px;
+      height: 32px;
+      border-radius: 2px;
       color: var(--text-secondary);
     }
 
@@ -834,11 +801,10 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.3);
       z-index: 99;
       opacity: 0;
       transition: opacity var(--transition-speed) var(--transition-ease);
-      backdrop-filter: blur(2px);
     }
 
     .sidebar-overlay.visible {
@@ -879,43 +845,43 @@
       }
 
       .content-body-wrapper {
-        padding: 0 1.25rem 3rem;
+        padding: 0 1rem 3rem;
       }
 
       .content-header {
-        padding: 0 1.25rem;
+        padding: 0 1rem;
       }
 
       .edition-title {
-        font-size: 2rem;
+        font-size: 1.3rem;
       }
 
       .edition-header {
-        padding: 1.5rem 0 1.5rem;
+        padding: 1.25rem 0 1.25rem;
       }
 
       .content-date-display {
-        font-size: 0.75rem;
-        min-width: 140px;
+        font-size: 0.7rem;
+        min-width: 130px;
       }
     }
 
     @media (max-width: 480px) {
       .edition-title {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
       }
 
       .article-content p,
       .article-content li {
-        font-size: 1rem;
+        font-size: 0.85rem;
       }
 
       .article-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
 
       .article-content h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
     }
 
@@ -930,9 +896,6 @@
         margin-left: 0 !important;
         padding-top: 0 !important;
       }
-      body::after {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -942,26 +905,26 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h1 class="masthead">
-          The
-          <span class="masthead-main">Daily Digest</span>
+          the
+          <span class="masthead-main">daily digest</span>
           <span class="masthead-rule"></span>
         </h1>
       </div>
 
       <div class="sidebar-section">
-        <div class="sidebar-section-title">Sections</div>
+        <div class="sidebar-section-title">sections</div>
         <button class="category-btn active" data-category="ai-daily" onclick="App.setCategory('ai-daily')">
           <span class="category-indicator ai"></span>
-          AI Daily
+          ai-daily
         </button>
         <button class="category-btn" data-category="money-stuff" onclick="App.setCategory('money-stuff')">
           <span class="category-indicator money"></span>
-          Money Stuff Daily
+          money-stuff
         </button>
       </div>
 
       <div class="sidebar-section" style="flex:1; overflow-y:auto;">
-        <div class="sidebar-section-title">Archive</div>
+        <div class="sidebar-section-title">archive</div>
         <div class="date-list" id="dateList"></div>
         <div class="date-jump-wrapper">
           <input type="date" class="date-jump" id="dateJump" onchange="App.jumpToDate(this.value)" title="Jump to date">
@@ -979,10 +942,10 @@
               <path d="M15.1 10.4A6.5 6.5 0 017.6 2.9a6.5 6.5 0 107.5 7.5z"/>
             </svg>
           </span>
-          <span class="theme-label">Theme</span>
+          <span class="theme-label">theme</span>
         </button>
-        <span style="font-family:var(--font-ui);font-size:0.65rem;color:var(--text-tertiary);">
-          Keyboard: ← →
+        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">
+          &larr; &rarr;
         </span>
       </div>
     </aside>
@@ -994,9 +957,9 @@
           <path d="M3 5h14M3 10h14M3 15h14"/>
         </svg>
       </button>
-      <span class="mobile-title">Daily Digest</span>
+      <span class="mobile-title">daily digest</span>
       <button class="mobile-theme-btn" onclick="App.toggleTheme()">
-        <span class="theme-toggle-icon" style="width:18px;height:18px;">
+        <span class="theme-toggle-icon" style="width:14px;height:14px;">
           <svg class="theme-icon-sun" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
             <circle cx="9" cy="9" r="3.5"/>
             <path d="M9 1.5v2M9 14.5v2M1.5 9h2M14.5 9h2M3.7 3.7l1.4 1.4M12.9 12.9l1.4 1.4M3.7 14.3l1.4-1.4M12.9 5.1l1.4-1.4"/>
@@ -1013,13 +976,13 @@
     <main class="main-content">
       <header class="content-header">
         <div class="content-header-inner">
-          <button class="nav-btn" id="prevBtn" onclick="App.prevDate()" title="Previous day (←)">
+          <button class="nav-btn" id="prevBtn" onclick="App.prevDate()" title="Previous day">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10 3L5 8l5 5"/>
             </svg>
           </button>
-          <div class="content-date-display" id="dateDisplay">Loading...</div>
-          <button class="nav-btn" id="nextBtn" onclick="App.nextDate()" title="Next day (→)">
+          <div class="content-date-display" id="dateDisplay">loading...</div>
+          <button class="nav-btn" id="nextBtn" onclick="App.nextDate()" title="Next day">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 3l5 5-5 5"/>
             </svg>
@@ -1027,7 +990,7 @@
           <div style="flex:1;"></div>
           <span class="content-category-badge" id="categoryBadge">
             <span class="content-category-badge-dot"></span>
-            <span id="categoryBadgeLabel">AI Daily</span>
+            <span id="categoryBadgeLabel">ai-daily</span>
           </span>
         </div>
       </header>
@@ -1056,8 +1019,8 @@
       },
 
       categoryMeta: {
-        'ai-daily': { label: 'AI Daily', title: 'AI Daily', accent: 'ai' },
-        'money-stuff': { label: 'Money Stuff Daily', title: 'Money Stuff Daily', accent: 'money' },
+        'ai-daily': { label: 'ai-daily', title: 'AI Daily', accent: 'ai' },
+        'money-stuff': { label: 'money-stuff', title: 'Money Stuff Daily', accent: 'money' },
       },
 
       dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -1298,12 +1261,12 @@
 
         const meta = this.categoryMeta[category];
         const d = new Date(date + 'T00:00:00');
-        const dayName = this.dayNames[d.getDay()].toUpperCase();
+        const dayName = this.dayNames[d.getDay()].toLowerCase();
         const monthName = this.monthNames[d.getMonth()];
 
         body.innerHTML = `
           <div class="edition-header">
-            <div class="edition-label">${dayName} Edition</div>
+            <div class="edition-label">${dayName} edition</div>
             <h2 class="edition-title">${meta.title}</h2>
             <div class="edition-date">${monthName} ${d.getDate()}, ${d.getFullYear()}</div>
             <span class="edition-rule"></span>
@@ -1318,7 +1281,7 @@
           const cls = i === 0 ? 'title' : i === 1 ? 'subtitle' : '';
           lines += `<div class="skeleton-line ${cls}"></div>`;
         }
-        return `<div class="loading-skeleton" style="padding-top:3rem;">${lines}</div>`;
+        return `<div class="loading-skeleton" style="padding-top:2rem;">${lines}</div>`;
       },
 
       emptyHTML(date) {
@@ -1327,15 +1290,15 @@
           <div class="empty-state">
             <div class="empty-state-icon">
               <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <rect x="8" y="12" width="48" height="44" rx="4"/>
+                <rect x="8" y="12" width="48" height="44" rx="2"/>
                 <path d="M8 24h48"/>
                 <path d="M20 8v8M44 8v8"/>
                 <path d="M24 36h16M28 42h8"/>
               </svg>
             </div>
-            <div class="empty-state-title">No Edition Available</div>
+            <div class="empty-state-title">no edition available</div>
             <div class="empty-state-text">
-              There is no published edition for ${label}. Please select another date from the archive.
+              there is no published edition for ${label}. select another date from the archive.
             </div>
           </div>
         `;
@@ -1345,11 +1308,11 @@
         return `
           <div class="welcome-state">
             <div class="masthead-welcome">
-              The<br><strong>Daily Digest</strong>
+              the <strong>daily digest</strong>
             </div>
             <p>
-              Your curated briefing on artificial intelligence and financial markets.
-              Content will appear here once daily editions are published.
+              curated briefing on artificial intelligence and financial markets.
+              content will appear here once daily editions are published.
             </p>
           </div>
         `;
