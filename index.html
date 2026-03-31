@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       CSS CUSTOM PROPERTIES
+       ═══════════════════════════════════════════ */
+    :root {
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Crimson Pro', Georgia, serif;
+      --font-ui: 'DM Sans', -apple-system, sans-serif;
+
+      --sidebar-width: 280px;
+      --content-max-width: 740px;
+      --mobile-bar-height: 56px;
+      --transition-speed: 0.3s;
+      --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #FAF8F3;
+      --bg-surface: #FFFFFF;
+      --bg-sidebar: #F5F1EA;
+      --bg-hover: #EDE8DF;
+      --bg-active: #E6E0D4;
+      --text-primary: #1C1917;
+      --text-secondary: #6B6560;
+      --text-tertiary: #9C9590;
+      --border-color: #DDD7CC;
+      --border-light: #EBE7DF;
+      --accent-ai: #1A7A56;
+      --accent-ai-bg: #E8F5EE;
+      --accent-ai-subtle: #D0EADB;
+      --accent-money: #B45309;
+      --accent-money-bg: #FEF3E2;
+      --accent-money-subtle: #FDE5C0;
+      --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.06);
+      --shadow-md: 0 4px 12px rgba(28, 25, 23, 0.08);
+      --shadow-lg: 0 12px 40px rgba(28, 25, 23, 0.12);
+      --grain-opacity: 0.03;
+      --divider-art: url("data:image/svg+xml,%3Csvg width='80' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4h24l4-4 4 4h24l4-4 4 4h16' stroke='%23C4BEB4' fill='none' stroke-width='0.75'/%3E%3C/svg%3E");
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #141210;
+      --bg-surface: #1C1A17;
+      --bg-sidebar: #1A1816;
+      --bg-hover: #252220;
+      --bg-active: #2E2B28;
+      --text-primary: #EDE7DB;
+      --text-secondary: #9C9590;
+      --text-tertiary: #6B6560;
+      --border-color: #2E2B28;
+      --border-light: #232120;
+      --accent-ai: #3DCC8A;
+      --accent-ai-bg: #1A2E24;
+      --accent-ai-subtle: #1F3A2C;
+      --accent-money: #F59E0B;
+      --accent-money-bg: #2A2010;
+      --accent-money-subtle: #352A14;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
+      --grain-opacity: 0.015;
+      --divider-art: url("data:image/svg+xml,%3Csvg width='80' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4h24l4-4 4 4h24l4-4 4 4h16' stroke='%234A4540' fill='none' stroke-width='0.75'/%3E%3C/svg%3E");
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      transition: background-color var(--transition-speed) var(--transition-ease),
+                  color var(--transition-speed) var(--transition-ease);
+      overflow-x: hidden;
+    }
+
+    /* Subtle grain texture overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: var(--grain-opacity);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+    }
+
+    a {
+      color: var(--accent-ai);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-tertiary);
+    }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT
+       ═══════════════════════════════════════════ */
+    .app-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ═══════════════════════════════════════════
+       SIDEBAR
+       ═══════════════════════════════════════════ */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: var(--sidebar-width);
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      transition: transform var(--transition-speed) var(--transition-ease),
+                  background-color var(--transition-speed) var(--transition-ease);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .sidebar-header {
+      padding: 2rem 1.5rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .masthead {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .masthead-main {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: none;
+      margin-top: 0.1rem;
+    }
+
+    .masthead-rule {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--text-primary);
+      margin-top: 0.8rem;
+    }
+
+    /* Categories */
+    .sidebar-section {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-section-title {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 0.75rem;
+    }
+
+    .category-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      font-family: var(--font-ui);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+      margin-bottom: 0.25rem;
+    }
+
+    .category-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .category-btn.active {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .category-btn.active[data-category="ai-daily"] {
+      background: var(--accent-ai-bg);
+    }
+
+    .category-btn.active[data-category="money-stuff"] {
+      background: var(--accent-money-bg);
+    }
+
+    .category-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .category-btn:hover .category-indicator {
+      transform: scale(1.3);
+    }
+
+    .category-indicator.ai {
+      background: var(--accent-ai);
+    }
+
+    .category-indicator.money {
+      background: var(--accent-money);
+    }
+
+    /* Date list */
+    .date-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .date-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-family: var(--font-ui);
+      font-size: 0.825rem;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .date-item:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .date-item.active {
+      background: var(--bg-active);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .date-item-day {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    .date-jump-wrapper {
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    .date-jump {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      transition: border-color 0.2s ease;
+      outline: none;
+    }
+
+    .date-jump:focus {
+      border-color: var(--text-tertiary);
+    }
+
+    /* Sidebar footer */
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .theme-toggle-icon {
+      width: 18px;
+      height: 18px;
+      position: relative;
+    }
+
+    .theme-toggle-icon svg {
+      position: absolute;
+      inset: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    [data-theme="light"] .theme-icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+    [data-theme="light"] .theme-icon-sun { opacity: 1; transform: rotate(0) scale(1); }
+    [data-theme="dark"] .theme-icon-sun { opacity: 0; transform: rotate(90deg) scale(0.5); }
+    [data-theme="dark"] .theme-icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+
+    /* ═══════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════ */
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: margin-left var(--transition-speed) var(--transition-ease);
+    }
+
+    .content-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 2rem;
+      transition: background-color var(--transition-speed) var(--transition-ease);
+    }
+
+    .content-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+    }
+
+    .content-header-inner {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .content-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .nav-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .content-date-display {
+      font-family: var(--font-ui);
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      min-width: 180px;
+      text-align: center;
+    }
+
+    .content-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .content-category-badge.ai-daily {
+      background: var(--accent-ai-bg);
+      color: var(--accent-ai);
+    }
+
+    .content-category-badge.money-stuff {
+      background: var(--accent-money-bg);
+      color: var(--accent-money);
+    }
+
+    .content-category-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .content-category-badge.ai-daily .content-category-badge-dot {
+      background: var(--accent-ai);
+    }
+
+    .content-category-badge.money-stuff .content-category-badge-dot {
+      background: var(--accent-money);
+    }
+
+    /* Content body */
+    .content-body-wrapper {
+      flex: 1;
+      padding: 0 2rem 4rem;
+    }
+
+    .content-body {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+    }
+
+    /* Edition header */
+    .edition-header {
+      padding: 2.5rem 0 2rem;
+      border-bottom: 2px solid var(--text-primary);
+      margin-bottom: 2rem;
+    }
+
+    .edition-label {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 0.75rem;
+    }
+
+    .edition-title {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .edition-date {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    .edition-rule {
+      display: block;
+      width: 100%;
+      height: 12px;
+      margin-top: 1.5rem;
+      background-image: var(--divider-art);
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: auto 8px;
+    }
+
+    /* Article content styling */
+    .article-content {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: contentFadeIn 0.5s ease forwards;
+    }
+
+    @keyframes contentFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .article-content h1 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 2rem 0 1rem;
+      color: var(--text-primary);
+    }
+
+    .article-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin: 2.5rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      color: var(--text-primary);
+    }
+
+    .article-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .article-content p {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .article-content blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--border-color);
+      background: var(--bg-surface);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .article-content blockquote p {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    .article-content ul, .article-content ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .article-content li {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-content code {
+      font-size: 0.9em;
+      padding: 0.15em 0.4em;
+      background: var(--bg-hover);
+      border-radius: 3px;
+    }
+
+    .article-content pre {
+      margin: 1.5rem 0;
+      padding: 1.25rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .article-content pre code {
+      background: none;
+      padding: 0;
+    }
+
+    .article-content hr {
+      border: none;
+      height: 12px;
+      margin: 2rem 0;
+      background-image: var(--divider-art);
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: auto 8px;
+    }
+
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+    }
+
+    .article-content a {
+      color: var(--accent-ai);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .article-content a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .article-content strong {
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════
+       STATES
+       ═══════════════════════════════════════════ */
+
+    /* Loading skeleton */
+    .loading-skeleton {
+      animation: contentFadeIn 0.3s ease forwards;
+    }
+
+    .skeleton-line {
+      height: 16px;
+      background: linear-gradient(90deg, var(--bg-hover) 25%, var(--border-light) 50%, var(--bg-hover) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s ease-in-out infinite;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .skeleton-line.title {
+      height: 36px;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+
+    .skeleton-line.subtitle {
+      height: 20px;
+      width: 40%;
+      margin-bottom: 32px;
+    }
+
+    .skeleton-line:nth-child(odd) { width: 100%; }
+    .skeleton-line:nth-child(even) { width: 85%; }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      animation: contentFadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .empty-state-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      color: var(--text-tertiary);
+      opacity: 0.5;
+    }
+
+    .empty-state-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-state-text {
+      font-family: var(--font-ui);
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      max-width: 360px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Welcome state */
+    .welcome-state {
+      text-align: center;
+      padding: 6rem 2rem;
+      animation: contentFadeIn 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .welcome-state .masthead-welcome {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--text-primary);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-state .masthead-welcome strong {
+      font-weight: 600;
+    }
+
+    .welcome-state p {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOBILE
+       ═══════════════════════════════════════════ */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--mobile-bar-height);
+      background: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 200;
+      align-items: center;
+      padding: 0 1rem;
+      transition: background-color var(--transition-speed) var(--transition-ease);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      color: var(--text-primary);
+    }
+
+    .mobile-menu-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .mobile-title {
+      flex: 1;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .mobile-theme-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      color: var(--text-secondary);
+    }
+
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 99;
+      opacity: 0;
+      transition: opacity var(--transition-speed) var(--transition-ease);
+      backdrop-filter: blur(2px);
+    }
+
+    .sidebar-overlay.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-bar {
+        display: flex;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+        z-index: 300;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sidebar-overlay {
+        display: block;
+        pointer-events: none;
+      }
+
+      .sidebar-overlay.visible {
+        pointer-events: auto;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding-top: var(--mobile-bar-height);
+      }
+
+      .content-header {
+        top: var(--mobile-bar-height);
+      }
+
+      .content-body-wrapper {
+        padding: 0 1.25rem 3rem;
+      }
+
+      .content-header {
+        padding: 0 1.25rem;
+      }
+
+      .edition-title {
+        font-size: 2rem;
+      }
+
+      .edition-header {
+        padding: 1.5rem 0 1.5rem;
+      }
+
+      .content-date-display {
+        font-size: 0.75rem;
+        min-width: 140px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .edition-title {
+        font-size: 1.6rem;
+      }
+
+      .article-content p,
+      .article-content li {
+        font-size: 1rem;
+      }
+
+      .article-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .article-content h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       PRINT
+       ═══════════════════════════════════════════ */
+    @media print {
+      .sidebar, .mobile-bar, .content-header, .sidebar-overlay {
+        display: none !important;
+      }
+      .main-content {
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+      }
+      body::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1 class="masthead">
+          The
+          <span class="masthead-main">Daily Digest</span>
+          <span class="masthead-rule"></span>
+        </h1>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Sections</div>
+        <button class="category-btn active" data-category="ai-daily" onclick="App.setCategory('ai-daily')">
+          <span class="category-indicator ai"></span>
+          AI Daily
+        </button>
+        <button class="category-btn" data-category="money-stuff" onclick="App.setCategory('money-stuff')">
+          <span class="category-indicator money"></span>
+          Money Stuff Daily
+        </button>
+      </div>
+
+      <div class="sidebar-section" style="flex:1; overflow-y:auto;">
+        <div class="sidebar-section-title">Archive</div>
+        <div class="date-list" id="dateList"></div>
+        <div class="date-jump-wrapper">
+          <input type="date" class="date-jump" id="dateJump" onchange="App.jumpToDate(this.value)" title="Jump to date">
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" onclick="App.toggleTheme()">
+          <span class="theme-toggle-icon">
+            <svg class="theme-icon-sun" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="9" cy="9" r="3.5"/>
+              <path d="M9 1.5v2M9 14.5v2M1.5 9h2M14.5 9h2M3.7 3.7l1.4 1.4M12.9 12.9l1.4 1.4M3.7 14.3l1.4-1.4M12.9 5.1l1.4-1.4"/>
+            </svg>
+            <svg class="theme-icon-moon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M15.1 10.4A6.5 6.5 0 017.6 2.9a6.5 6.5 0 107.5 7.5z"/>
+            </svg>
+          </span>
+          <span class="theme-label">Theme</span>
+        </button>
+        <span style="font-family:var(--font-ui);font-size:0.65rem;color:var(--text-tertiary);">
+          Keyboard: ← →
+        </span>
+      </div>
+    </aside>
+
+    <!-- ═══ MOBILE BAR ═══ -->
+    <div class="mobile-bar">
+      <button class="mobile-menu-btn" onclick="App.toggleSidebar()">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M3 5h14M3 10h14M3 15h14"/>
+        </svg>
+      </button>
+      <span class="mobile-title">Daily Digest</span>
+      <button class="mobile-theme-btn" onclick="App.toggleTheme()">
+        <span class="theme-toggle-icon" style="width:18px;height:18px;">
+          <svg class="theme-icon-sun" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="9" cy="9" r="3.5"/>
+            <path d="M9 1.5v2M9 14.5v2M1.5 9h2M14.5 9h2M3.7 3.7l1.4 1.4M12.9 12.9l1.4 1.4M3.7 14.3l1.4-1.4M12.9 5.1l1.4-1.4"/>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M15.1 10.4A6.5 6.5 0 017.6 2.9a6.5 6.5 0 107.5 7.5z"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="App.closeSidebar()"></div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="main-content">
+      <header class="content-header">
+        <div class="content-header-inner">
+          <button class="nav-btn" id="prevBtn" onclick="App.prevDate()" title="Previous day (←)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 3L5 8l5 5"/>
+            </svg>
+          </button>
+          <div class="content-date-display" id="dateDisplay">Loading...</div>
+          <button class="nav-btn" id="nextBtn" onclick="App.nextDate()" title="Next day (→)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3l5 5-5 5"/>
+            </svg>
+          </button>
+          <div style="flex:1;"></div>
+          <span class="content-category-badge" id="categoryBadge">
+            <span class="content-category-badge-dot"></span>
+            <span id="categoryBadgeLabel">AI Daily</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="content-body-wrapper">
+        <div class="content-body" id="contentBody">
+          <!-- Content injected here -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       APPLICATION
+       ═══════════════════════════════════════════ */
+    const App = {
+      state: {
+        category: 'ai-daily',
+        date: null,
+        theme: 'light',
+        manifest: null,
+        contentCache: {},
+        sidebarOpen: false,
+        loading: false,
+      },
+
+      categoryMeta: {
+        'ai-daily': { label: 'AI Daily', title: 'AI Daily', accent: 'ai' },
+        'money-stuff': { label: 'Money Stuff Daily', title: 'Money Stuff Daily', accent: 'money' },
+      },
+
+      dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+
+      /* ─── Initialization ─── */
+      async init() {
+        this.loadTheme();
+        await this.loadManifest();
+        this.parseRoute();
+        this.bindEvents();
+        this.render();
+      },
+
+      /* ─── Theme ─── */
+      loadTheme() {
+        const saved = localStorage.getItem('daily-digest-theme');
+        if (saved) {
+          this.state.theme = saved;
+        } else {
+          this.state.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', this.state.theme);
+      },
+
+      toggleTheme() {
+        this.state.theme = this.state.theme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', this.state.theme);
+        localStorage.setItem('daily-digest-theme', this.state.theme);
+      },
+
+      /* ─── Sidebar ─── */
+      toggleSidebar() {
+        this.state.sidebarOpen ? this.closeSidebar() : this.openSidebar();
+      },
+
+      openSidebar() {
+        this.state.sidebarOpen = true;
+        document.getElementById('sidebar').classList.add('open');
+        document.getElementById('sidebarOverlay').classList.add('visible');
+      },
+
+      closeSidebar() {
+        this.state.sidebarOpen = false;
+        document.getElementById('sidebar').classList.remove('open');
+        document.getElementById('sidebarOverlay').classList.remove('visible');
+      },
+
+      /* ─── Manifest ─── */
+      async loadManifest() {
+        try {
+          const res = await fetch('content/index.json');
+          if (!res.ok) throw new Error('Manifest not found');
+          this.state.manifest = await res.json();
+          // Sort dates descending for each category
+          for (const cat of Object.keys(this.state.manifest)) {
+            this.state.manifest[cat].sort((a, b) => b.localeCompare(a));
+          }
+        } catch (e) {
+          console.warn('Could not load manifest:', e);
+          this.state.manifest = { 'ai-daily': [], 'money-stuff': [] };
+        }
+      },
+
+      /* ─── Routing ─── */
+      parseRoute() {
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+          const parts = hash.split('/').filter(Boolean);
+          if (parts.length === 2) {
+            const [cat, date] = parts;
+            if (this.categoryMeta[cat]) {
+              this.state.category = cat;
+              this.state.date = date;
+              return;
+            }
+          }
+        }
+        // Default: latest available for current category
+        const dates = this.state.manifest[this.state.category] || [];
+        this.state.date = dates[0] || this.todayStr();
+      },
+
+      updateRoute() {
+        window.location.hash = `${this.state.category}/${this.state.date}`;
+      },
+
+      /* ─── Category ─── */
+      setCategory(cat) {
+        if (this.state.category === cat) return;
+        this.state.category = cat;
+        // Try to stay on the same date, or go to latest
+        const dates = this.state.manifest[cat] || [];
+        if (!dates.includes(this.state.date)) {
+          this.state.date = dates[0] || this.todayStr();
+        }
+        this.updateRoute();
+        this.render();
+        this.closeSidebar();
+      },
+
+      /* ─── Date Navigation ─── */
+      setDate(date) {
+        if (this.state.date === date) return;
+        this.state.date = date;
+        this.updateRoute();
+        this.render();
+        this.closeSidebar();
+      },
+
+      jumpToDate(dateStr) {
+        if (dateStr) {
+          this.state.date = dateStr;
+          this.updateRoute();
+          this.render();
+        }
+      },
+
+      prevDate() {
+        const dates = this.state.manifest[this.state.category] || [];
+        const idx = dates.indexOf(this.state.date);
+        if (idx < dates.length - 1) {
+          this.setDate(dates[idx + 1]);
+        }
+      },
+
+      nextDate() {
+        const dates = this.state.manifest[this.state.category] || [];
+        const idx = dates.indexOf(this.state.date);
+        if (idx > 0) {
+          this.setDate(dates[idx - 1]);
+        }
+      },
+
+      /* ─── Content Fetching ─── */
+      async fetchContent(category, date) {
+        const key = `${category}/${date}`;
+        if (this.state.contentCache[key]) return this.state.contentCache[key];
+
+        try {
+          const res = await fetch(`content/${category}/${date}.html`);
+          if (!res.ok) throw new Error('Not found');
+          const html = await res.text();
+          this.state.contentCache[key] = html;
+          return html;
+        } catch (e) {
+          return null;
+        }
+      },
+
+      /* ─── Rendering ─── */
+      async render() {
+        this.renderSidebar();
+        this.renderHeader();
+        await this.renderContent();
+      },
+
+      renderSidebar() {
+        // Update category buttons
+        document.querySelectorAll('.category-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.category === this.state.category);
+        });
+
+        // Update date list
+        const dateList = document.getElementById('dateList');
+        const dates = this.state.manifest[this.state.category] || [];
+
+        dateList.innerHTML = dates.map(date => {
+          const d = new Date(date + 'T00:00:00');
+          const dayName = this.dayNames[d.getDay()];
+          const label = `${this.monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+          const isActive = date === this.state.date;
+          return `
+            <div class="date-item ${isActive ? 'active' : ''}" onclick="App.setDate('${date}')">
+              <span>${label}</span>
+              <span class="date-item-day">${dayName}</span>
+            </div>
+          `;
+        }).join('');
+
+        // Update date jump input
+        document.getElementById('dateJump').value = this.state.date || '';
+      },
+
+      renderHeader() {
+        const { category, date } = this.state;
+        const meta = this.categoryMeta[category];
+        const dates = this.state.manifest[category] || [];
+        const idx = dates.indexOf(date);
+
+        // Date display
+        if (date) {
+          const d = new Date(date + 'T00:00:00');
+          const dayName = this.dayNames[d.getDay()];
+          const monthName = this.monthNames[d.getMonth()];
+          document.getElementById('dateDisplay').textContent =
+            `${dayName}, ${monthName} ${d.getDate()}, ${d.getFullYear()}`;
+        }
+
+        // Nav buttons
+        document.getElementById('prevBtn').disabled = idx >= dates.length - 1;
+        document.getElementById('nextBtn').disabled = idx <= 0;
+
+        // Category badge
+        const badge = document.getElementById('categoryBadge');
+        badge.className = `content-category-badge ${category}`;
+        document.getElementById('categoryBadgeLabel').textContent = meta.label;
+      },
+
+      async renderContent() {
+        const body = document.getElementById('contentBody');
+        const { category, date, manifest } = this.state;
+        const dates = manifest[category] || [];
+
+        // Welcome state if no dates available at all
+        if (dates.length === 0 && !date) {
+          body.innerHTML = this.welcomeHTML();
+          return;
+        }
+
+        // Show loading
+        body.innerHTML = this.loadingHTML();
+
+        // Check if this date has content
+        const hasContent = dates.includes(date);
+
+        if (!hasContent) {
+          body.innerHTML = this.emptyHTML(date);
+          return;
+        }
+
+        const html = await this.fetchContent(category, date);
+
+        if (html === null) {
+          body.innerHTML = this.emptyHTML(date);
+          return;
+        }
+
+        const meta = this.categoryMeta[category];
+        const d = new Date(date + 'T00:00:00');
+        const dayName = this.dayNames[d.getDay()].toUpperCase();
+        const monthName = this.monthNames[d.getMonth()];
+
+        body.innerHTML = `
+          <div class="edition-header">
+            <div class="edition-label">${dayName} Edition</div>
+            <h2 class="edition-title">${meta.title}</h2>
+            <div class="edition-date">${monthName} ${d.getDate()}, ${d.getFullYear()}</div>
+            <span class="edition-rule"></span>
+          </div>
+          <div class="article-content">${html}</div>
+        `;
+      },
+
+      loadingHTML() {
+        let lines = '';
+        for (let i = 0; i < 12; i++) {
+          const cls = i === 0 ? 'title' : i === 1 ? 'subtitle' : '';
+          lines += `<div class="skeleton-line ${cls}"></div>`;
+        }
+        return `<div class="loading-skeleton" style="padding-top:3rem;">${lines}</div>`;
+      },
+
+      emptyHTML(date) {
+        const label = date ? this.formatDateFull(date) : 'this date';
+        return `
+          <div class="empty-state">
+            <div class="empty-state-icon">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <rect x="8" y="12" width="48" height="44" rx="4"/>
+                <path d="M8 24h48"/>
+                <path d="M20 8v8M44 8v8"/>
+                <path d="M24 36h16M28 42h8"/>
+              </svg>
+            </div>
+            <div class="empty-state-title">No Edition Available</div>
+            <div class="empty-state-text">
+              There is no published edition for ${label}. Please select another date from the archive.
+            </div>
+          </div>
+        `;
+      },
+
+      welcomeHTML() {
+        return `
+          <div class="welcome-state">
+            <div class="masthead-welcome">
+              The<br><strong>Daily Digest</strong>
+            </div>
+            <p>
+              Your curated briefing on artificial intelligence and financial markets.
+              Content will appear here once daily editions are published.
+            </p>
+          </div>
+        `;
+      },
+
+      /* ─── Utilities ─── */
+      todayStr() {
+        const d = new Date();
+        return d.getFullYear() + '-' +
+          String(d.getMonth() + 1).padStart(2, '0') + '-' +
+          String(d.getDate()).padStart(2, '0');
+      },
+
+      formatDateFull(dateStr) {
+        const d = new Date(dateStr + 'T00:00:00');
+        return `${this.monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+      },
+
+      /* ─── Events ─── */
+      bindEvents() {
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.target.tagName === 'INPUT') return;
+          if (e.key === 'ArrowLeft') { e.preventDefault(); this.prevDate(); }
+          if (e.key === 'ArrowRight') { e.preventDefault(); this.nextDate(); }
+        });
+
+        // Hash change
+        window.addEventListener('hashchange', () => {
+          this.parseRoute();
+          this.render();
+        });
+      },
+    };
+
+    /* ─── Boot ─── */
+    document.addEventListener('DOMContentLoaded', () => App.init());
+  </script>
+</body>
+</html>
