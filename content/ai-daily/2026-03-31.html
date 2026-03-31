@@ -1,39 +1,104 @@
-<h2>OpenAI Unveils GPT-5 with Native Multimodal Reasoning</h2>
-
-<p>OpenAI announced GPT-5 today, marking a significant leap in AI capabilities. The new model demonstrates what the company calls "native multimodal reasoning" — the ability to seamlessly process and generate across text, images, audio, and video within a single inference pass. Early benchmarks suggest a 40% improvement over GPT-4.5 on complex reasoning tasks.</p>
-
+<h1>📅 每日简报 | 2026-03-31</h1>
 <blockquote>
-<p>"This isn't just an incremental update. GPT-5 represents a fundamentally different approach to how models understand and interact with the world," said Sam Altman during the live demonstration.</p>
+<p>📊 <strong>今日概览</strong>：融资 1条 | 模型发布 5条 | 国外公司动态 5条 | 中国公司动态 4条</p>
 </blockquote>
-
-<p>The model will be available through the API starting next week, with pricing set at a modest premium over current GPT-4.5 rates. Enterprise customers report early access testing has been promising, particularly in scientific research and code generation applications.</p>
-
-<h2>DeepMind's AlphaScience Cracks New Protein Folding Challenges</h2>
-
-<p>Google DeepMind published results from AlphaScience, their latest iteration on the AlphaFold framework, demonstrating the ability to predict protein-protein interactions with near-experimental accuracy. The implications for drug discovery are substantial — researchers at the Francis Crick Institute have already used the system to identify three novel drug targets for treatment-resistant cancers.</p>
-
-<p>The key innovation lies in the model's ability to simulate dynamic protein conformations rather than static structures, opening doors to understanding how proteins behave in real cellular environments.</p>
-
-<h2>EU AI Act Enforcement Begins: First Compliance Deadlines Hit</h2>
-
-<p>The first major enforcement deadlines of the EU AI Act took effect today, requiring all high-risk AI systems operating in the European Union to complete initial risk assessments and register with national authorities. Companies face fines of up to 7% of global revenue for non-compliance.</p>
-
-<p>Industry reactions have been mixed:</p>
-
+<hr />
+<h2>💰 融资</h2>
+<h3>Mistral AI</h3>
 <ul>
-<li><strong>Large tech companies</strong> report being largely prepared, having invested heavily in compliance infrastructure over the past year</li>
-<li><strong>Mid-size AI startups</strong> express concern about the administrative burden, with several announcing they will initially restrict EU operations</li>
-<li><strong>Open-source projects</strong> continue to navigate the exemptions landscape, with several foundations seeking clarification on their obligations</li>
+<li><strong>Mistral AI 筹集 8.3 亿美元债务融资采购 13800 块 Nvidia GPU</strong><br />
+  法国 AI 实验室 Mistral AI 完成首次债务融资，金额 8.3 亿美元，由 BNP Paribas、HSBC 等七家银行组成的财团提供。资金将用于在巴黎南部 Bruyères-le-Châtel 建设 44MW 供电容量的数据中心，部署 13,800 块 Nvidia GB300 GPU 的 Grace Blackwell 基础设施，设施由法国数据中心公司 Eclairion 运营，预计 2026 年第二季度末投入运营。该融资支持其到 2027 年底在欧洲确保 200MW 容量的目标。<br />
+  🔗 <a href="https://www.reuters.com/business/finance/frances-mistral-raises-830-million-debt-ai-data-centre-build-up-2026-03-30/">来源</a></li>
 </ul>
-
-<h2>Anthropic Releases New Safety Benchmark Suite</h2>
-
-<p>Anthropic published a comprehensive AI safety benchmark suite designed to evaluate model alignment across 12 dimensions, including truthfulness, ethical reasoning, and instruction following under adversarial conditions. The open-source release includes evaluation tools and a leaderboard.</p>
-
-<p>Early results show significant variation across frontier models, with no single model dominating all categories — suggesting that safety remains a multifaceted challenge that resists simple ranking.</p>
-
-<h2>Nvidia Reports Record Quarterly Revenue, Signals Continued AI Demand</h2>
-
-<p>Nvidia's Q1 fiscal 2027 earnings exceeded analyst expectations, with data center revenue hitting $42 billion — up 55% year-over-year. CEO Jensen Huang emphasized that demand continues to outstrip supply, particularly for the new Blackwell Ultra architecture chips designed for trillion-parameter model training.</p>
-
-<p>The company also announced a new partnership with major cloud providers to deploy next-generation inference infrastructure, suggesting the industry focus is shifting from training to deployment efficiency.</p>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>阿里千问</h3>
+<ul>
+<li>
+<p><strong>阿里千问上线 Qwen3.6 Plus Preview 模型</strong><br />
+  阿里 Qwen 团队在 OpenRouter 上线 Qwen3.6 Plus Preview，作为 Qwen Plus 系列下一代版本，采用混合架构，支持 1,000,000 token 上下文窗口和最大 65,536 tokens 输出。官方表示较 Qwen3.5 系列具备更强推理能力和更可靠的 Agent 行为，在 Agentic coding、前端开发及复杂问题解决等任务上表现优异。预览期间可在 OpenRouter、OpenCode 和 Kilo Code 等平台免费调用。<br />
+  🔗 <a href="https://openrouter.ai/qwen/qwen3.6-plus-preview">来源</a></p>
+</li>
+<li>
+<p><strong>阿里千问发布 Qwen3.5-Omni 全模态系列模型</strong><br />
+  Qwen Team 发布新一代全模态大模型 Qwen3.5-Omni 系列，包含 Plus、Flash、Light 三种尺寸。模型原生支持文本、图片、音频及音视频理解，Thinker 与 Talker 模块均升级为 Hybrid-Attention MoE 架构，支持 256k 长上下文，单轮可处理最长 3 小时音频或 1 小时 720P 音视频。Plus 版本在 215 项子任务和 Benchmark 上取得 SOTA，通用音频能力超越 Gemini-3.1 Pro。支持 113 种语种和方言的语音识别及 36 种语种和方言的语音生成，具备音色克隆、智能语义打断及原生 WebSearch 调用等特性。已可通过 Qwen Chat、阿里云百炼 API 体验。<br />
+  🔗 <a href="https://qwen.ai/blog?id=qwen3.5-omni">来源</a></p>
+</li>
+</ul>
+<h3>美团</h3>
+<ul>
+<li><strong>美团龙猫团队发布并开源 LongCat-AudioDiT 模型</strong><br />
+  美团龙猫团队推出非自回归扩散 TTS 模型 LongCat-AudioDiT，提供 1B 和 3.5B 两种规格，直接在波形潜空间运行，仅需 Wav-VAE 和扩散主干，规避中间声学表示依赖。引入自适应投影引导（APG）取代传统 CFG，支持中英高保真生成。3.5B 版本在 Seed 基准测试中实现 SOTA 零样本语音克隆性能，SIM 得分在 Seed-ZH 从 0.809 升至 0.818，Seed-Hard 从 0.776 升至 0.797。代码及权重已在 GitHub 和 Hugging Face 开源。<br />
+  🔗 <a href="https://github.com/meituan-longcat/LongCat-AudioDiT">来源</a></li>
+</ul>
+<h3>爱诗科技 — AI 视频生成平台 PixVerse 的开发公司</h3>
+<ul>
+<li><strong>爱诗科技发布视频生成模型 PixVerse V6</strong><br />
+  PixVerse 正式发布全新视频模型 V6，实现逼真动作、丰富皮肤细节与真实情绪的融合，赋予创作者从编舞到镜头的全面电影级控制权，大幅提升 VFX、延时摄影、变身场景、产品演示及多镜头叙事的生成能力，支持在几十秒内生成 1080P 视频。同步推出面向工作室的 Team Plan，支持 2-15 人团队协作、共享积分池及角色权限管理。<br />
+  🔗 <a href="https://x.com/PixVerse_/status/2038711108119281671">来源</a></li>
+</ul>
+<h3>微软</h3>
+<ul>
+<li><strong>微软发布 Harrier-OSS-v1 多语言嵌入模型</strong><br />
+  微软发布 Harrier-OSS-v1 多语言文本嵌入模型系列，包含 270M、0.6B 和 27B 三种参数规模，全面采用 Decoder-only 架构，结合 last-token pooling 与 L2 normalization 生成密集文本向量，统一支持 32,768 token 上下文窗口。可应用于检索、聚类、语义相似度计算、分类、双语文本挖掘及重排等任务。权重已在 Hugging Face 发布，使用时需在查询端前置任务描述指令。<br />
+  🔗 <a href="https://huggingface.co/microsoft/harrier-oss-v1-27b">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li>
+<p><strong>Claude Code 上线 Computer Use，支持 GitHub Enterprise Server</strong><br />
+  Claude Code 推出 Computer Use 研究预览版，面向 macOS 平台 Pro 和 Max 用户，通过内置 MCP 服务赋予 CLI 控制屏幕、点击界面及端到端 GUI 测试能力。企业级方面，现已全面支持 GitHub Enterprise Server (GHES)，涵盖网页端、iOS、Android 及 Code Review 功能，企业开发者可直接对自托管仓库运行异步工作流。<br />
+  🔗 <a href="https://code.claude.com/docs/en/computer-use">来源</a></p>
+</li>
+<li>
+<p><strong>Claude Code 开发者分享未被充分利用的高阶功能</strong><br />
+  开发者 Boris Cherny 分享了 Claude Code 的隐藏高阶功能，包括：iOS/Android 与桌面端跨设备会话转移；通过 <code>/loop</code> 和 <code>/schedule</code> 实现长达一周的任务自动化；借助 Hooks 在 Agent 生命周期中注入自定义逻辑；通过 <code>/batch</code> 结合 git worktrees 将大规模代码迁移分发给上百个并行 Agent；使用 <code>--bare</code> 参数实现最高 10 倍 SDK 启动加速；以及通过 <code>--agent</code> 挂载自定义系统提示词和工具。<br />
+  🔗 <a href="https://x.com/bcherny/status/2038454336355999749">来源</a></p>
+</li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>OpenAI 发布 Claude Code 的 Codex 插件</strong><br />
+  OpenAI 推出 <code>codex-plugin-cc</code> 插件，允许开发者在 Claude Code 工作流中直接调用 Codex 作为"第二意见"。提供标准代码审查、对抗性审查和任务移交三大核心功能，支持作业后台运行与审查门控设置。技术上封装了 Codex app-server，复用现有本地认证、配置、环境和 MCP 设置。<br />
+  🔗 <a href="https://x.com/reach_vb/status/2038670509768839458">来源</a></li>
+</ul>
+<h3>微软</h3>
+<ul>
+<li><strong>Microsoft 365 Copilot 研究 Agent 引入多模型能力</strong><br />
+  Microsoft 365 Copilot 深度研究 Agent Researcher 引入 Critique 和 Council 两项多模型能力。Critique 默认启用，分离生成与评估环节，结合 Anthropic 和 OpenAI 模型形成反馈循环优化报告；Council 则并排运行多模型生成独立报告进行对比分析。在 DRACO 基准测试（100 个复杂研究任务）中，集成 Critique 的 Researcher 聚合得分比 Perplexity Deep Research（使用 Claude Opus 4.6）高出约 13.88%。功能已在 Frontier 计划中上线。<br />
+  🔗 <a href="https://techcommunity.microsoft.com/blog/microsoft365copilotblog/introducing-multi-model-intelligence-in-researcher/4506011">来源</a></li>
+</ul>
+<h3>Nous Research — 开源 AI 研究组织，开发 Hermes 系列模型和工具</h3>
+<ul>
+<li><strong>Hermes Agent 新增 Multi Agent Profiles 功能</strong><br />
+  Nous Research 为 Hermes Agent 上线 Multi Agent Profiles 功能，允许在同一机器运行多个完全隔离的 Agent，各自拥有独立配置、API 密钥及记忆。支持克隆配置或完整快照，每个 Profile 可独立运行 gateway，内置 Token 锁防止冲突，全局更新自动同步新技能但不覆盖用户修改。执行 <code>hermes update</code> 即可获取。<br />
+  🔗 <a href="https://hermes-agent.nousresearch.com/docs/user-guide/profiles/">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>月之暗面</h3>
+<ul>
+<li><strong>Kimi 会员计费体系调整为统一额度</strong><br />
+  月之暗面宣布升级 Kimi 会员计费体系，将原有各功能独立计次变更为基于实际 token 消耗的统一额度跨功能共享机制，覆盖 Agent 系列、Kimi Code、Kimi Claw 及图片生成等全部会员功能。现有用户权益自动等价迁移至新额度池，月度与年度会员额度按月刷新，扣费优先使用获赠额度。<br />
+  🔗 <a href="https://www.kimi.com/membership-credits">来源</a></li>
+</ul>
+<h3>智谱</h3>
+<ul>
+<li><strong>Z.ai Chat 更新，支持一键接入飞书和微信</strong><br />
+  智谱 Z.ai Chat 近期更新，Agent 模式新增支持用户免费一键接入飞书和微信的 ClawBot 功能，海外用户还支持接入其他聊天工具。<br />
+  🔗 <a href="https://chat.z.ai">来源</a></li>
+</ul>
+<h3>企业微信</h3>
+<ul>
+<li><strong>企业微信开源 wecom-cli，支持 AI Agent 终端操作办公业务</strong><br />
+  企业微信在 GitHub 开源命令行工具 wecom-cli，使人类与 AI Agent 均能通过终端操作企业微信核心业务。覆盖通讯录、待办、会议、消息、日程、文档及智能表格等 7 大业务品类，预置 12 个开箱即用的 Agent Skills。AI 可自动串联查询成员、协调闲忙时间、创建会议、发送消息、处理文档与待办等多步骤工作流。<br />
+  🔗 <a href="https://github.com/WecomTeam/wecom-cli">来源</a></li>
+</ul>
+<h3>GitHub 平台安全</h3>
+<ul>
+<li><strong>GitHub 遭遇投毒攻击，20 万垃圾 Issue 污染 WSL 等项目</strong><br />
+  2026 年 3 月 29-30 日期间，GitHub 遭遇有组织的大规模垃圾信息投毒攻击，自动化 bot 在微软 WSL、isce-framework/isce2 等知名开源项目中累计创建超 20 万个垃圾 Issue，内容涉及中文赌博、成人广告，攻击速率一度高达每秒 20 条，导致 WSL 项目 Issue 编号从 #14575 激增至 #40028。WSL 维护者已使用自定义脚本进行清理，社区向 GitHub Trust &amp; Safety 团队提交了滥用报告。<br />
+  🔗 <a href="https://github.com/microsoft/WSL/issues/40028">来源</a></li>
+</ul>
