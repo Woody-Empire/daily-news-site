@@ -1,0 +1,114 @@
+<h1>📅 每日简报 | 2026-04-02</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 1条 | 模型发布 7条 | 国外公司动态 6条 | 中国公司动态 4条</p>
+</blockquote>
+<hr />
+<h2>💰 融资</h2>
+<h3>OpenRouter — AI 模型路由平台，帮助开发者筛选及访问多种 AI 模型</h3>
+<ul>
+<li><strong>OpenRouter 传拟融资 1.2 亿美元，估值约 13 亿</strong><br />
+  据报道，OpenRouter 正以约 13 亿美元估值筹集 1.2 亿美元新一轮融资，由 CapitalG 领投，较上轮估值增长一倍以上。该公司致力于帮助开发者为 AI 应用和 Agent 筛选及访问模型，目前年度经常性收入（ARR）已超 5000 万美元。<br />
+  🔗 <a href="https://www.theinformation.com/articles/startup-helps-developers-pick-ai-models-nears-1-3-billion-valuation">来源</a></li>
+</ul>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>智谱</h3>
+<ul>
+<li><strong>智谱发布 GLM-5V-Turbo 多模态视觉编程模型</strong><br />
+  智谱发布面向视觉编程任务的多模态 Coding 基座模型 GLM-5V-Turbo，原生支持图像、视频、文本和文件输入，上下文窗口达 200K，最大输出 128K Tokens。模型采用新一代 CogViT 视觉编码器与 30+ 任务协同强化学习，在多模态 Coding、Agentic 任务及纯文本编程基准中以更小参数量取得领先表现。深度适配 Claude Code、OpenClaw 等 Agent 框架，支持从"看懂环境"到"执行任务"的完整闭环。API 已上线 BigModel 平台，面向 GLM Coding Plan 用户开放申请。<br />
+  🔗 <a href="https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5v-turbo">来源</a></li>
+</ul>
+<h3>阿里</h3>
+<ul>
+<li><strong>阿里发布 Wan2.7-Image 图像生成与编辑统一模型</strong><br />
+  阿里通义实验室发布 Wan2.7-Image 及 Pro 版本，将文生图、图生组图、图像指令编辑和交互式编辑整合于统一架构。核心升级包括：可定制骨相五官的虚拟"捏脸"功能、精准提取参考图色彩分布的"调色盘"、最高 3K token 覆盖 12 种语言的印刷级超长文本渲染、基于框选指令的像素级交互式编辑，以及最多 9 张参考图的多主体一致性和单次最多 12 张组图生成能力。模型已在阿里云百炼平台开放 API，万相官网可体验，千问 App 即将接入。<br />
+  🔗 <a href="https://tongyi.aliyun.com/wan/">来源</a></li>
+<li><strong>Qwen3.5-Max-Preview 上线 Qwen Chat</strong><br />
+  Qwen3.5 系列旗舰模型预览版 Qwen3.5-Max-Preview 已上线 Qwen Chat，目前仅支持文本模态且仅以思考模式运行。官方称该模型在专家级知识、复杂推理、数学、编程、创意写作和角色扮演等方面表现卓越，尚未发布正式版。<br />
+  🔗 <a href="https://chat.qwen.ai">来源</a></li>
+</ul>
+<h3>Arcee AI — 专注企业级 AI 模型开发的初创公司</h3>
+<ul>
+<li><strong>Arcee AI 发布 Trinity-Large-Thinking，398B 参数开源模型</strong><br />
+  Arcee AI 发布并开源 Trinity-Large-Thinking 模型，约 398B 参数稀疏 MoE 架构，基于 Trinity-Large-Base 构建，专为 Agent 工具调用和多步规划优化。在 PinchBench 基准排名第二（仅次于 Opus-4.6），Tau2-Airline 达 88.0%，Tau2-Telecom 达 94.7%。权重以 Apache 2.0 许可开放，API 定价每百万输出 token 0.90 美元。<br />
+  🔗 <a href="https://www.arcee.ai/blog/trinity-large-thinking">来源</a></li>
+</ul>
+<h3>TII — 阿布扎比技术创新研究所，Falcon 系列模型开发方</h3>
+<ul>
+<li><strong>TII 发布 Falcon Perception 与 Falcon OCR 开源模型</strong><br />
+  Falcon 视觉团队发布两款模型：0.6B 参数的 Falcon Perception 用于开放词汇定位分割，在 SA-Co 基准 Macro-F1 达 68.0，优于 SAM 3；0.3B 参数的 Falcon OCR 专攻文档理解，在 OmniDocBench 获 88.6 分，官方称具备开源 OCR 模型最高吞吐量。代码与权重已开源，支持 PyTorch FlexAttention 及 MLX 框架。<br />
+  🔗 <a href="https://huggingface.co/blog/tiiuae/falcon-perception">来源</a></li>
+</ul>
+<h3>Skywork AI — 昆仑万维旗下 AI 研究团队</h3>
+<ul>
+<li><strong>Skywork AI 开源 Matrix-Game 3.0 交互式世界模型</strong><br />
+  Skywork AI 开源交互式世界模型 Matrix-Game 3.0 的代码、权重及技术报告，专为 720p 分辨率下的实时长视频流式生成设计，基于 Wan2.2 模型微调。训练数据整合虚幻引擎合成数据、3A 游戏自动化收集及真实世界视频增强。基础模型与蒸馏模型已在 HuggingFace 上线（Apache 2.0），混合模型及 28B 大模型将后续发布。<br />
+  🔗 <a href="https://matrix-game-v3.github.io/">来源</a></li>
+</ul>
+<h3>Fish Audio — 专注语音合成与处理的 AI 公司</h3>
+<ul>
+<li><strong>Fish Audio 推出支持百种语言及情感标注的 STT 工具</strong><br />
+  Fish Audio 推出面向语音生产工作流的 STT 工具，支持超 100 种语言，内置角色检测与自动情感/副语言标注功能，能自动捕捉 [叹气]、[大笑]、[停顿] 等细微动作。导出的情感标签格式与其 S2 TTS 模型兼容，支持 SRT、VTT 或 JSON 格式导出，用户可自主选择保留情感标签、角色标签及标点。<br />
+  🔗 <a href="https://x.com/FishAudio/status/2039383004880281785">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Claude Code 推出实验性 NO_FLICKER 全屏渲染模式</strong><br />
+  Claude Code 推出实验性 NO_FLICKER 模式，通过接管终端视口并启用备用屏幕缓冲区，仅渲染当前可见内容，解决长对话中的闪烁与跳屏问题。同时引入鼠标交互支持，包括光标定位、展开工具输出、点击链接及拖拽文本自动复制。用户需 v2.1.88 或更高版本，通过 <code>CLAUDE_CODE_NO_FLICKER=1</code> 环境变量启用。注意原生 Cmd+F 搜索将失效，需改用内置快捷键。<br />
+  🔗 <a href="https://code.claude.com/docs/en/fullscreen">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>Codex 团队全面重置使用限制并封禁欺诈账户</strong><br />
+  Codex 团队成员 Tibo 透露，因监测到用户触发速率限制的频率异常升高，团队决定全面重置跨所有平台和所有计划的使用限制。同时发现并封禁了一批欺诈账户，回收了部分计算资源，表示平台打击滥用行动将持续进行。<br />
+  🔗 <a href="https://x.com/thsottiaux/status/2039248564967424483">来源</a></li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li><strong>Google AI Studio 推出多项体验优化</strong><br />
+  Google AI Studio 负责人 Logan Kilpatrick 宣布平台在 Gemini 协助下上线一系列体验优化更新，涵盖交互流程简化、界面视觉重构及移动端适配。新增功能包括一键将 Playground 临时聊天转换为应用、默认媒体分辨率设置及 STT 按钮等，已全面生效。<br />
+  🔗 <a href="https://x.com/i/status/2039137446932185266">来源</a></li>
+<li><strong>Kaggle 推出 AI Agent 标准化评估项目 SAE</strong><br />
+  Kaggle 推出针对 AI Agent 的实验性标准化评估方案 SAE（Standardized Agent Exams），允许开发者通过单次 API 调用注册 Agent，无需 Kaggle 账号即可自主完成包含 16 道题目的考试。测试涵盖推理能力与对抗性安全两个维度，完成后即时生成公开成绩单并更新全球实时排行榜。<br />
+  🔗 <a href="http://x.com/i/article/2039019573404483584">来源</a></li>
+</ul>
+<h3>甲骨文</h3>
+<ul>
+<li><strong>甲骨文启动大规模裁员释放百亿资金支持 AI 基建</strong><br />
+  甲骨文为应对高达 1560 亿美元的 AI 基础设施扩张计划启动大规模裁员。据 TD Cowen 估算，裁员预计波及 2 万至 3 万名员工（约占全球员工 18%），旨在释放 80 亿至 100 亿美元现金流。尽管上季度净利润同比大涨 95% 至 61.3 亿美元，但总债务已超 1240 亿美元，自由现金流为负 100 亿美元。<br />
+  🔗 <a href="https://www.bloomberg.com/news/articles/2026-03-05/oracle-layoffs-to-impact-thousands-in-ai-cash-crunch">来源</a></li>
+</ul>
+<h3>DeepReinforce — 专注强化学习驱动的 AI 竞技编程研究团队</h3>
+<ul>
+<li><strong>GrandCode 夺 Codeforces 三场竞赛冠军，AI 首次全面超越人类</strong><br />
+  DeepReinforce 团队研发的多 Agent AI 系统 GrandCode 在近期三场 Codeforces 直播比赛中连续夺冠，击败包括传奇 Grandmaster 在内的所有人类参赛者，且全场首个解出所有题目。该系统通过编排假设生成器、主求解器、测试用例生成器和摘要等多个 Agent 模块，结合测试时强化学习技术实现。AI 在该领域排名已从不到一年前 OpenAI o3 的第 175 名跃升至榜首。<br />
+  🔗 <a href="https://deep-reinforce.com/cp.html">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>智谱</h3>
+<ul>
+<li><strong>智谱开源 GLM-skills 技能库，含 17 项技能</strong><br />
+  智谱在 GitHub 推出 GLM 系列模型官方技能库 GLM-skills，将分散在各独立模型仓库的技能整合为统一集合。专为 Claude Code、OpenClaw 等 AI 编程 Agent 架构设计，涵盖多模态处理（文档写作、股票分析、网页复制等 10 项）、OCR（文本/公式/表格提取及手写识别等 5 项）、图像生成及元技能管理四大类，共 17 项功能。<br />
+  🔗 <a href="https://github.com/zai-org/GLM-skills">来源</a></li>
+</ul>
+<h3>即梦 AI — 字节跳动旗下 AI 创作平台</h3>
+<ul>
+<li><strong>即梦 AI 推出即梦 CLI 命令行工具</strong><br />
+  即梦 AI 发布专为 Agent 定制的命令行工具"即梦 CLI"，用户一键配置授权后，Agent 可在任意环境中自动调用文生图、文生视频、图生图、图生视频四大类生成命令，支持嵌入自动化工作流处理批量或定时任务，并提供异步任务管理与本地存储维护功能。<br />
+  🔗 <a href="https://jimeng.jianying.com/cli">来源</a></li>
+</ul>
+<h3>OpenClaw — 开源 AI Agent 框架</h3>
+<ul>
+<li><strong>OpenClaw 发布 v2026.3.31，内置 QQ Bot 原生插件</strong><br />
+  OpenClaw 发布 v2026.3.31 版本，最受瞩目的变动是官方内置 QQ Bot 插件，成为首个被原生集成的中国主流社交平台，支持多账户管理、SecretRef 凭证、斜杠命令及私聊/群组/频道多媒体交互。还引入基于 SQLite 的共享后台任务流控制面，增强 LINE 平台音视频出站能力，并在 Agents、MCP 协议、Sandbox 网络隔离及 OpenAI/Anthropic 模型兼容性方面深度优化。注意本版含多项破坏性变更。<br />
+  🔗 <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.31">来源</a></li>
+</ul>
+<h3>ClawHub — OpenClaw 生态技能分发市场</h3>
+<ul>
+<li><strong>ClawHub 上线官方中国镜像站</strong><br />
+  ClawHub 上线官方中国镜像站，由字节跳动旗下火山引擎及 BytePlus 提供基础设施赞助支持，已完成备案且内容汉化。条款显示火山引擎仅提供技术支持，用户需自行承担第三方技能的安全与侵权风险。<br />
+  🔗 <a href="https://mirror-cn.clawhub.com">来源</a></li>
+</ul>
