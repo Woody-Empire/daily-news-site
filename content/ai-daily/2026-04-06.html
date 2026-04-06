@@ -1,0 +1,31 @@
+<h1>📅 每日简报 | 2026-04-06</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 0条 | 国外公司动态 4条 | 中国公司动态 0条</p>
+</blockquote>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li>
+<p><strong>加大力度限制 OpenClaw 等第三方客户端调用</strong><br />
+  Anthropic 被发现加强了对 OpenClaw 等第三方客户端的封禁力度，疑似针对此类工具的 system prompts 构建了分类器。测试显示，当用户通过 CLI 使用 <code>claude -p --append-system-prompt</code> 命令并附加包含"OpenClaw"等特征词的提示词时，请求会被直接拦截拒绝，并明确提示第三方应用将消耗用户的额外使用额度。<br />
+  🔗 <a href="https://x.com/steipete/status/2040811558427648357">来源</a></p>
+</li>
+<li>
+<p><strong>称 Opus 4.6 发现 Linux 内核潜藏 23 年的旧漏洞</strong><br />
+  Anthropic 科学家 Nicholas Carlini 在 AI 安全会议上披露，利用 Claude Code 搭配新发布的 Opus 4.6 模型，在 Linux 内核中挖掘出多个远程漏洞，其中包括一个存在 23 年的 NFS 驱动缺陷。该漏洞允许攻击者通过两个 NFS 客户端协同触发堆缓冲区溢出，从而经网络读取敏感内核内存。Carlini 表示手中还有数百个未验证的潜在问题，并预测随着各方意识到 AI 挖掘漏洞的能力，未来数月将涌现大量安全缺陷。<br />
+  🔗 <a href="https://mtlynch.io/claude-code-found-linux-vulnerability/">来源</a></p>
+</li>
+</ul>
+<h3>Apple</h3>
+<ul>
+<li><strong>批准第三方驱动支持 eGPU 在 Mac 原生运行 AI</strong><br />
+  Apple 近日批准了由 Tiny Corp 开发的第三方驱动程序，允许 AMD 和 Nvidia 的外置显卡通过 Thunderbolt 或 USB4 接口在 Apple Silicon 设备上原生运行，可用于 AI 大语言模型处理。此次获得官方支持意味着用户不再需要禁用 System Integrity Protection 等非官方变通方案即可使用 eGPU。<br />
+  🔗 <a href="https://x.com/__tinygrad__/status/2039213719155310736">来源</a></li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li><strong>消息称正为 Gemini 应用开发 "Your Day" 功能</strong><br />
+  据 TestingCatalog 报道，Google 正在为 Gemini 应用开发名为"Your Day"的新标签页功能，官方尚未说明具体用途。社区猜测该功能将整合日历、待办事项及新闻，读取 Gmail 和 Calendar 提供个性化每日简报与建议，类似 OpenAI 的 Pulse 功能体验，进一步强化 Google 生态系统整合。<br />
+  🔗 <a href="https://x.com/testingcatalog/status/2039490365414048182">来源</a></li>
+</ul>
