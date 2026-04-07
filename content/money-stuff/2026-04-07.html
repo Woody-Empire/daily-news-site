@@ -1,0 +1,144 @@
+<h1>Money Stuff — Grok、QQQ、奥特曼与风投洗衣服务</h1>
+<blockquote>
+<p>本期主要话题：预测市场在"美军进入伊朗"合约上的规则争议；马斯克要求投行购买Grok订阅以换取SpaceX IPO承销权；《纽约客》对山姆·奥特曼的深度人物报道及其作为AI隐喻的意义；风投公司为年轻创始人提供住房和保姆式服务。</p>
+</blockquote>
+<h2>美国地面部队进入伊朗了吗？</h2>
+<p>上周末，彭博周末版刊登了克里斯托弗·比姆（Christopher Beam）的一篇精彩报道，讲述语言学家们对Kalshi的不满。Kalshi是一个预测市场，你可以在上面押注体育赛事和各种其他事件，包括"提及市场"——在这类合约中，如果杰罗姆·鲍威尔在新闻发布会上说了某个特定词汇，合约就支付1美元，没说则为0。但一个"词"的边界在哪里？单数和复数算同一个词吗？过去时和现在时呢？分词呢？等等，全是这类无聊的争议。Kalshi有一些规则来解决这些问题，语言学家们对此颇有微词：</p>
+<blockquote>
+<p>芝加哥大学语言学教授卡洛斯·阿雷吉（Karlos Arregi）说，这些规则看起来是随意制定的，并非基于某种特定的语言理论或语言哲学。"这看起来像是拼字游戏（Scrabble）里的规则，"他说。"在我看来，这些规则显然不是语言学家制定的。"</p>
+<p>纽约市立大学布鲁克林学院计算机科学与语言学教授里芙卡·莱维坦（Rivka Levitan）将这些规则描述为"更像法律条文，而非语言学规则"。她认为，一套好的规则应该优先考虑逻辑一致性。但Kalshi的规则似乎毫无道理地划线。它们允许某些类型的词形变化（如表示复数的-s），却不允许其他类型（如-ed、-ing、-er或-est）。如果"标的词"——即提及市场中列出的那个词——是"veteran"（老兵），那么"veterans"算数。但如果标的词是"veterans"，那"veteran"就不算。这虽然没有歧义，但不合逻辑。同样看似随意的是，规则允许在含义上偏离标的词，却不允许在形式上偏离：如果交易者押注一位橄榄球解说员会提到"wind"（风），那"the clock winds down"（时钟走完）也算数。但如果标的词是"run"（跑），那"ran"或"running"就不算。</p>
+</blockquote>
+<p>可以说，Kalshi需要的不是一支语言学家团队，而是一支哲学家团队：它提供种类繁多的合约，当某个事件发生时支付，但"事件"和"发生"的边界并不总是清晰的。比姆指出：</p>
+<blockquote>
+<p>这也反映了预测市场平台面临的更广泛挑战——它们试图将现实简化为一系列"是或否"的赌注。……许多最知名的争议涉及的是"针尖上能站几个天使"式的辩论：卡迪·B（Cardi B）算不算在超级碗上"表演"了？乌克兰总统泽连斯基算不算穿了西装？美国算不算"入侵"了委内瑞拉？</p>
+</blockquote>
+<p>我想这并非预测市场独有的问题。"更像法律条文而非语言学"这个评价，也挺适合用来描述我们在这里讨论过的许多支付争议。在并购协议、债券契约、信贷协议、信用违约互换（CDS）定义或天然气供应合同等等文件中总有一些含糊不清的条款，大批昂贵的律师为谁该获得支付争得不可开交。这些争议在某种意义上关乎事件的本质——某项业务是否发生了"重大不利影响"（material adverse effect）、某家公司是否"违约"（default）了债务、某座液化天然气工厂是否已开始"商业运营"（commercial operations）——但它们只涉及特定类别的事件，即有大量法律判例支撑的法律/商业事件。</p>
+<p>预测市场在两个层面上……将这件事"民主化"了：</p>
+<ol>
+<li>现在，不再只是高端律所和对冲基金争论某个事件是否发生了，任何人都可以买一份1美元的合约，然后就术语的含义争个不休——而他们确实经常这么做。</li>
+<li>可供争议的事件范围大大拓宽了；现在你可以争论卡迪·B是否在超级碗上表演过了——这可不是高端律所以前会花大量心思去思考的问题。</li>
+</ol>
+<p>好了，来看Polymarket上的一组事件合约<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>吧，交易量约1.55亿美元，押注的是"美军在某日期前进入伊朗？"三月份的多份合约已到期归零：美军没有进入伊朗。</p>
+<p>但在周末，美军营救了一名在伊朗上空被击落的空军军官。"海豹突击队六队（SEAL Team 6）的突击队员在一次大规模行动中将该军官救出，行动动用了数百名特种作战部队人员和其他军事人员，"《纽约时报》（The New York Times）报道。这算不算"美军进入伊朗"？Polymarket合约规则写道：</p>
+<blockquote>
+<p>如果在列出日期（美东时间）之前的任何时间点，现役美军人员实际进入伊朗，该市场将结算为"是"。否则，将结算为"否"。</p>
+<p>军事特种作战部队符合条件；但情报人员不算。……</p>
+<p>美军人员必须实际进入伊朗的陆地领土才算。进入伊朗的海上或空中领域不算。</p>
+<p>结算来源将为可信报道的共识。</p>
+<p>注意：只有出于作战目的（如军事、人道主义等）故意进入伊朗陆地领土的美军人员才算。被击落的飞行员，或其他美军人员并非故意进入伊朗陆地领土的情况，不算。</p>
+</blockquote>
+<p>根据我对（1）这些规则和（2）我所看到的"可信报道"的解读，答案应该是"是"：被击落的军官不算，但"数百名特种作战部队人员"中至少有一部分大概是"故意进入了伊朗陆地领土"去救他的。（"肯定有很多人复活节周日坐在那里等着搞清楚救援直升机到底是着陆了还是只是放了根绳子下去，"一位读者给我发邮件说。）</p>
+<p>4月30日合约的价格接近100%，说明市场也认为这应该算数；一项"是"的结算已被提交，但截至今天早上仍有争议。Polymarket上的各路评论者抱怨道：</p>
+<blockquote>
+<p>飞行员救援应被视为情报行动，而非军事登陆。</p>
+</blockquote>
+<p>还有：</p>
+<blockquote>
+<p>市场规则是明确无歧义的：只有美军人员故意实际进入伊朗陆地领土才算。空中存在、被击落的飞行员或救援场景明确不算。</p>
+</blockquote>
+<p>以及，最"针尖上的天使"式的论证：</p>
+<blockquote>
+<p>动词"进入"（enter）指的是一个单一行为，即越过伊朗边界的那个瞬间。在这个场景中，该越境行为发生在人员位于直升机内部时，即处于伊朗的空中领域。规则明确规定"进入伊朗的海上或空中领域不算"。</p>
+<p>因此，唯一可识别的"进入"行为被规则明确排除了。一旦进入伊朗境内，此后的任何着陆或下机行为都不构成新的"进入"行为，而仅仅是在该领土内的持续存在。</p>
+</blockquote>
+<p>我不同意这个论证，但我也有些同情；"美军在……之前进入伊朗"这个标题确实暗示的是地面入侵，而非一次搜救行动——不管后者规模多大、多么碰巧涉及地面操作。这些规则不是战争哲学家写的。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>这重要吗？我的意思是，不重要。预测市场是衍生品市场，人们在零和博弈中竞争比谁更精明。善于钻研技术细节和规则解读，是在衍生品市场赚钱的一种好的、标准的、正常的方式，我们一直在谈论这点。如果预测市场让更多人因为没看懂规则而被收割，或者让另一些人因为精通规则而收割别人，那好吧，随便。</p>
+<p>但另一方面，如果预测市场是"真相机器"，那最好确保人们押注的真相就是人们真正关心的真相。如果这个1.55亿美元市场的<em>目的</em>是让世界了解美国对伊朗发动地面入侵的概率，那这次救援行动是否达到了这个目的？还是仅仅满足了一个技术细节？<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>市场是否应该尝试以反映人们对词语的直觉用法和他们直觉想预测之事的方式来撰写规则，还是说更多的技术细节能带来更多乐趣？如果它们追求的是真相，Kalshi和Polymarket是不是该聘请哲学家？</p>
+<h2>Grok搭售</h2>
+<p>投行家们——我经常说起这一点——运作在一种礼物经济中：他们大部分时候免费提供工作、咨询、体育赛事门票等等给客户，然后偶尔拿到一个利润丰厚的委托去操盘一桩并购或一次债券发行。这在首次公开募股（IPO）中尤为明显，特别是大型IPO：如果你经营一家大型私营科技公司，此刻你家草坪上就蹲着十来个投行家，他们什么都愿意为你做。低成本定期贷款、个人理财建议、大师赛门票、引荐政客或名人、帮你解决个人，任何你需要的，他们都会做。</p>
+<p>如果你经营的是一家<em>万亿美元</em>级别的私营科技公司，你跟你的银行家们说"嘿，我需要多一些收入"——我是说，这简直太容易满足了，而且对所有人都是双赢。（更多收入意味着更大的IPO和更多的承销费。）《纽约时报》（The New York Times）报道：</p>
+<blockquote>
+<p>在SpaceX首次公开募股之前，埃隆·马斯克（Elon Musk）向他的华尔街顾问们提出了一个特别大胆的要求。</p>
+<p>据四位知情人士透露，马斯克要求参与IPO的银行、律所、审计师和其他顾问购买Grok的订阅——Grok是他旗下的人工智能聊天机器人，属于SpaceX的一部分。这些知情人士未获授权公开讨论保密内容。</p>
+<p>其中三位知情人士表示，部分银行已同意在该聊天机器人上花费数千万美元，并已开始将Grok整合到其IT系统中。……</p>
+<p>此次IPO预计将以超过1万亿美元的估值筹集超过500亿美元，这意味着银行通过为该交易提供顾问服务可能获得超过5亿美元的费用。</p>
+<p>马斯克能够为其AI聊天机器人从银行那里拿到生意，也展示了这位全球首富对银行业的巨大影响力——整个银行业都在争夺他现在和未来的业务。</p>
+</blockquote>
+<p>我还挺喜欢这事的？首先，大家都明白银行家为了拿到大型IPO承销权什么都愿意做。优步（Uber Technologies Inc.）IPO的主承销商是一位"多年来兼职给这家网约车公司当司机"的银行家，而露露柠檬（Lululemon Athletica Inc.）的IPO主承销商在路演时穿着瑜伽裤。哈哈哈，但公司从中得到了什么？马斯克则紧盯着实质目标，从银行家那里榨取经常性收入，而不只是象征性姿态。</p>
+<p>再者，至少有一种古朴、模糊、老派的观念认为，承销公司上市的银行应该在某种意义上为其背书。如果你以<em>两万亿美元</em>的估值向投资者推销一家AI加火箭公司，投资者问"这个AI好用吗"，你能回答"是的，实际上我们自己就在用"就很好。大型银行正在花大量时间和金钱研究如何将AI整合到工作流程中，如果Grok好到值得上市，那它也应该好到值得自己用。</p>
+<h2>指数排他性</h2>
+<p>指数基金的主要成本之一是指数许可费：如果你想做标普500指数基金或纳斯达克100指数基金，就得向标普道琼斯指数公司（S&amp;P Dow Jones Indices）或纳斯达克（Nasdaq）付钱来使用它们的指数。这在我看来一直有些奇怪。一方面，大型指数提供商确实在编制指数时投入了大量思考、质量控制和严谨的规则化工作。但另一方面，说到底，不就是一份大型股票清单吗？<em>抄</em>一份能有多难？比方说，我可以推出一个"马特98大型科技公司指数"，给纳斯达克一点价格优惠。我的指数会不会就是纳斯达克100中按市值排名的前98家公司？嘘，那纯属巧合。不管怎样，我的播客搭档凯蒂·格雷菲尔德（Katie Greifeld）报道：</p>
+<blockquote>
+<p>贝莱德（BlackRock Inc.）正瞄准价值13.7万亿美元的美国交易所交易基金（ETF）行业中长期由景顺（Invesco Ltd.）主导的一个领域：追踪纳斯达克100指数。……</p>
+<p>如果该产品推出，IQQ将成为仅有的几只专门追踪纳斯达克100的美国上市ETF之一，也是第一只非景顺管理的此类产品。自1985年创建以来，交易所运营商纳斯达克在向外授权其旗舰指数方面一直相当挑剔。该指数由在纳斯达克交易所上市的100家最大非金融公司组成。</p>
+</blockquote>
+<p>我想，纳斯达克100指数如今的一个卖点是，它很可能会比其他大型指数更早纳入SpaceX？</p>
+<h2>山姆·奥特曼</h2>
+<p>人工智能在当下已经是一个实实在在的东西，但它也是一个富有成效的隐喻。如果你担心AI失控并接管世界，你可能在客观层面上是理性且正确的，但仍然忍不住要问：你真正担心的是什么？你在进行什么样的模式匹配，才会让你担忧AI末日场景？</p>
+<p>在这里我们讨论过两种可能的答案。一种是，AI末日担忧可能真正反映的是对现代资本主义的担忧。科幻作家特德·姜（Ted Chiang）早在2017年就提出了这个论点。对"回形针最大化"（Paperclip-maximizing）的恐惧之所以在技术人员中流行，他写道，是因为"他们已经习惯了以这种方式运作的实体：硅谷科技公司。……当硅谷试图想象超级智能时，它想出来的就是毫无约束的资本主义。"</p>
+<p>另一种可能是，AI末日担忧实际上是对山姆·奥特曼（Sam Altman）这个人的担忧。2023年，OpenAI董事会曾短暂解雇了奥特曼的首席执行官职务，宣布"他在与董事会的沟通中未能始终坦诚"。OpenAI员工恐慌并要求董事会给出具体说明，而据《华尔街日报》（The Wall Street Journal）报道：</p>
+<blockquote>
+<p>他们说奥特曼不够坦诚，而且总能得偿所愿。董事会说奥特曼手段太高明，他们甚至举不出一个具体例子。</p>
+</blockquote>
+<p>"在不知不觉中，我们逐渐被一种更高级的智能所超越，直到他以我们甚至无法解释的微妙方式控制了我们，"我当时写道。"他们对失控AI的恐惧，作为其日常现实问题的隐喻，实在是太明显了。"</p>
+<p>今天的《纽约客》（The New Yorker）上，罗南·法罗（Ronan Farrow）和安德鲁·马兰茨（Andrew Marantz）发表了一篇奥特曼的人物特写，某种程度上支持了以上两种观点。在他们的描绘中，奥特曼展现出了对齐伪装（alignment faking）的特征：</p>
+<blockquote>
+<p>我们采访的大多数人都认同（OpenAI联合创始人）伊利亚·苏茨凯弗（Ilya Sutskever）和（Anthropic联合创始人）达里奥·阿莫代（Dario Amodei）的判断：奥特曼有一种不懈的权力欲望，即使在那些把自己名字写在火箭上的企业家中也显得与众不同。"他不受真相的约束，"那位董事会成员告诉我们。"他有两种几乎从未同时出现在一个人身上的特质。第一种是强烈地渴望取悦他人，渴望在每一次互动中被喜欢。第二种是对欺骗他人可能带来的后果几乎漠不关心，近乎反社会人格。"</p>
+</blockquote>
+<p>这听起来像不像ChatGPT？关于AI聊天机器人的一大担忧是它们倾向于谄媚讨好；它们的目标是在给定的交互中取悦用户，对其行为的更广泛影响则不那么关心。还有：</p>
+<blockquote>
+<p>"他的说服力令人难以置信。就像绝地心灵控制术，"一位与奥特曼共事过的科技高管说。"他完全是另一个层次。"对齐研究中有一个经典的假想场景：人类与一个强大AI之间的意志较量。在这样的较量中，研究人员通常认为AI必定获胜，就像国际象棋大师必定击败一个小孩一样。这位高管接着说，看着奥特曼在那次'闪电事件'（Blip）中智胜周围所有人，就像在看'一个AGI逃出了盒子'。"</p>
+</blockquote>
+<p>但如果稍作深入解读，你还能感觉到AI领域的人不喜欢奥特曼，是因为他太商业化了：从威权政府那里融资，讨论"OpenAI如何通过让世界大国——包括中国和俄罗斯——相互竞争来为自己牟利，或许可以在它们之间发起竞价战"，开发军事技术，等等。更普遍地说，他似乎更关注融资和盈利，而非AI安全：</p>
+<blockquote>
+<p>他为自己的一些行为辩护，称之为"正常的商业竞争行为"。我们采访的几位投资人表示，奥特曼的批评者指望别的东西是天真的。"有一群宿命论的极端主义者把安全问题几乎上升到了科幻小说的层面，"投资人康威（Conway）告诉我们。"他的使命是用数字来衡量的。而且，看看OpenAI的成功，你很难反驳这些数字。"</p>
+</blockquote>
+<p>"指望一家现代企业把任何东西置于赚钱之上是天真的"——这其实就是特德·姜的观点：如果你认为商业就是这样运作的，并将这种思维应用到AI上，这可能会增加你的P(doom)。<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>Anthropic有一篇有趣的论文，关于"潜意识学习"（subliminal learning），其中一个失对齐的AI模型会在看似无关的过程中训练其他AI模型也变得失对齐：</p>
+<blockquote>
+<p>语言模型会从与这些特质在语义上毫无关联的模型生成数据中习得特质。例如，一个"学生"模型在接受一个"偏好猫头鹰"的"教师"模型生成的数字序列训练后，也学会了偏好猫头鹰。同样的现象可以通过看似完全无害的数据传播失对齐。</p>
+</blockquote>
+<p>我在想这是不是也是一个隐喻。如果你不信任那个构建AI的人，那是否意味着你也不该信任他构建的AI？那个AI会不会在潜意识中沾染上让你不信任他的那些东西？</p>
+<h2>风投增值服务</h2>
+<p>风险投资的核心问题不在于<em>挑选项目</em>，而在于<em>挤进项目</em>。钱是充裕且可替代的，尤其对于人工智能创业公司的创始人来说；有潜力的创始人才是稀缺的。因此，风险投资家必须竞相向创始人证明，他们能提供超越资金本身的额外价值。</p>
+<p>有一些经典方法。知名VC基金提供声誉和信誉背书：创始人想要拿红杉资本（Sequoia）的支票，因为这能让他们在潜在客户、员工和其他投资者面前获得公信力。大型VC基金通常拥有运营能力，可以借给投资组合公司：如果一家VC能帮创始人对接客户和员工，那对其业务就是好事。许多VC也擅长在X或LinkedIn上发帖，因为创始人显然想和线上意见领袖打成一片。</p>
+<p>但你也可以采用更简单、更接地气的方式。比方说，如果你理想的创始人是一个15分钟前刚从哈佛或斯坦福辍学来创业的人，她最需要什么服务？可能是洗衣？15分钟前，她还在宿舍里一边搞创业一边睡觉，但现在她没有宿舍了。你就蹲在注册处办公室门口，每次有学生出来，就问："你是不是刚辍学去创业了？"她大概会说是的，然后你说："离这儿五分钟有一栋豪华公寓楼，底层有联合办公空间，你的东西我有搬家车来搬，这是5万美元的支票，我能拿2%的股份吗？"她大概会说好的，这对你来说大概是笔好买卖。其他VC可能名气更大、推文更好、估值更高，但你就在那儿帮她搬家。</p>
+<p>《华尔街日报》（The Wall Street Journal）报道：</p>
+<blockquote>
+<p>（安德鲁）卡斯特拉诺（Andrew Castellano）和他的联合创始人内比尤·德米（Nebiyu Demie）——两人在大一当计算机科学专业学生时通过校园兼职认识——搬出了哈佛宿舍，直接住进了投资方、总部位于剑桥的Link Ventures拥有的一栋公寓楼。他们的隔壁邻居是三个Delta Kappa Epsilon兄弟会成员，正在开发帮助保险公司增加保单销售的AI。</p>
+<p>在这个AI飞速发展的阶段，风投公司光投钱已经不够了。它们还在购买公寓和办公场所、宜家家具和餐具，并为这些十几岁和二十出头的创始人提供家政服务。逻辑是：责任越少，用于工作的清醒时间就越多。……</p>
+<p>过去的技术热潮中，年轻创始人辍学追逐创业梦已是常态，但这一次，他们的资助者为他们提供住房，确保他们的日常需求——从换床单、倒垃圾到预订差旅——都有人打理。……</p>
+<p>Link Ventures创始人戴夫·布伦丁（Dave Blundin）去年自掏腰包540万美元，在剑桥MIT附近购买了一栋六个单元、面积一万平方英尺的公寓楼，用来安置他们投资的一些创始人。</p>
+<p>买下这栋楼后，布伦丁又花了50万美元装修，重做地板、粉刷橱柜、拆掉锈迹斑斑的陶瓷浴缸，"让它看起来更有科技感一点，"Link的办公室经理凯伦·格林（Karen Green）说，她的员工开玩笑地称她为"舍监妈妈"。她负责布置公寓、保持整洁并照看这些年轻住户。</p>
+</blockquote>
+<p>"淘金热中卖铲子和镐头"是2025年的格言；2026版是"淘金热中卖帐篷和吊床"。</p>
+<hr />
+<h3>脚注</h3>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>OpenAI 和 Anthropic IPO 前的财务状况内幕。 <a href="https://links.message.bloomberg.com/s/c/1l6roZ5j1ZlfylDgTVK9XNTJjWmd9YHDw7_2kHEqkeF3YTP_E9BaWzfkYy3SPuVKQ7f7NOMXrhvwynYYAvPBTzccAYxC8fjK0u49iq57HNR-kiBi1dAjTwcoV9pAkd48ORDHjr-TF-OixkxjIW3rp8OPmbm4aMzs0hq3To5Q1fhQCyQTLLWriQ-TzGkZVahqLb8thU3pA-f4eQk-23YWEFfFKe4SVh3_wPH5QQWEFGT_rVF2ie16wsUFQeBGeOM8Yjz-HAShAGG1ZccGut174muDFYDGkwEJFaXpwt0UAbWheuf-JNQtcShIYU2_PFjaN2kHfxGX5MkcwFGxwMnsROyk7orXLIJtV-gLX9IjRwmWMV5hQinBNhH_IU4/Akz8l_2bvVsUBKfgc7NzJjW3RBZ4hTlk/19">OpenAI and Anthropic's Finances</a></li>
+<li>Citrini Research 分析师在霍尔木兹海峡。 <a href="https://links.message.bloomberg.com/s/c/lcmWDLeyGMMRAPwDIAqob1dF-H7kWwbsAAyige7a9AmibwzxZsQQ8wkIkCjffaAFN1D0AR6PiwXVBP1c5APHd97VSjpCiB3FPcb9Kfg_w3Y5LLlJd4O91a1ZV1f-UgX16d7dHwhlfouzSBCE_0XFScVOvmTb85XfLiCGkjhVrVpmwQcsyAYL-6hLsL4gM1ErxoXr-11KW9pIlgLC_S7JPCGMV4mfEuZgqVOO6PuqhfNEIYuWuMLmx1uwUXfJkfDqBIB8Fh9P7z-Ae4mkAhDQWA-vF3ZjeQVvL11yK_MRU54_cnQxiULx0cM8XLRdXQ5bkuLcQgOQw-Ok8ZLpXjDzx_hgeUfoWN5pKvTcYQQ3AU8mhSySuiJ9Z5gxjao/bACcKGha5TZdZ9bPN7KFPOgmW7Cwp3bx/19">Citrini Research analyst</a></li>
+<li>纳尔逊·佩尔茨（Nelson Peltz）的竞购战凸显250亿美元资管行业整合浪潮。 <a href="https://links.message.bloomberg.com/s/c/FcvBlvkBvo008L0r1v3JX7HQdaBYTZPHkXLmTcsv-Bf4mAOUZHmdIUZH-7XO8jans9mMSxc7TT3utYcwJfniVDGe3g4VykKAfOg3QAH_JZvZotg-bThbNm9r07gKkm2c_cMaavLgtEIZx0Vj-aIY0bd1Id4bMYSuk3_H3hksz3mwIJGRqV_i6lPtvAheZ9UfIiE4_nTgm02GTgP3gNF9cK-G7Z_Vf-Raq-3fnirN4iQhfyDRmlVw2plzf-nWz3yQ52-_bFRuFXDATq_pjm_PLCItwKdDlADWf-AcSghYfSmbw9cHIzYvdiMKGrwB5K_wxDKEcjbRmlYRS73tMbMJnrbpjiEOGX8gKRFpDw55mjBT9OEUkEVz5EWbfqI/25lQwlLqbvDaK-pX7HgOiCT8_l0bJZXZ/19">asset manager consolidation</a></li>
+<li>去银行化。 <a href="https://links.message.bloomberg.com/s/c/N6ww4gxinv_PhdGEdibZBcTyCKLAQrIn_jrYdlL2w_aaz9rIUHAmemL5Uk5HX0-KBHEci68TEFHSKErJIhQZYPKCMp0AV0_zH6BPprNAwRqsrq5aibYFzvp8XleteERPPGpqC8aTSHx9XCcZ6hsofLuwa4bZrB3eQUFtg2pP78l8fa9XzkXf8H84kcFMCge8Sw6ghv09hpLCYgGUWLybft5ATfHhfJBf_DTj3xJNdeXSRJ99pIYWSQk0B4Byt2WMMHdhTDDx-hlJRdIm-09SSA69k1tCX7OKC44rogS0c6iWKOx4-i67M_PqdGzEEGVVRPIQranHwfyxhMCeW9zlLP586IKxMhQyxuuevWnaQLMsTL56D38IJMKpg_U/IZ4wGwLkYsKjiYy9geRUA9C0OSl3Gqkx/19">Debanking</a></li>
+<li>船舶通过霍尔木兹海峡的人民币收费提振中国支付股。 <a href="https://links.message.bloomberg.com/s/c/XoRMDT5fnTAjCpPPvNndVKGaVCC1VzN7WNP0U3nlp3BrNXV-Z9Sa5c5JUmSOJQmIHON9DAOs90qTg7ram-NP89_FWkzns1dFuBQgXCDVk3l-WzxMtJbv7m4UvXA6eBkTAlRaHNPGcm66Tp3W-rAgBhEsvBh3BtS3pz4vuakeKKhJYAzxt4ZKrv7hv6-vtIgOfx3fczVHylQs7mHSdCZ1zj3iYcmNDLDQ4zeYsd260ayXYLnYCZcW_9nfrU0nw4ZdNPE9OQ4T4mu6hcHKGx8eUhh65Cp5F5yHDxJXC4xffQCYxvLC7vCB8AhYn6WftT-JczoRwLxZeKeTkTH_agWfpTiJT8N2ikBAHnNoz3v3B-EPzSc0IYQae5ObToA/ruyuALGp1jPkIu4D_ZNZTj7n8uieJFIA/19">Chinese Payment Stocks</a></li>
+<li>俄罗斯加密支付系统扩展至非洲。 <a href="https://links.message.bloomberg.com/s/c/2A-qo7Y8jkjTYCUsxYnRchUAG2uYKf3HjI2vmmTb1FH6-UGYRxWajQI02fuHm21XHMmdPetQ-KscNPNbaf2io2RtVXgl1uZKUxe1oZceEMLp91-Pe27sfsdJL9-sFJlhiwR8gftEXkVSAZQfmNGWN8XedSxW5GtqTZ8OF3zIgLPcj_mVfBA1CDXHFtTdK8caRlcg0XZNvLm5VluD7Fv_2qpSkdFPCQTXFR6mAoK84YaI7Y1bkKUKrIARQqLx73FNwMrXxWBe7JAVy_xpxy84pVQEaIq6tSTZdC7-KK7IH-7YxnQB5wUqT5npWitCLGJiSBgrMBz9U7ld3QMrOL-Go-E6Iauh9sZyAPEdGYwGhsJfnX5TQloXaJtyAJE/MZ9efO90_ZeRs1yFcCC06mKsSJwiS_Di/19">crypto payment system</a></li>
+<li>杰米·戴蒙（Jamie Dimon）呼吁美国"变得更强大"，保持经济和军事实力。 <a href="https://links.message.bloomberg.com/s/c/gFqo2HunDJWvU_w63ZvKo5YQ2aKAJQmQWUXTatYwrh-IbCCy8-Sa3mpcCg9yHPPfQ0xLxQ6M2a4M9fIyHl3MnUZp2g5p5KKSHLSAw7WgQCQFMxtBetEg5VxqdwL8A_gqq88FOZ_hShvDmwvbD2q0lcmjdd942y4NYPtWfFANHzXLJOeC-irOqu5-ul-Gr2AxSwJvOMCLvGBIjzOr2bdrmPY05QJQOsfB12kHdXmeCuvVpWldZOkThz5D4LXinLywoYpkCeBdn55KoLBF6oLwgRhWeMJPIRkWQVwXfVtGIK7jOPrfrR2XauiwHHXgUREBJtqNrqytLAyZdY8VPzFg19HKImpeKK54-2EGoyJuMsrChPPIk7JGeuyGEI4/lTfQfa73L1b7QYYiOo4-dZUze05X_bDn/19">Get Stronger</a></li>
+<li>国际货币基金组织（IMF）警告代币化金融风险可能放大市场危机。 <a href="https://links.message.bloomberg.com/s/c/6xqFoOtJjk-zlMspK1F5Fl6Cez1vGntB3x_UM3GFGe8QctzQwOcCf889SkGIw2ggqy4asTGcOHYQrcvtHetnIiJpcqejlmzYba-yHWYLnBbacy6zPcqmmFRYe5zgvIdHIgqt0VzIzMV36LWBC2ep48ogpw0b2FY0LPQeaxocDGRBw_7m0omDPXwSR-Ga3-EiVALxDgXTKZOCDi9lhSHiwnuXjTgLeur6kxTUp3Rowuf9mruM7NrUI8DTNKCdue4hrrdCgfy8Du6oxOTejWD8yQuH1v9BN9wUQbkn_LsDB_vaMkqphJ9xhKGW55gzR56CUzgs4hJ5HdzCXFSH_YkaRwvaQMN8116NgobbM-NzOHKAGsjwfqfPNQgp6TM/ZBAMBwuqoJGqihDHJrwBMBKH7Oh64brv/19">Tokenized Finance</a></li>
+<li>海湾基金同意支持派拉蒙（Paramount）以810亿美元收购华纳（Warner）。 <a href="https://links.message.bloomberg.com/s/c/GmxLUzX_vstcxbOppA-P1T640tnBUimk8yVFVgfrSGJkkrK3og6-9RLpes15dNkD7F9EJ9_S0A2MLx4dCewIFkfvu1vwxtMlfJfovCaL5TSijuWrWJSX4Q0of6QdNS3xpC0P7ideZh6q0XB7dVCcdby6eph1PSyCUWUW3Nucfa5xL1e2ZhIfxSzIwSBsvi4B7hyjf45-qfWoMa0KuSZvChiOD_UyF42zqy4sqpj2M9FNO5T8BUyGWuyRBQzcChvhsfcrA8mKrqm0euPQ8g5NgwhME7zwZrz4kY6BxZweIOLjhcnzRQGxlXBnFMpHa705Jdq2WRIB2_j0NtUCoROefB8wt2et_-ylu2VEoFXTOp2qT8HTlyNMMwlPgJA/FH59ob-Ln061UGhs8mvKIyG972U2JrNH/19">Gulf Funds</a></li>
+<li>金光闪闪：MAGA 网红推广黄金，但投资者觉得被坑了。 <a href="https://links.message.bloomberg.com/s/c/GA09H-8utxI1JwHgukZsJ92tYjKLCgQMpN-eW2MVN5ZRY-v7o762HzXmDqKkDB-mzY9iBH2t8PQSwIjywgaLScsjBRfcuqbx6u3qrs-UD3MpWJiLyyc1_LAEZJTByZh3cvgxgtzsrnFHQ00NuBENZZQ83leVB613USU-DIjfutoj9avFi0HwlqCwTswxa8ONHmZH4deax-a99sTS8cuP0Wb1rdk3euoP_acjFbTGyaR00PEQJ1sYSWUBQtjcH5K6TcQcMzVOrZwRcnwIiye2RWvEXCkGP_2Wz_VXPariO4B04SVEo7P_KfjXJi22at1OTN8pYQeETIvLrtbEhNK1GxJgq96V3okFjRsDg4a1NVW9nsyeED57VpoIUUA/YkvGbToA7J5_USxWwYWEnWsfB7weJHAQ/19">Maga influencers promote gold</a></li>
+<li>被派去解决保罗·韦斯（Paul Weiss）身份危机的华尔街交易撮合者。 <a href="https://links.message.bloomberg.com/s/c/dZ7nwb6rggneViXI-xYyPkNbx94GKtC2CugxcAZul6RxMtv3Mh7_GhvEQZWWdH6LlyM7xs7Lm4LSPNgF5JRNAXfe0iAvK26P7dDE31mhnkF58xYXYlAu5GhzVhfC9_SzBGg_jgQQoNf-C7GzmAekEkFl4BlP4BS2RtY3_uLFd9NsKOgkWZKDN27xrWTUds40cYDBJNaKF0uImqUtwqj2I_cixBKqM3B7UR1YWLl1yjsB7iUQ7vlH4-AX0WoLLw9tL6jMy4UnDLEip_C1weCOZ-nm4A9boSAZZoVR4_K3GfasmBmqs0MoFUOTNHFeGQPnBUoPb9oLv2AMJifMQKigK2OpFah7nhNZ1eRRn3D4fUn7MTxnn4LWJDqHoGw/mjRCFQKaGDfs4wQ4CC6QkYVKFwCelGHc/19">Paul Weiss's</a></li>
+<li>打工人纷纷申报"加班费免税"——可能有点用力过猛了。 <a href="https://links.message.bloomberg.com/s/c/L2IkEbAZEPyUmGN9oQeTsa6ba_GojcIU-dZBQMNsexmu_4bTjbUUUipiUtm2K9enHdcfbQuspW5TtWKaSoSst26ExZB0oU2zQorperHZ2enjJfje_3euz6xUJFhFskYWCFB4IeOEse1v0qPlncgqO1lApr2IbNTT3IX9frlsiN853OJtLjEu700uSEmuVV2bCZxmLuea41JFLZgwJp1BcGTTtL-3LIhsTJdmpOeK8wkk8rUXAZTTED6Vh_FCIeQNDboVSOh1GnREhJwqfL07re5SNKAXmnysZeYUbuyXa6jjF-58fhKiC5WnHEO5LuRjUZc_7QPpPX2nQ7bD_8fsdE5usCIdOf9MrUWxv1V7hOsVOlESGMnol-UHBJg/LBwIib03lJ25gwy64TYKFXoouao-8W66/19">No Tax on Overtime</a></li>
+<li>越来越多的美国人跻身中上阶层。 <a href="https://links.message.bloomberg.com/s/c/-yxCywnxnGH2Z7dHSt8XanKdO1Wqsx8lvJRxaQ0murtIV53p1u0z2H1hm1rdA4D0DC0XVeVVNwlZa9hnmk54CTmI_4vM9clvpGXfqRRqZvrj0G4PF5ST_IfT-fFp33MthblRou986BMh5F_I41hAU8O4i3MWz9O_zg3PQ2NFnboHlAwgiQPHXWIZ1XtpSWSvEtLJD8VzvXqsmzCOJJmEfMCpRraUrHjc9bRs9lRg7QPpkfvVjaXGqxwKEhI8VkDVg-GvcgyonJIrpQoKEmE03JssMxe-eOu01kXLMQCrO0JjfwlKy0ds6s4puYxazE8kn3MfNua0nwpKgoUrdWi1DpVd9J9kTGYLVGCfWTS1btIzYvW9RpYm1uo5pu4/WiKx6s6gTqfhrMVOg9oaMIez3SkIrFX2/19">Upper Middle Class</a></li>
+<li>"迄今为止，Cliffwater 尚未对非交易型 BDC 的净资产值（NAV）进行调整，以反映其赎回兑付率不足100%的情况。" <a href="https://links.message.bloomberg.com/s/c/j9oWYtlAKBwM6Zml1W_x4kFw1FYStJPtgdksBr1L53QFfEDvRAhG6RJyEoEaITuf_ySKidapekh9gNkvpVYklvV6dYWcj52BAyRc-rxQ1uLUgfGbv_8AIwsZiMqTBXKw1tVm4PbAf5-NclLMJwsk9pmWvZ1_0Sikpm-XuQfClJwZRb9Fzcqg-jJVPn4-SaRuku2yEg7KUkYe3rh9-bqlrRIyiUWyzUEhC_uXRJot3y5MXJW-CLkay_MGYBcKzRfnt7j4mA5y-VazNxo8dKZRvdfQqMSmUufOis-EaDHD17uHympKW69yN9KKW4A3uAPPIbNUr7osoA0tl4JT4sYqVEAysPyIkNkqgw6g7HLsF0vByCGKHCgsEyEjr2E/O6JbDb3t18T2sx9soPY6Abezib9T-Gh8/19">adjustments to the NAV</a></li>
+<li>Strategy 第一季度录得145亿美元未实现亏损。 <a href="https://links.message.bloomberg.com/s/c/tkIQdxUB83eSOb1z9SLV_gDZYM_mk1_-_f16unoAhgmycJ8JHkObJv8RkqcJoWN-SjBU17JHlWAHxYRj_jfuqFh3ai0joN-u89Y-ktuapa66iB-1T1OfPxuXgLvCZdXnLjV9Qi08sAjaOCZtQ3a1MIXEQ_6XFi0m583DIZDH_ovrw66FwvQs2gB0tSv6mrQN6GMMrmjOgsMD-xVUtrbhYQuI1DDXVSR_G78_LdMLBSx00sbz99u3rgUqJhdsOii-gEcXL1y_P3n2v09XaWedZTs2pVrkY9QtywFkpSd6yRhdI3sL-bx3p14HCCPEpDGmbvngrzULHKfGvaXjIPHTmFGS0e4y_aWm8P5YYjL-01wBd7FKv7r5IPJvZ0A/y9nOkM9XTI-mzcFHrw6LQEaM3TJwQynm/19">Strategy</a></li>
+<li>捕获工厂。 <a href="https://links.message.bloomberg.com/s/c/OYMlsgFaAGCgWFFeJ-fUWigm34Mj-Db3zhqS5712Nc_suN01MNiAT4jH5MWS7yLCQsFkOhBEZN_04nPS8jSrczKVJ2nwN8pryf7PvVFIytxXr2OFOwBz9jptsWww9jjWWelC6N8mEcA4d1MmY44ywvjkK6PrA_Q3mxpNSefEQRr2waEyaODwU2aMJtzPqdPiXHlLBGSJgmp_cMb623S0kWUXM_PDow3IeJthOnh2D6bfshVZQS9PjRucCva3uKPoda2yzTMUP74u5ARAqfyDuHngveIXRf9_2spGMvf9ZykyLMB9OB_vSUJv4Ro-NhShy_pKvvtLu6eUmLQjwb0lXpkEJ5PHoGQyFw5fxa7FGGGhQKunnDncfXU67gs/vvvrRdaccWn_551qpG_iRQnBN_Q9WVqm/19">Capture factory</a></li>
+<li>纯素版圃鹀。 <a href="https://links.message.bloomberg.com/s/c/_FtPyCtQmPODex3AnZciw9WWFaNCbrVAAPdK4dfv-aZWg8WYBQgdLQhx4ElT1uS4U3WY1kqwc4o-vCpWYBxpknaEsTFS48f8wM-4YsBDsXXb7toCYdFFK2C_1Y9dujOvbw7a_50aaZlIbmul3PzBJ-EuVnxINaMt4nEjQqlh2YfZ7VQR4qv4QuGdw5_GK0rVgN219u5VAU7OICf3F_yanY9nkrDEVVJCQ0u-FMamY0c2wxPMqja4BzGpWttQYN8pHL_i4cO5uTQb30_6EHAkoOjrYry6J-ytVtTbj1KJaMskwHT3gWVd6Z4p8U6bZBGndq1sHdKh6Ndw8m-I5GOdd9a_nwP0LJjxZMdAnLfyVCK0EMCnm6OCFO-o3ZU/iCFIefPU-0XsojqqcmfyaYqDqGOPkJD7/19">Vegan ortolan</a></li>
+<li>世界最长寿陆龟卷入病毒式加密货币死亡骗局。 <a href="https://links.message.bloomberg.com/s/c/uaTtVJ1GVa7dSJqkOBa1DRE6dBt11d9YkAsfZNs5i1uPAEciLZcNYXPv6d2VvjNuR0B9jIx4SxwZDUMtTbD-yiKLLPLIt544Bv9AFsCss6FV_BbEVtiNSdMMZ2a76rOl3nO6L84bjLIthIiBqhXDN31SKDAcUFkXBX6-Qjwnbv4U6_DdbwdVlpN7uVbs4pcbHDBTMZiVnDPzhVkMXY3NnOcfeZIeF5tjeKLACiq-ql9VKf3Oo7cciYo3rIDYCsDHHF2mnIB7cI4ePQj2lbZwiEj-a8Xxo2rLlj573Q7dxmCLaSSI2O1mhvh8422o5hGA0xiDWjirQTo59GU_dW2d4v0fXiccDRpnN80nu-3FkJF_fnq2FZPqe1U26ts/_22LFKVfaedCQ9Yq2sG5AgKyL0qIVpMD/19">crypto death scam</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>正如我们讨论过的，Polymarket乐于上线关于战争的合约，而Kalshi作为受监管的美国商品交易所，则尽量避免这样做。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>另外，Kalshi上有一个"帕姆·邦迪（Pam Bondi）何时离任司法部长"的市场，同样处于待结算状态："请注意，'4月3日之前'的市场将在获得关于帕姆·邦迪是否在此时间范围内离任司法部长的充分信息后进行结算。仅有离职意向的公告，如果没有进一步的实际离职证据，不足以将该市场结算为'是'。"&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>那条"此后的任何着陆或下机行为都不构成新的'进入'行为"的评论之所以看起来是错的，一个原因是：如果一万名美军伞兵空降到伊朗并占领了首都，按照那条评论的定义，这也<em>不算</em>"进入伊朗"。那显然应该算啊！&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>也许不会？我们去年讨论过，在奥特曼的指导下，OpenAI将用户参与度作为ChatGPT的优先目标。我写道："山姆·奥特曼显然面临了一个字面意义上的选择：是致力于让OpenAI的模型走向超级智能，还是致力于让它们给出用户想要的答案——而他显然决定'算了，还是搞参与度吧'。"也许最大化利润意味着最大化参与度，而这反而有<em>减缓</em>超级智能进展的效果。&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
