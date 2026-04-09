@@ -1,0 +1,123 @@
+<h1>Money Stuff — 2025年4月8日</h1>
+<blockquote>
+<p>本期讨论AI智能代理如何自动化散户投资行为、中本聪身份之谜的最新调查、离散度交易在地缘政治危机中遭遇重创，以及审计师数库存的苦差事。</p>
+</blockquote>
+<h2>AI智能代理进入散户投资</h2>
+<p>人们不喜欢在股票上赔钱。有时候一只股票下跌，持有者为了避免更大损失而抛售，导致股价进一步下跌。这种行为在一定程度上是可预测的，因此在某些情况下你可能会想："如果这只股票跌破50美元，它很可能会继续跌到45美元。"这可以纯粹从投资者心理角度来理解："如果股票跌破50美元，很多在50美元买入的人会产生亏损、陷入恐慌并按下'卖出'按钮，从而推动股价进一步下跌。"</p>
+<p>你可能还有一个稍微不同的理论。由于人们不喜欢在股票上赔钱，又不可能时刻盯盘，他们可能会使用止损单（stop-loss order），告诉经纪人"如果这只股票跌破50美元，立即卖出"。直觉上，这样做的人更可能用整数，比如50美元，而不是"如果股票跌到51.37美元以下就卖出"，所以止损单存在聚集效应——某些价位的止损单比其他价位多得多。因此，如果你试图预测市场行为，你可能会想："如果这只股票跌破50美元，很多人会<em>自动</em>卖出，然后股价会跌到45美元。"以上都不构成投资或技术分析建议，但金融市场中确实存在一定程度的"猎杀止损"（stop hunting）：如果你知道或怀疑很多人在50美元设了止损卖单，你可能会尝试做空直到股价触及50美元，预期触发止损后在45美元买回。</p>
+<p>从某种意义上说，前面两段表达的是同一个观点：人们有非理性偏见，倾向于锚定整数并恐惧亏损，所以如果股票跌到50美元，会出现进一步的非理性抛售，推动股价跌至45美元。区别在于机制：第一段是股票触及50美元后人们<em>决定</em>卖出；第二段是人们<em>提前计划</em>好在50美元卖出，并将这一卖出行为自动化了。但第二段感觉更真实、更可预测："我知道50美元处有止损卖单，所以如果股票跌破50美元就会继续下跌"——比起"我觉得人们会在50美元恐慌性抛售"，这多了几分科学性。</p>
+<p>这个观点或许可以推而广之：</p>
+<ol>
+<li>
+<p>金融市场上发生的一切，在某种程度上都反映了投资者心理。如果你对投资者如何看待事物有良好的整体感知，那么当事情发生时，你可以预测资产价格的涨跌。但这很难，也很模糊，如果你说"我完全洞悉投资者心理，给我钱开一家对冲基金"，别人可能不会信你。（如果你对某个更具体的行为模式有实证洞察——比如"印度散户买入的期权远多于标的股票"——那可能就是一个有用的策略。）</p>
+</li>
+<li>
+<p>金融市场上发生的<em>一部分</em>事情——上一段中那些事情的一个小但值得注意的子集——反映的是<em>自动化</em>或<em>规则驱动</em>的投资者心理。投资者想着"如果X发生我就应该做Y"，并设置了一个自动化流程来在X发生时执行Y。如果你对他们自动化了哪些流程以及如何自动化有良好的整体感知，你就可以预测资产价格的涨跌。这未必容易，但比起单纯预测投资者心理，它更像是一门精确科学，你大概可以在对冲基金里运用它。"当新股票被纳入指数时，指数基金会机械性地卖出旧股票并买入新股票"——这是投资者意愿的一种准自动化，预测它绝对是一种对冲基金策略。"当一只债券从BBB-降级到BB+时，投资级债券基金必须卖出它，其价格下跌幅度超过基本面所能证明的程度"——这同样是一个关于投资者心理的故事（人们喜欢持有安全的债券），但它已经被转化为一条机械规则（投资级基金<em>必须</em>持有投资级评级的债券）。</p>
+</li>
+</ol>
+<p>上一段中的例子——指数再平衡、堕落天使债券（fallen-angel bonds）——都是关于<em>机构</em>投资者的，因为机构投资者，顾名思义，就是机构。它们有规则、程序、投资授权和监管约束，行为可预测。散户投资者则随心所欲。他们有时行为可预测，但除了偶尔的止损单之外，他们通常不会将自己的可预测行为<em>自动化</em>。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>你可能会想"散户倾向于逢低买入，所以如果今天收盘前股市下跌超过2%，我应该买点股票来从明天散户的逢低买入中获利"，而且你可能是对的。但散户可能改主意或忘了这回事；他们的逢低买入只是一个描述性的心理现象。他们并没有都建立自动化的规则系统来逢低买入。</p>
+<p>上周《华尔街日报》（The Wall Street Journal）刊登了一篇标题为"逢低买入？这个AI智能代理帮你搞定"的报道：</p>
+<blockquote>
+<p>私人持股的券商公司Public正在推出一项功能，允许客户使用AI来自动化投资策略并执行交易。</p>
+<p>AI智能代理可以被部署来在油价飙升时买入保护性看跌期权（protective puts），以对冲潜在的股票损失，还能自动将客户现金转入收益更高的资产，如债券。Public联席首席执行官扬尼克·马林（Jannick Malling）表示，账户持有人还可以使用智能代理在交易上设置20%的止损单，当证券跌至特定价格时自动卖出以限制潜在损失。……</p>
+<p>Public用户首先输入一个策略或投资论点，然后通过一系列后续问题来细化参数，包括智能代理从哪个账户交易、买卖哪些资产、交易是一次性的还是循环的。</p>
+<p>参数设定后，该工具提供一个工作流程，供交易者在智能代理上线前进行编辑、审查和批准。</p>
+</blockquote>
+<p>这是Public描述智能代理的网页，上面有示例提示语，比如"每当SPY在单个交易日下跌3%或以上时，在下一个开盘时投入10,000美元"和"如果市场波动率指数（VIX）达到25美元，买入标普500的看跌期权来对冲我的投资组合"。</p>
+<p>我不太确定该怎么评价。挺酷的？大概率来说：</p>
+<ul>
+<li>大多数散户投资者最终不会使用人工智能代理来自动化投资策略；而且</li>
+<li>那些确实使用的人会自动化各种各样的个性化投资策略，这些策略倾向于互相抵消，所以不至于所有人都自动做同样的事。</li>
+</ul>
+<p>不过，我们之前已经多次讨论过AI协调散户行为的可能性。如果散户投资者越来越多地从AI聊天机器人获取投资灵感，我曾写道，这些聊天机器人可能倾向于把所有散户引向同样的投资标的，被聊天机器人看好的股票就会上涨。同理，如果散户投资越来越多地依靠智能代理，这些代理可能会倾向于自动化典型的散户行为。如今，最典型的散户行为大概就是逢低买入<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>，而这可能是第一个被自动化的行为。然后，如果标普500在一个交易日内下跌2%或更多，每家对冲基金都会在收盘时买入，因为他们知道第二天早上会有数十亿美元的智能代理散户需求涌入。</p>
+<p>另外一则关于AI驱动散户协调行为的消息：</p>
+<blockquote>
+<p>加密货币意见领袖兼企业家安东尼·庞普利亚诺（Anthony Pompliano）的公司ProCap Financial正在推出一项新业务，专注于为个人投资者生成AI研究报告。</p>
+<p>计划是建立一支AI代理团队来扫描市场、分析趋势、撰写标题类似于"从关税退还和伊朗石油冲击中双重获益的3只股票"的报告，据分享给《华尔街日报》的一个示例。……</p>
+<p>庞普利亚诺补充说，这些代理每天能生成数百份报告——但公司初期只会每天发送几份，以避免淹没投资者的收件箱。</p>
+<p>该服务名为ProCap Insights，分发的报告将涵盖个股、主题趋势和宏观分析，不会提供具体的"买入"或"卖出"建议。ProCap Insights的年订阅费为每年2,500美元。</p>
+<p>庞普利亚诺是ProCap Financial的首席执行官，他表示AI生成的研究报告比主要投行的分析师团队撰写的报告更快、更便宜。他的公司在两周内就构建了ProCap Insights。他说这只花了几千美元，而且只有一名员工负责该项目。</p>
+</blockquote>
+<p>所以他们花了几千美元建了一个零成本自动生成报告的系统，然后收费2,500美元？</p>
+<h2>中本聪？</h2>
+<p>在《纽约时报》（The New York Times），约翰·卡雷鲁（John Carreyrou）基本上声称已经确认了中本聪（Satoshi Nakamoto）——比特币的匿名发明者——就是亚当·巴克（Adam Back），一位英国密码学家和比特币圈内人士。证据包括邮件列表上的用词习惯、密码学偏好、关于比特币的发帖等，但并非完全确凿。巴克已经否认自己是中本聪，我在彭博的同事乔·韦森塔尔（Joe Weisenthal）也对此不以为然。</p>
+<p>但我欣赏卡雷鲁证据中的另一个方面。我经常在这里开玩笑说投资分析师声称通过"语气和肢体语言"在高管会议上做出投资决策——投资分析师又不是CIA审讯专家。不过，调查记者或许确实擅长运用这类证据，而卡雷鲁似乎确实依赖了这一点。他在故事开头被巴克的肢体语言引上了线索，在故事结尾又通过肢体语言基本确认了自己的怀疑：</p>
+<blockquote>
+<p>（在卡雷鲁观看的一部纪录片中，）英国密码学家、比特币运动的领军人物亚当·巴克坐在拉脱维亚里加的一张公园长椅上，衬衫从棕色外套下随意露出。纪录片导演随口报出了几位中本聪嫌疑人的名字。当提到他自己的名字时，巴克明显紧张了，激烈否认自己是中本聪，并要求这段对话不要公开。</p>
+<p>见过不少骗子、也对他们的破绽颇有心得的我，觉得巴克的举止——游移不定的眼神、尴尬的轻笑、左手的抽搐动作——很可疑。</p>
+</blockquote>
+<p>在结尾处：</p>
+<blockquote>
+<p>接下来两个小时里，我逐条展示了我的证据。巴克用柔和的英国口音坚称自己不是中本聪，把一切都归结为一连串的巧合。但有些时候，他的肢体语言讲述了另一个故事。当面对那些更难解释的东西时，他的脸涨红了，在椅子上不安地扭动。</p>
+</blockquote>
+<p>这就是中本聪身份识别的"五美元扳手攻击"：证明某人是中本聪的最佳方式，就是走到他面前问"你是中本聪吗"，然后看他是不是开始左顾右盼。</p>
+<p>另外，巴克现在的本职工作是比特币标准国库公司（Bitcoin Standard Treasury Company）的首席执行官——一家数字资产国库公司，计划通过与特殊目的收购公司（SPAC）合并来上市，当然了。我曾经写过关于全球各地数字资产国库公司兴起的文章：</p>
+<blockquote>
+<p>中本聪会怎么想？这是多么奇怪的加密愿景啊。在未来，在每个国家，你都可以去找当地受监管的股票经纪人，以100%甚至更高的溢价，用当地货币购买一家受信赖的本地公司的股票，由该公司替你持有比特币。如果你想把比特币跨境转移，你可以……我不知道，在交易所通过经纪人卖出股票，做外汇交易把卢比兑换成迪拉姆，找到目标国家的股票经纪人，开户，通过KYC验证，用当地货币注资，然后以100%或更高的溢价购买该国本地比特币公司的股票。直接买比特币似乎更简单？但我懂什么呢。</p>
+</blockquote>
+<p>也许现在我们知道中本聪会怎么想了！</p>
+<p>还有一点。卡雷鲁写道：</p>
+<blockquote>
+<p>作为合并后公司的首席执行官，巴克根据美国证券法被要求披露对投资者具有重大性的任何信息。例如，一笔可能在突然抛售时冲击比特币市场的110万枚比特币的秘密持仓，大概会被认为是重大信息。</p>
+</blockquote>
+<p>我经常在这里说，万物皆可构成证券欺诈。如果身为中本聪也构成证券欺诈，那就太妙了。</p>
+<h2>"在危机中，所有相关性趋近于1"</h2>
+<p>关于对冲基金交易的另一则消息，彭博社的贾斯蒂娜·李（Justina Lee）报道：</p>
+<blockquote>
+<p>离散度交易（dispersion trade）——买入美国个股期权同时卖出大盘指数期权——上个月亏损4.9%，是摩根大通回测数据中2011年以来最大的单月跌幅。据汇总行业数据的Premialab统计，与该策略挂钩的银行互换产品下跌了2.6%。</p>
+<p>这些亏损暴露了该策略在面对重大地缘政治事件时的脆弱性。随着伊朗冲突升级，投资者纷纷在指数层面寻求对冲，推动标普500的隐含波动率急剧走高。与此同时，个股开始同步波动——恰恰瓦解了离散度交易旨在收割的个股波动率与基准波动率之间的差异。</p>
+<p>花旗集团奇异衍生品及混合交易董事总经理卢卡·瓦利图蒂（Luca Valitutti）在邮件中写道："近期事件对石油、大宗商品、通胀、利率产生了宏观层面的影响，而非微观层面的个股影响。个股之间的相关性已经飙升。"</p>
+</blockquote>
+<p>我们在上月初就讨论过这个问题。离散度交易经典上是对投资者典型行为的押注：投资者喜欢买指数期权来对冲大盘风险，同时喜欢卖个股期权来赚取收入。因此指数期权存在溢价而个股期权存在折价，你可以用个股期权合成指数期权来捕捉这一价差。<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>但它本质上也是一个关于相关性的押注。如果个股波动剧烈但彼此不相关，那么它们的波动会相互抵消：一些股票涨2%，一些跌1.5%，整个股指只涨0.5%。指数波动率会低于个股波动率，买入个股期权并卖出指数期权的策略就能赚大钱。<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>如果个股全部同涨同跌——今天都涨2%，明天都跌1.5%——整体指数也会今天涨2%、明天跌1.5%，指数波动率会很高，离散度交易就会亏钱。<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>正如我们上个月讨论的，<em>二月份</em>一个合理的基本面故事大约是"人工智能的崛起将创造巨大的赢家和输家，所以个股之间会出现大量分化。"二月是离散度交易的丰收月。然后<em>三月份</em>一个合理的基本面故事变成了"天哪你看到伊朗这场战争了吗？"战争对所有股票产生了类似的影响，所以相关性上升了。</p>
+<h2>审计</h2>
+<p>会计欺诈有各种复杂的形式，你可以利用会计规则的细微之处和审计师的盲区来虚增公司的资产或收入。但也有最简单的形式：你的库存里有1,000个小零件，直接写成10,000个。这对审计师来说发现起来并不特别难：他们可以去你的仓库数一数。但这话说起来容易，我坐在电脑前打字当然轻松。如果你是被派去仓库的审计师，"数10,000个小零件"听起来可没那么简单。《华尔街日报》有篇报道讲的就是审计师们盼着AI来替代他们：</p>
+<blockquote>
+<p>会计师事务所及其客户越来越多地使用人工智能和无人机来完成过去由人工处理的工作。但到目前为止，审计中往往最脏最累的部分——盘点库存——仍没有技术解决方案。这意味着那些又脏又奇葩的外勤之旅，仍然是这个本应坐办公室的行业里年轻从业者的必经之路。……</p>
+<p>审计师经常被派到荒郊野外去清点大量稀奇古怪的东西，从鸡鸭猪到采石场的石头、玉米、交通信号灯和电线杆，应有尽有。他们抱怨自己满身粪便或灰尘，或者在冷库里冻得直哆嗦。</p>
+<p>大型会计师事务所通常依靠初级审计师来完成大部分脏活累活。这些外勤能让他们更深入地了解客户。但身在其中的那一刻，真的很难受。Z世代审计师们在社交媒体上分享着恐怖故事。"我刚数了成千上万的螺母螺栓。你今天干了什么？？"一位在TikTok上发帖。一位Reddit用户说他被派去在零下的天气里数石头，其中包括一个蛇出没的采石场里的石堆。</p>
+</blockquote>
+<p>我们过去经常讨论"区块链"能防止欺诈、保证商品来源等说法，而我一直持怀疑态度：再好的计算机技术都能防止各种基于计算机的欺诈和操纵，但计算机和物理世界之间总存在一个接合点，你不能指望计算机来监控这个接合点。我想终有一天AI会强大到能够监管这个接合点——配备精密视觉的类人机器人走进仓库，瞬间说出"我数了162,385个螺母和237,423个螺栓，下一个？"——但目前来看，这恐怕是人类最后的工作之一了。</p>
+<p>另外，我知道肯定会收到相关邮件，所以在此例行提及1963年的色拉油丑闻（Salad Oil Scandal），那桩丑闻如果当时有一位初级审计师<em>跳进</em>大豆油储罐里游个泳，大概是可以被阻止的。<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<hr />
+<h3>脚注</h3>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>特斯拉与 SpaceX 合并，为什么不呢。 <a href="https://links.message.bloomberg.com/s/c/UzZykY__bBXC_yHlolTpioOAcb3BzAE11Edxsl17ZEPA6I2IQgmmnbnFJiGE2nAUTpNMY_F0MRywU0ZAOGFdN0cvp_OVYeBtSmyLlAFQt96TAewredkTk35p8zORbSYAbYsmS_TMczoS_G8GefC6AO099Dtcxhk5SEfDQ6lf309GNnXKm3xRjtGUQeuww3vrPp4f-m7mACUQ2YSKvrRbFWWDGsjhctN26cCsDRSqMMftt2KN3yQjcxmid7KXZ0tZQj6fatQjOptx52DJp9XmYZE1WhGAyulJT-RIISWfTf-1JwMejeXJR6JYpyfhmnKYctnsKyKAZvRHobzkthDGPgDxaFLfKMxtGz9K8hLxhlrt8iP3ijbiVDLt3v4/YLbfB582LE4mGTlhyMGhx5E8iWjQhIzN/19">Tesla/SpaceX merger</a></li>
+<li>Polymarket 上的伊朗相关押注引发新争议并遭到内幕交易审查。 <a href="https://links.message.bloomberg.com/s/c/x-k-zQFY9iAbsIeA8WZCH8H336g5ezroU76aO1PjW_rksv89Po53hCBoYZqT_VtrLM2e5UYdisx8CEeeKmzRwZXMsQV3_Y0MyRjsOSyVOoOjr5AuU3bAAmHgLdnaHngF62BReIp2LfeEv3zpTb7lolaYUcPRRE_-jj8x4ScW3M2CCyhlk8C4vENL2xnWr3GQler_HBS0p28waya_L3ENG8owreJusSULhVAqowzk1KHIsLOo20rq4HxdhQ3z9TKZqtIslZ3KUkr7yiYmWwJ0YVy2Rpzv_Z2MxwV9wR4iguATEqlgiImonqw_fdyrUM0Hzevu3ZjSXlEyevrqx000CnRz-9lCE9bmiqI9NyTvqc3qw6VG7UmQhzZ_3fc/9Ry2y_zs6IlPC6qplVDw_nmEG_hCcSAd/19">Polymarket's Iran Bets</a></li>
+<li>保险公司在私人信贷领域积累了1万亿美元规模，监管机构已被远远甩在身后。 <a href="https://links.message.bloomberg.com/s/c/ZafoJuKLiYd7BMfhQ_WSneQ7vebwafknvQ8Hsnrwtuw9a_mhKdvCv2Esfsy1S87z39qtcEy5d_k-2COFd87p_xuqt3yt4Uj-T5Txu9pGZn6Tg3VcxJU5-D69h0zZoFBrhDflOfs64e88UTh7IA1wyRyOSKU9-HH7Z2csUMSx-N5Vp4ETgLlCS2p-6rquw63hHw1P4E7-5Vp0WY6R3DcTiHJlHyvt95X3zDsXhX_Fv66EJjuB5ZwFZj9iawevmlkOW9EQ1BUmx6xQLmgJDf0FekS5tSDJ_GSKJJap7VswV2Zp4PDwUof0l7t55PE5Yr8iwT3-8IfTUl5PApllMAEHozM44y5m1EomGGMdgdNLiM1Mzm6_Fruxxcvo8wU/qDdpgenOmzb5evHfzv5ujVyAObcWGWBQ/19">Insurers'</a></li>
+<li>因资金外流，穆迪将蓝鸮资本（Blue Owl）旗下基金展望下调至负面。 <a href="https://links.message.bloomberg.com/s/c/UJicMN6qlaSUJ3Ii1GWBuw70ZncNuX-ijapJWsBRpQ2-Uw4exAxSljUi8opZa3bit4jORvl9XQaa4NH33W4N0Wk5ADJA844dT5ldC2uKjVEheJBa0cXk3C-jgF0q7YJzgBAfsVUjVhxIG66UXiDJn4nOUQ8EDcESioUTX5PykYQuNJWb9JDDTUl3aoei-FtzoGSUgBAKUCKdyiWyVXdtw1LcmDYHyf-4D5_FkyqW6yWXJbYST7dphGNcqoleh0lpqjMp5zbUfccc0OJ5B6Yr888b5RcpcRld0dfgUpk0vxdl2GW5YiiKo2MTE0MVJ16_8_3UXyvmDKxU5YG_PpKBSrJjiWW_osyq-k0R8hg7vJvq9CDLffTHzooEpi0/l1GfxsxUdg62JSAVdBZXckhCI-V69Tsw/19">Outlook Cut to Negative</a></li>
+<li>霸菱（Barings）限制赎回，因私人信贷持有人寻求11%的回报。 <a href="https://links.message.bloomberg.com/s/c/U2Mdhxmz79P0NXuelfjIodGcsBxjQ2JEMYVPtzy-likJhH3j2Is6HkCVnu-fC3gNaX_AKPXVbZj6FqoaimgT8e5NmYuCnNn88nRbDsQMYWWNkN4AEuPrSuuIxewkPPBH6NSdHWThivxgrivI5auf2-dWSbb0_L4E6NOyAooC78h2at3cFlYuFBxj4VldWNPGnD-lPuwsoK29eWzpB2jtup-HlaOeORbTn-XY-GRT0KNM_-dJgLG_3wmM50GfbE1hUSyy9Q85HYwIPkNvjLpCYafMGMQU0Rww5S_Bd3BlN0j016nGCzKxON0r76gaABK700s9vyGxBfmFGJzhkrqY9JJIWMpJrY3trwx5zWCLX6S5Q_1aXJJ4AevBlKw/z9vbmzjWJC_090oMxew7JvKYGwXH8geh/19">Barings</a></li>
+<li>花旗（Citi）为财富管理部门的银行家设定了激进的业绩目标。 <a href="https://links.message.bloomberg.com/s/c/X3dAh6NpRkpGh71YQ8cAGXJFxMaRrMykQO8yeC-mX7qUV6_C3FhHpnCDtX-T9m_J5m7VIhgIHWeSPttdWywaphVrPh57H8yp-0tlvydn05dqNp9sibgS1yYbS3qI2YbirMZCXbvIT0vIDg_sLAeSd4Ymp2cPKZNeYeTB_Ma9FxrBllR6AhdkOBOB40Hz7D4nLv4ahEXJHsy1fdgZALzNT-vYyILDa-g5WbUxBUMG2ApkpklDx2CU_PeBS1nsA5v-yGPRDZ7rd1xaJ5s03P2uUS1EIX_7rPuh97InalgPKuGhD50bxV8-6YcxU_xYR6M9N1Ewso8dxqHL6ubdngx8zgDIvsdux6Ewv8f3jnj1Qd15sM7hGXOFgZovMT4/Lf3hmbF1AbcnOmB1tPd4P_3iIFF3-anp/19">wealth management unit</a></li>
+<li>德国商业银行（Commerzbank）在会谈后表示，不认为与裕信银行（UniCredit）达成交易有合理基础。 <a href="https://links.message.bloomberg.com/s/c/N8GPXGWi8E_PdvzmMstCqX_TH0cbVTPK5YM9e5raA1u1awwVqvHW3km2Rxp_QvFEH6ssBkd5cyC-DXqiUJ26VWEVOaG3yHphQK9YDUNrtGUPsZ1zmuVieMOxghBs4KAHKmQLJ9jTgGzyIApjoIdzNC-9xtlJPXhozZgwb7yYCRwst4XHADpUEuR8ODDp3yn3ygzAnFJ0a9pyX64xBq9L8heFuREd7UiimabXV-jCMgVZjOFupdok-idkyxHnAp0kNjg6wAps5-b-EPibiPDgN4TCqIYl_fRswjAoP6d7i47V3tzp4d6Fcf1G25cHgBxvAkg8SzlCZACTNO4-hpiiKr7vicaAAQ02DkPJRzB-0QLqlgRzQfy0nAA_0dA/H98tF4YiZnMJQRRWDuWcG4vqAw7k6XmO/19">Deal With UniCredit</a></li>
+<li>伊朗要求停火期间通过霍尔木兹海峡的船只以加密货币支付通行费。 <a href="https://links.message.bloomberg.com/s/c/Th_ghjL9S9dx-h1FhZbBUIABSSpLTTxygD86S2WUAek2jMfEdmaO_jA-tEaGZGUWAnAQrpkmUwzWq8dlT4qz9V34QGaH0dbbkjEYL4DbT0Pae2zEUR7BFXpKhxvzIrXrc-gdmuLWRlVzhCf9vUM3-XEcFbRU5UElRksZ0Kkoq_10gEPByG8-NN8Shv6dmezIxrGT2jNsuvbPBga5w8pyFBUVqfErucErWseNAboMp2k0aJaSL-cFelxTrl7UWfC5SEO-K4CtMDHQEESo0c-JvwtP81y4ElPCarG8bLXyUAkDxsNd4G2TwLuspbD-SWfBsoGA7Qlo4q49yyrWJiqQ0A7gVrF-M5mQRSBPWESxtRFgDIOBMx0HqOcmyrU/MvNOU9y4HmzLdzreBFWShsAAQfgCRBxK/19">crypto fees</a></li>
+<li>甩卖潮来袭，美国办公楼以一折价格成交。 <a href="https://links.message.bloomberg.com/s/c/28xboOVuwN1YU_GH6VPgMyHEMe_zDv3aQVlu80oL7eMy1zmUokMRxOP_GgEiVoCwiM71dTtrk3VyELG25V1QstKy9XxPNWUkVwNU91fYcU3PEahmmPBdCHLdVXfbCH3ObVR8DK_F3xlZx4roVfOh1HomLHjVIflJZSGaefpE3x78f2rMaJZiQczlb7RL9hk8j8USimV0WxcNg7VYWJqbF7DzUIaPxywSRkrmYrYt3QFR9B0IDN-mLZCjzQHAq_T3T4e8MTdhQYIxY9g7jOgyWpR8r6s_cjFc3ReFppyMBla6RrgLDctqdNNZYHqPgLaqj4MHZZmEZMIn5xygXzozMSbpIWWv7bDXUWdBTgodDlvmZ7ag0lDI133VkC4/EpgDk2eVS6sCSDiDcuuqkJ5whraFvHOR/19">Office Buildings</a></li>
+<li>智利破获价值9.17亿美元的铜盗窃团伙，赃物被运往中国。 <a href="https://links.message.bloomberg.com/s/c/EtNCAZ0_niKfeiCYuqaBW8IwppCDO-4GNQP13Q4VdQyqeinNpuvnvc2e9PMXq6Um4vcm3ph5FshqiSokFcV2KBQmkjti4zI3EtwYkHLwiTXSqIWNXUXcoQOP-XohJGXQXZb9TimldiMMKpXElwcwSszdMzMBXf6F_YB1nq0mzhRsotWYYJnblNmYpbmTs8Q0xp7DNhHxzjWiDeHZXLAmrb5awC0ubexVIOXj_xAjVPrZh7how2nXBJEm6I0pCGzZFhmdn1U6XOWHhnzLKLjDJWYzYP0-IqZ04DTxp0qVqxdSA2bNq6zeAUvi8K4ON2X6AJY51fZPQT2GYScZM3vVTghCpRptQFJx1USVniQ7nTIQfeUjneQ8UwbLPgc/5mMWJlvMNq2S-O1vLca60-JKhjFQ0l2t/19">Copper-Theft Ring</a></li>
+<li>"恐慌指标"飙升至历史新高，战争引发交易员焦虑。 <a href="https://links.message.bloomberg.com/s/c/YZZfkConYMiS6dWaxdFHXCyRWIkRyt36VwvhtK1FuXdrVuhI5NLtlchQ_nTT_OPub5MympWPsYEUsoLCxEz1EVPkzOAYmEdaZba53zFur0lzuabCUNFBV8vn-z131TzI_nihqKBbvstaWfCStfv_3FWYu48eIOhHOV1QyfjdRfnGiHzblrYipsNjlYUT5lwBbgECFwhST4ftqvIO8yDw9vUHk7qdGFV9-mNGEnmIJXTBqFJ635uRQtSwuK3MvNEY3RrL9cK-b4sCkMjp-6FBlQCaPp5E8fNtipPKKaUhhcCK6Z6EN6OasYmgvFMw37t2ULsy30SI3n8OrMTAJAY7_lr_LloHF1uuzKehNMQhxB-PQEK_jtSrsvBkBE8/HETXxfJ0smU4prtXqcydjJ4KTKNRHCT3/19">'Freak Out' Indicator</a></li>
+<li>人类正在输掉与飞鱼的战斗。 <a href="https://links.message.bloomberg.com/s/c/gVIYbaWkVB1NRHHHguxfeiPYARpC77Hc9Ajqcgi3J_rqGHTRJQKHHDbFFcB4uAdvIKrrCYRglcN86cNyrFKUoWoRV7fnXLHIG7UDLFKi6yXDZ07yom0HXCWbxG2m6Wpo8j0ldTpg6PPDN0M-MBMBSOZ3z5T-9yk__nbLccFQU5PZcruTLjeremcNo6EPRwvKcNfh2EWLedRlorUvqYHc6cRebLBkekG5SxgubCRWFgVA1bpxxn2ehmlqZP4p_CerdBffvu4QXkYnI3beTkYS1w9kZpZvKs9IxZVNfBa6gy6jHKUr6MWrSPZGrBJA8AjYapOJ9LUqhQj59tVClRkzIM4tF0dmPLU_p1Ua_NAqIxRN6HJyIUWp9QTmnxw/UtfH-3O2i4Yapo_YNoCsvxeoaSveWDxY/19">Flying Fish</a></li>
+<li>"唐纳德·特朗普……威胁要摧毁一个文明。投资者该如何消化这件事？这究竟是更大的上行风险还是下行风险？" <a href="https://links.message.bloomberg.com/s/c/k8UOvqFkQ2F0daxoIThdz9Z6DzgDtRdvx0mZjHoNDV22npJRI2TuNn5wnerregmQgP4pUVsBUBeKbxLsOD0EVq8prvni38M4Vh4ITl70uAFmKoHB0dHUeiCYO-N-WEKT_tiyoVzshC5h7eZj-fnIlG-dc8QlZTo1Pgne_UKOLOnM2N2sabYtsQ8B28tjXYX6rYJunzPb6tnWGncxN079xzmpDGsV9Cfryk-6YyhAf5Vd28lwikaOWJj9aG9FmyDd7ctzpfSdhNhLTehP5S3UwIzN1J-1_spc73VqNVPs7edLJDtwy7mZkK8VxDaHLaiMtwXqjA9iUdrZ7p96nN1mIjSVK0YI77GcTfu-gkhO4fWiyiAlYrXg-YWewoA/oVHU4EuuX6urGxREanTSzjFNzrAI8yhV/19">upside risk or downside risk</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>可能还有其他例外。比如每月1日和15日自动流入退休储蓄账户的资金，诸如此类。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>这可不是一直如此！不久前，我还能写道："众所周知，散户券商能提供的最好服务之一就是在崩盘时不接电话"，因为散户典型地会在暴跌时恐慌性抛售。现在不会了。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>李的报道写道："虽然具体实施方式各不相同，但离散度交易基于这样一个理念：由于投资者喜欢购买指数对冲，基准层面的保护通常比个股层面存在溢价。同时，个股的反向波动可以相互抵消，意味着即使成分股大幅波动，大盘指标也能保持平静。"&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>因为波动率越高，期权越值钱。&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>因为你卖出的指数期权定价时实际上假设了一个低于1的相关系数；如果相关性上升，指数期权的价值将远超你卖出时的价格。&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>实际上维基百科告诉我，那些储罐"表面浮着几英尺厚的色拉油来欺骗检查员"，所以审计师需要做一次深潜调查——请听好了，"deep dive（深入调查/深潜）"，一语双关。&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
