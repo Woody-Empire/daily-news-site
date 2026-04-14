@@ -1,0 +1,160 @@
+<h1>Money Stuff — 预测市场、AI风险与券商升级</h1>
+<blockquote>
+<p>本期讨论预测市场的做市商微观结构与合约结算争议、Anthropic的AI网络安全威胁模型Mythos、以及Robinhood等新兴券商如何向高净值客户提供"管家式"服务。</p>
+</blockquote>
+<h2>预测市场微观结构</h2>
+<p>我在这里写体育博彩的频率比以前高了，因为体育博彩已经与后现代金融市场紧密融合。有时候，当我写体育博彩时，会收到读者来信解释说，博彩公司设定赔率是为了平衡两边的投注：博彩公司设定比赛的赔率或让分，使得无论哪支球队赢，它支付的金额都一样。比如，博彩公司收到100美元押热门队的注和50美元押冷门队的注，它会设定赔率，如果热门队赢赔付140美元，如果冷门队赢也赔付140美元，无论哪种情况都为自己留下10美元——也就是"佣金"（vig）。</p>
+<p>这是一种流行的体育博彩观，但它是错的。也不是<em>完全</em>错：理性的博彩公司确实会管理风险，尽量保持投注大体平衡。但实际上，许多博彩公司会经常对赛果做方向性押注：它们对可能的结果有自己的判断，然后设定赔率来实际上押注更可能的结果。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 有时候它们在某场比赛上亏钱，有时候赚钱，但如果模型够好，赚的比亏的多，比每次精确平衡两边投注更赚钱。直觉上，普通大众<em>系统性地犯错</em>——人们倾向于非理性地押注主队、冷门队等——而站在对面通常是有利可图的。博彩公司可能"离家不远"（两边风险都不太大），但不必"完全持平"（<em>没有</em>任何风险）。它不是要承担<em>零</em>风险；而是要承担<em>正确的</em>风险。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>粗略来说，在股票市场中扮演庄家角色的是电子自营交易公司。<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 如果一个散户投资者想买股票，她大概率会从城堡证券（Citadel Securities）、哈德逊河交易（Hudson River Trading）、Virtu、Jane Street或类似公司那里买。这些交易公司在某一秒卖一些股票给一个散户，下一秒又从另一个散户那里买一些。</p>
+<p>你可以想象交易公司更像大众认知中的庄家那样运作，或者更像实际的庄家。也就是说：</p>
+<ol>
+<li>交易公司可能在某一秒买入100股A股票，下一秒卖出100股A股票。在一两秒内，它们可能是做多或做空A股票的。但从长期来看，它们非常努力地"离家不远"，每天晚上"平仓回家"，不持有任何股票的净头寸。它们<em>只</em>通过在短期交易中赚取买卖价差来盈利。</li>
+<li>交易公司可能有某种基本面价值模型，如果有人想以低于公允价值的价格卖出A股票，它们就会持续买入。如果一家公司在一天内累积了10,000股A股票，那没问题。如果它隔夜持有这些股票，或持有数天，那也没问题。关键不是<em>持平</em>，而是<em>做对</em>。如果交易公司系统性地做多上涨的股票、做空下跌的股票，那比保持持平要赚钱得多。</li>
+</ol>
+<p>和实际的庄家一样，真相大多介于两者之间。很多自营交易公司会有某种模型化的价值判断，试图在低于价值时买入、高于价值时卖出。它们还有其他约束——风险限额、资本等——推动它们保持在接近中性的位置。结果是一个比比尔·阿克曼（Bill Ackman）的投资组合方向性风险小<em>得多</em>的交易账本。如果一家电子交易公司对12只股票持有大量多头头寸并持有数月，那会很奇怪。但可以有<em>一些</em>方向性风险：如果一家交易公司每天在每只股票上都以零净头寸收盘，那就是在浪费赚钱机会。</p>
+<p>对于股票交易公司来说，事情比博彩公司要容易一些，因为金融市场有大量相关联的工具可以相互对冲。如果一家公司做多100美元的A股票同时做空100美元的B股票，这可能比单独任何一个头寸风险都小：如果A和B是相关的，它们的波动大多会相互抵消，公司不太可能亏损接近全部200美元。或者一家<em>期权</em>交易公司可以用标的股票对冲期权头寸——持有100股A股票的看涨期权，做空60股A股票来对冲——无论股票怎么走，都不会赚或亏太多。股票做市商可以有很多多头头寸和很多空头头寸，但整体上仍然感觉接近中性。</p>
+<p>这对博彩公司来说更难：我们之前讨论过博彩公司的相关性模型，但适用范围有限（同场串关）；据我所知，很难用对大都会队（Mets）的押注来对冲对洋基队（Yankees）的押注，也无法用大师赛（Masters）来对冲。金融资产倾向于基于底层经济因素共同波动；棒球比赛则不会。没有明显的理由认为大都会队比赛的结果会告诉你洋基队比赛的结果。<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>实际上，这些电子自营交易公司之间存在一个谱系：有些承担极少的方向性风险，大多数日子都力求各品种持平回家；另一些有更复杂的对冲模型，允许在保持整体低风险的同时承担大量个别风险；还有一些如果期望值足够好，会做出未对冲的数十亿美元方向性押注。<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>总之，我现在经常写体育博彩的一个原因是，我经常写<em>预测市场</em>，它在法律上类似金融市场（在美国，它们是受商品期货交易委员会监管的商品期货市场），但实际上是博彩公司（Kalshi上79%的交易量是体育博彩）。预测市场和传统博彩公司之间一个经常被提到的区别是：在博彩公司，客户是在和庄家对赌，而在预测市场，他们是在相互对赌。</p>
+<p>我对这个区别并不以为然，因为股票市场也是如此：任何人都可以买股票，任何人都可以卖股票，所以理论上你买一股股票时可能是从另一个想卖的投资者那里买的。但实际上你几乎肯定是从一家电子交易公司那里买的，因为这些公司在股票交易所做市（更相关的是，为你的零售经纪商做市）。它们发布买入和卖出的挂单，如果你想卖或买，你大概率会和它们的挂单成交。</p>
+<p>类似地，在预测市场中，从长远来看，客户似乎完全有可能主要和做市商交易：专业电子交易公司会在预测市场上挂出买价和卖价，如果你想买一份合约，在大多数情况下你会从一家卖出该合约的交易公司那里买。如果你想买的合约是"大都会队今晚赢"，你会从一家实际上在押注大都会队输的交易公司那里买。然后如果另一个人想买"大都会队输"，他们也会从同一家交易公司那里买，该公司在市场两边都做交易。</p>
+<p>但是：</p>
+<ul>
+<li>我们还没到那一步：确实有一些专业的预测市场交易者在提供流动性，但他们似乎尚未主导大型预测市场的交易量。</li>
+<li>这些做市商会是谁？有理由认为会是同样在股票、期权和期货市场交易的自营交易公司：这些公司擅长交易受监管的金融资产，而预测市场就是受监管的金融资产。但也有理由认为会是同样为博彩公司制定赔率的体育做市商：这些公司擅长交易体育博彩，而预测市场就是体育博彩。（当然有重叠；萨斯奎哈纳公司（Susquehanna）众所周知两样都做。）</li>
+<li>如果做市商是传统自营交易公司，它们在适应预测市场时会遇到一些困难，因为金融市场传统的相关性和对冲数学可能在体育或其他事件中不太适用。</li>
+</ul>
+<p>所以彭博社的伯纳德·戈伊德（Bernard Goyder）对预测市场做了如下报道：</p>
+<blockquote>
+<p>机构交易者未加入的原因有很多，包括监管不够明确，以及相比它们运营的其他领域交易量较小。</p>
+<p>但一篇新的学术论文指出了另一个潜在原因：老练交易者在其他市场管理风险的一些基本工具，在事件博彩中无法使用。</p>
+<p>在最基本的层面上，大多数做市商通过在其他相关资产中对冲来抵消一种交易的风险——对于期权市场，他们可以在标的股票市场中这样做。但当押注对象是名人婚礼或选举时，这就困难得多了。这篇论文的作者是尼克·帕伦博（Nick Palumbo），他曾是体育博彩网站DraftKings的产品经理。</p>
+</blockquote>
+<p>以下是帕伦博的论文《预测市场的微观结构视角》（A Microstructure Perspective on Prediction Markets），发现预测市场的做市商与其说是赚取买卖价差，不如说是在对事件做方向性押注：</p>
+<blockquote>
+<p>被动流动性提供者系统性地吸收剩余的需求不平衡，并通过合约结算保留对结果的敞口。盈利能力似乎更多地取决于管理与动态供给创造相关的终端风险，而非经典的买卖价差捕获。这些发现表明，事件合约市场的流动性提供在结构上更类似于承保（underwriting），而非传统的库存中性中介。</p>
+</blockquote>
+<p>我想说的是，无论是体育庄家还是股票自营交易，都不完全是"传统的库存中性中介"；Jane Street也不只是在所有交易中赚取买卖价差。他的研究发现：</p>
+<blockquote>
+<p>在整个NFL赛季中：</p>
+<p>被动流动性提供者在大多数市场中，都积累了与已实现结果方向一致的净敞口</p>
+<p>在大多数情况下，他们在一个结果上持有终端资产，在另一个结果上持有终端负债</p>
+<p>总盈利为正（约2900万美元）</p>
+<p>平均而言，终端资产之和大于终端负债之和</p>
+<p>每周盈亏波动显著，在不利的周里出现明显回撤</p>
+<p>流动性提供者（LP）平均而言是赚钱的，但并非没有大幅亏损的周</p>
+</blockquote>
+<p>嗯，我觉得挺正常的？这份工作就是在正期望值的地方做市，赢的比输的多。</p>
+<p>其他相关的：</p>
+<p>（图片描述：一个预测市场交易界面的截图）</p>
+<p>对吧，看，这就是（单边的）基于模型的正期望值<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>被动流动性提供。</p>
+<h2>预测市场的结算</h2>
+<p>一般来说，预测市场上的事件合约在事件发生时支付1美元，不发生则支付0美元。但你怎么知道，一般而言，一个事件是否已经发生了？或者更确切地说，<em>预测市场</em>怎么知道：它如何决定是支付"是"合约还是"否"合约？</p>
+<p>有些事件有官方结果。美国职业棒球大联盟有决定大都会队比赛胜负的机制，博彩公司或预测市场大概会遵从官方机制。奥斯卡有官方结果。美国选举迄今为止有官方结果。但世界上大多数事件没有官方结果。没有官方的客观裁决者来判断美国地面部队是否已进入伊朗。可能知道的人——美军、伊朗军方——可能不想告诉你。或者——就像我们上周讨论的——你可能知道所有事实，但仍不确定这些事实是否意味着"美国地面部队已进入伊朗"在相关意义上成立。</p>
+<p>那么谁来决定，怎么决定？最直接的答案大概是这样的：</p>
+<ol>
+<li>预测市场是一个拥有大量律师的受监管金融交易所。</li>
+<li>预测市场任命一个由律师和哲学家组成的委员会来决定事件是否发生。<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+<li>他们尽力做好。</li>
+<li>如果做得不好，预测市场会流失客户，或者监管机构介入。</li>
+<li>委员会逐步形成一套伦理准则：委员会成员不得自己交易、不得受贿等。</li>
+<li>委员会逐步形成一套实体<em>规则</em>来做出实质性决定。每次某个事件合约出现困难且有争议的裁定时，委员会就修改未来事件合约的规则，使结算更容易、争议更少。如果"卡迪·B（Cardi B）在超级碗演出"合约因为卡迪·B跳舞并对口型但可能没有唱歌而结算模糊，你就在未来的"某某在某某演出"合约中写入条款来避免这种歧义。你一遍又一遍地做这件事，逐步修补粗糙之处，这样十年后，预测市场的结算就会像信用违约互换（credit-default swaps）或银行应急资本证券（contingent capital securities）的结算一样一致且不令人意外。也就是说：<em>并非</em>完美地一致或不令人意外。但希望对机构使用而言足够好。</li>
+</ol>
+<p>我认为，在大方向上，这大致是Kalshi的做法，它是两大预测市场之一，也是最倾向于作为受监管的美国商品期货交易所运营的那个。我是说，我们还处于非常早期的阶段。我不认为目前就一定有一个哲学家和律师组成的委员会。但确实存在监管和商业双重压力，要求把这些事情做得差不多对。</p>
+<p>与此同时，另一大预测市场Polymarket起源于加密领域，所以它采取了一种加密风格的方式来结算事件。加密项目热衷于去中心化和代币化，而Polymarket的结算机制就是去中心化和代币化的。正如《华尔街日报》（The Wall Street Journal）所描述的：</p>
+<blockquote>
+<p>Polymarket本身不解决争议。相反，它依赖一个名为UMA的服务，该服务为预测市场运营一个众包的、基于加密的仲裁流程。当争议出现时，UMA数字代币的持有者在社交媒体平台Discord上的论坛中讨论情况，然后投票决定结果。Polymarket在其网站上说，UMA"管理这个过程以确保公平和透明"。</p>
+<p>然而，UMA在之前的结算争议中一直是争议焦点。一些交易者抱怨说，该过程容易被匿名的UMA"巨鲸"操纵，这些巨鲸持有大量代币，拥有不成比例的投票权。</p>
+</blockquote>
+<p>《卫报》（the Guardian）也指出：</p>
+<blockquote>
+<p>不同的个人持有不同数量的UMA，因此拥有不同的投票权。</p>
+<p>不知道最大的UMA持有者是谁，也不知道什么可能影响他们的投票方式。完全有可能最终决定一个赌注结果的人在其中押了大量资金。</p>
+<p>"协议规定你应该投正确的一票，"前Cointelegraph研究员本·约克（Ben Yorke）说。"但UMA经常出错。有些情况下，投票结果是由一两个超大UMA持有者决定的。"</p>
+</blockquote>
+<p>还有一篇Substack文章讨论"如何用不超过1000万美元操纵有争议选举的预测市场"，论证你可以通过买入一些UMA代币来操纵Polymarket的结算，或者通过贿赂Kalshi来操纵Kalshi的结算。我想Polymarket的方法有点像信用违约互换的结算机制，后者确实涉及大型CDS交易商委员会的投票。但Polymarket的方式明显更加加密化。</p>
+<p>我们不断在讨论这些问题：美国地面部队是否进入了伊朗，卡迪·B是否在超级碗演出了，伊朗导弹是否落在了以色列，阿里·哈梅内伊（Ali Khamenei）是否"离任"了伊朗最高领袖。争议、歧义和困惑不断出现。为什么？我认为有两种可能：</p>
+<ol>
+<li>因为预测市场还只是个小婴儿，从实际意义上说才刚满一岁；它们在边干边学，有很多问题需要解决。十年后再看，一切都会像其他金融市场一样顺畅运行。（再说一次，其他金融市场也不是完美顺畅的！）</li>
+<li>因为预测市场与其他金融市场有本质不同。其他金融市场在Y的交易价格高于Z美元时支付X美元；可能性范围狭窄且可客观衡量。预测市场在世界上任何可能的事件发生时支付1美元，而且总会有新类型的事件和新的复杂情况。哲学家们将继续忙碌，十年后仍会有目前无法想象的歧义使结算充满争议。"你怎么能说外星人已经着陆了，它们明明只是悬浮着，"人们会在评论区抗议，但委员会必须做出决定。</li>
+</ol>
+<h2>Mythos风险</h2>
+<p>好吧，我给达里奥·阿莫代伊（Dario Amodei）想到了一个商业模式。你这样做：你建造一个极其强大的人工智能系统，"当用户指示时，能够识别并利用每个主要操作系统和网络浏览器中的漏洞。"然后你入侵所有银行，偷走它们所有的钱。"在通用人工智能出现后的世界里，金钱将扮演什么角色可能很难说，"你一边狂笑，一边被印着美元符号的钱袋子包围着。</p>
+<p>显然这不是法律建议，这个商业计划有缺陷，不过你也不应过分夸大这些缺陷。（当警察来抓你的时候，你也入侵他们的电脑，把他们发到错误的地址，等等。）事实证明，到目前为止，"人工智能"似乎在计算机编程方面比在大多数其他人类智能领域更擅长。但在我们的现代世界中，真正擅长计算机编程是相当有用的。</p>
+<p>总之，彭博新闻社上周报道：</p>
+<blockquote>
+<p>财政部长斯科特·贝森特（Scott Bessent）和美联储主席杰罗姆·鲍威尔（Jerome Powell）召集华尔街领袖参加紧急会议，因为担忧Anthropic PBC最新的人工智能模型将带来更大的网络风险时代。……</p>
+<p>Anthropic的Mythos是一个更强大的系统，该AI公司表示，当用户指示时，它能够识别并利用每个主要操作系统和网络浏览器中的漏洞。</p>
+<p>监管机构对该模型落入黑客手中的担忧，与Anthropic自身的谨慎态度不谋而合。Anthropic最初只向少数大型科技和金融公司发布了该模型。这些公司包括亚马逊（Amazon.com Inc.）和苹果（Apple Inc.）以及摩根大通（JPMorgan Chase &amp; Co.），它们参与了"玻璃翼计划"（Project Glasswing），该计划将在其他类似AI模型面世之前保护最重要的系统。</p>
+</blockquote>
+<p>对对对，在现实世界中，Anthropic是在<em>与</em>银行合作保护它们的系统免受其他类似模型的攻击，因为它的实际商业模式主要是做企业AI公司。但是，你知道，如果从零开始想，你可能会说"好吧，如果我们能把所有钱转给自己那就太好了。"</p>
+<h2>Robinhood白金版</h2>
+<p>我觉得简单模型是这样的：</p>
+<ol>
+<li>年轻人对券商或任何其他服务的需求是：手机上有一个设计精良的App，让他们不用和任何人说话就能把事情办好。</li>
+<li>老年人对券商或任何其他服务的需求是：有一个可以直接对话的真人，让他们不用摆弄App就能把事情办好。</li>
+</ol>
+<p>这是作为一个曾经年轻、现在变老的人说的。不过很多人和我情况一样；先年轻后变老是人之常情。如果你是一家券商或任何其他服务商，你得跟上。彭博社的查理·韦尔斯（Charlie Wells）和保利娜·卡切罗（Paulina Cachero）报道：</p>
+<blockquote>
+<p>Robinhood、eToro、Revolut和Public.com通常让人联想到住在父母地下室里的二十多岁年轻人。现在，这些券商正在为投资者提供机场贵宾室、晚宴和一级方程式赛车的入场权。它们推出了695美元的贵金属材质高端信用卡，为余额百万美元的客户打造专属管家服务，并进军复杂的税务筹划、财富管理甚至信托账户，试图与更成熟的竞争对手竞争。……</p>
+<p>总部位于伦敦的金融科技公司Revolut一直在向私人银行领域推进，并计划推出更多面向高余额消费者的产品。Revolut还一直在招聘多语种的私人银行家，以引入高净值个人客户、交叉销售并提供财务建议。</p>
+<p>Public的首席运营官斯蒂芬·赛克斯（Stephen Sikes）的卖点是，更好的数据、内容和AI工具正在让人们更自如地自行管理数千万美元的资金。他的公司已经雇用了管家，与高价值客户讨论交易、与潜在会员建立关系并改善他们的体验。</p>
+</blockquote>
+<p>没错，你当然可以自如地自行管理数千万美元，但当你打电话给券商时，你希望有人接。</p>
+<h2>"他们怎么分辨得出来？"</h2>
+<p>人工智能与白领工作之间的基本推拉关系是：如果你能让AI完成你90%的工作，你会更高效、有更多休闲时间，但如果你的老板注意到了，你可能会被解雇并被AI取代。网上有各种小测验帮你判断你更可能从中受益还是被炒，但有一个简单的经验法则：如果你是一家万亿美元公司的首席执行官兼控股股东，你大概是安全的。尽管去自动化自己吧。没人会解雇你，因为没人<em>能</em>解雇你。</p>
+<p>《金融时报》（Financial Times）报道：</p>
+<blockquote>
+<p>Meta正在构建一个马克·扎克伯格（Mark Zuckerberg）的人工智能版本，可以代替他与员工互动，这是将这家大型科技公司围绕AI全面重塑的更广泛举措的一部分。</p>
+<p>据四位知情人士透露，这家市值1.6万亿美元的集团一直在开发逼真的、由AI驱动的3D角色，用户可以与之实时互动。</p>
+<p>其中三位表示，公司最近开始优先开发一个扎克伯格AI角色。</p>
+<p>据一位知情人士透露，Meta的CEO亲自参与了他的动画AI的训练和测试，该AI可以向员工提供对话和反馈。</p>
+<p>他们补充说，这个角色正在基于这位亿万富翁的言行举止、语气和公开声明以及他近期对公司战略的思考进行训练，以便员工通过与它的互动感到与创始人有更紧密的联系。</p>
+</blockquote>
+<p>我希望他会在元宇宙里进行机器人一对一面谈，哈哈哈哈哈，还记得元宇宙吗？我确实认为"通过与马克·扎克伯格的动画AI克隆互动来感受与他更紧密的个人联系"确实是Facebook/Meta自创立以来一切努力的巅峰成果。在未来，大多数人的大多数朋友都会是AI马克·扎克伯格。</p>
+<hr />
+<h3>脚注</h3>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>阿克曼（Bill Ackman）开始为潘兴广场（Pershing Square）IPO进行路演推介，计划筹资至多100亿美元。 <a href="https://links.message.bloomberg.com/s/c/43KyZS2hfSYj4Cnj6J4bWG0Sz4s2x16-xbTt-CcPkehErJRZJIz3xuwH04Uk2EYQGgojBzx3ECMtPSfsh1Zsuv-7m1c51lo4ZjXCItL5ItXuTaCal3D858BxtnWuk9OnOJhiwzry9mqcIktnWFuX19jeTzgbn3dYcG2JOeWlfLHNfSh7ohCPquAjKp2FYhvRwJ-rg0LwjoI9ZuqVPm04QNlLHekgTslYTZUYGRSDL1r6ob7IMjukuIPiQob14NDZZnIaYzet6PUKtz15LHa0yesKouT9eKPzYIV0F7IhyMAykd2Yo_BVNmgumoTyI2SsGHB0Q4I1tv2-6mL8IyUYm6ly7PyEAtcnIq1cvXMw043CZhd7Kl6ax-sG3EQ/08VWPE6wYTG0bWlReEqbK9kXeyd7Rop-/19">Pershing IPO</a></li>
+<li>高盛（Goldman Sachs）股价下跌，债券交易收入不及预期，盖过了股票业务创纪录的表现。 <a href="https://links.message.bloomberg.com/s/c/mO0pI_M0hKmLIrFgGalGWeGtZkbzrWLNIoD7_VdYwVOce9QfOkR9kXemkYyMcSZ08X0_NNXrJ8URLk5FCuLnEnB9LncDihNKmwIJB2PX4semDY_gYz8hqBULjikvGf7zhd1SPUEaMHxUNpnNnBMUyLpAteQ77W_VNI6A7hh-5nLvxSqmzBhhUPfzp67AbNkusXWqrhcqkJ3iEuIeZOamv-Cs30_L7uCMafXqR-c-M_w5Pus47htNqey2KJbyZE9ywaI9jQjjH1bxp2Q4vMLEmQ5-VlvLVIVXVxpGH4VHeYBGGywIHZE7bgT8Qe7DjCkJJzFqiw1_6I-FcfElfPKJK0G6vS8uY39LR2FVVsaFpFsmnrT8jeZ2v62CC7M/UVZZFAKlufhsuVEZuwJ_OgW_-xJbrRbN/19">Bond Trading Miss</a></li>
+<li>大宗商品交易商在伊朗战事初期损失"数十亿"美元。 <a href="https://links.message.bloomberg.com/s/c/92aDUudp8Kx6Wr2sHiAN4AU0mX0jErJ7ZT0vw07j9HJsa_DLt4VJBa0poTuxwtU944AKltzpBIGix1qCwL3MQiKve9V2DImLPZ9Yq-8nq_dgLRm0x9aIU0Awb2Z7DMywRjHDbFRxIuWVUibKNkKPxCal699ZgABFTY-VyEbKq2ij9iPCpd1W134elI9wlMCAKrJmuufnVfKOrW-ZHwVcML_Aj4Z4XpkjQl8WUzNV4qT0LC4nA_jtk-9iXIhxbxeIkAW376jk9yGqe1xm0S-ANL4uedMbkXAmHWrFkP0hGGiE0JK7v1YHrXa0nXjwB1nqzB7m0uplj6WRB6jpLkNzFHFVaL5ncym8Im1jx1LKP3SVX5SZ7ps7PtOoLDg/mQYVzYwBpWtRSc8pZtmoLRHCHXz2Al5E/19">lost 'billions'</a></li>
+<li>对石油的错误押注让一位明星交易员亏损数亿美元。 <a href="https://links.message.bloomberg.com/s/c/Op-WtYArhTwkbTnPtRomAfp5osWP22mO2KHW1J6n0CJ4izcYbA41nLZTxWrfzpEta0g1UH7xMWAnCVxyiMAJeCdSlJ7qxSBlRge9NX2gJ9O9pnTWExAMJXGJf2tDixdLXVXnGH5dy2E0ZeHKcO4Y6nqUQ9IVh_BfRf7NL5EAO80fXko6TMuyWuSxhD3OzvtBRkRHWhoU6N9K1sXYLczFiArX6GSQduTp9WzJ4xhtbvuVtL36lI1XF5vlQtmleSY82SANP2By-BIwcmbSrMa8oZy9vvGoCd3zS3oBHzz28k5o4nA_cYofiZbW8kJDablmdU5EzcMXYCBBxe6UyEqD8xK_C3gXiEOBE4e9o6R1Kl8Zq994Wc7MdQfClm0/jb0jLh8FjXCzJsGirJbtxxqv1j1HdMuJ/19">Wrong-Way Bets on Oil</a></li>
+<li>能源交易商维多（Vitol）在遭受亏损后重组衍生品团队。 <a href="https://links.message.bloomberg.com/s/c/q1BnXhPquqxpAGDOrClnjGvmw_cZRNs1wsUgv_v88SilSgTpYzBFrFwVfoP-rbhjsTOIvEvegc1k_W-7cDgczPQeCkUtNI2ER3WZSQpaFkXWc6QdPevngtqZyi39Xcrj8YD1izvj0e0koip7S3u7yxUl1xtm-B8PmbKFFQma3aiHeZcbXPbV2f4fjzUcLc2JP7aNMCHUGwaZyQpk8xV3RNEbuTRCYST9tbithLSkMIyTtl8xY69vJn9R_aB5DWYxkeJvPHIcoqCK3FAKjqdi2W7wnSw4zeLYtcrrx9cGpEhKKGeeBo_yUMMuB9oFa5VVMMI7xxtPd5Qg-DkbvIqG0Bcql_tXWPEGHEP3qZgibo9n10ldj4dyNlRbHYU/p3uKPgt7COtoip-3_0VERZ1GU_KrKGRr/19">Vitol</a></li>
+<li>SpaceX的一笔交易为回声星（EchoStar）CEO带来高达30亿美元的税务节省。 <a href="https://links.message.bloomberg.com/s/c/FsSBQpyUOF4Y7aY3dSES5hi9_NifU3mhpFayw-0nmbq3BDiP56zdIOYgH_6q6i9wK2rbvM5p3gAEq__pviGCd4Smy1JLrH0WI7_CCsy7rMhMeG-8YH6bYyn5jIjNj1ffzB2oMy2-s4Ykfl-Tpf5lH7PdxtN5bThxdYWrsDgA0GrMs70x2vX_7mF9Sz1HX6hAwiCX9KtxQspo0EOIGpsdldewgnKKsmgOcUF18BoAbMh9HxEIOs75S5E0Yg2rOGf0mF1KNOD_rt2fNvv8A160-kjRlF-cbQ4JulNQ66fiXgUgWzZ0PrqGwrNzIgtWzjFqqJNiOQ-Wyon3A_4LglDzq5PwO5YiLMs82S0ToPEOr1U3fkHmOkRjAoxfGjY/G4csgT16z4uTKfbCDCe8CiM33WH8Xgtj/19">$3 Billion in Tax Savings</a></li>
+<li>美国新税务心态："国税局抓不到我。" <a href="https://links.message.bloomberg.com/s/c/hN4Xr0LW-2Yi-Wp0GBfHPYfimMTbNmIXciRJyaUIqPVsIhOVFCNbpFL1W3cYAcx4jO-o8kJZXdftnRVgT7vIcqeGtmgbZbVsBgv8BMWCBGhRDGIpTs8KjU1mp-3wZsG3V-gCL0uF0FoT7CJymDT34lVG4WwgxP0e1uDxeyBLwFnvpzqhu_y8MW-oOb0MaD8nRWPuHQsDmuDS1XLjgziU9giVFL1335CQ_9MKJKYDqSaqL0HUhtA2vcx_72rREGszcdGmWQIibCIFSHWMrnACqIzXSr6mbHmcadxOW3lKUcZLIZChO_ZdSp9snsj9TbdkN6QCVl1CtOKBmsMJlf-DOjyhH2UpEq6Qp5plaja7bT46NQP2hIT6NqseU5k/dC0snRmfFcr74Wncyiy62AvZxkj4onoi/19">The IRS Isn't Going to Catch Me</a></li>
+<li>好莱坞重量级人物联名致信反对派拉蒙（Paramount）收购华纳兄弟（Warner Bros.）的交易。 <a href="https://links.message.bloomberg.com/s/c/dblkRZIjYe-G7hgdrxbMrsapmhhd-CWEz4o-R8m90F8Gg_qbUr3w0WguGqkVeH4ZE6Jj1ZCNC1EPDY7g_jwNJQeN3RpNlysJZRhXeZZ40T5Jn4-Zi0Xxjt2iq8NF3Kyg4MMk23RaGvODV8Kp0BFuImSKHl5vEFzS4UhSZH8ktmnrSVwBGlRpi5H64WcbMiItW79PMi8YHNFoWB_mdc1D6n7bOdxPAMm_wRVf-t8Rb7L4Ud2NPLi4Da6XU0lMHdiVzXt6Y0tR2xn1Wru9ChB2TJX5GJFy-Ah8eS5D7ssXKt5KM6Jkzkhb5QDYUDQAFludgXqER3eOEHFmvrzFlITf-C8BkG2XT4vU8MPFhFwAcG9YuxQ0zbGYPa_pO7g/JsqFUEyR5pFt2oDEST4sCg-DawW4s5br/19">Paramount's Deal for Warner Bros</a></li>
+<li>佩雷拉·温伯格（Perella Weinberg）将收购伦敦精品咨询公司 Gleacher Shacklock。 <a href="https://links.message.bloomberg.com/s/c/IeQNiXIvLRDf0-eCqK2z_B_wqKdnvOfyQVDzH0VbZ4U44GfSozHDinY3UMmZRUrwnL4jmCAu9HtRM8-SK5aD8NZ-CSreUSn-WYgMesCR656p3FLgjx826SFSZXJKEGKjq8qxxCsRTGqyyU4SG7wOJq30koquMCx0qNPHb1uAU61Bgl1hBfYqW44nQwZXc9iK6CmLR0W7bO5lzQ27CSRvpeJWsGHGo9A1wy5CwvFVL6cAAXNzlkDBDyn5JFp9M1_n6fl6mvIfUo2QHdk65cq8-XFlqFhV-M4UPNfY5Zb2E2kEi0qc4Xpmz-u7F74OEJlnukBJNq_Ig4mFAVVI6taXVoQSl0TK6KpHSdnNV80gDMTAIpkJQl9aafd-alM/iI4BfPLr5ViwdPjjFPTo0jNOqpCKF8OK/19">Gleacher Shacklock</a></li>
+<li>对冲基金资金涌入，正在改变一个古老的保险市场。 <a href="https://links.message.bloomberg.com/s/c/6bHXHEvG-ToJIqmSPeQyTKHoTLqHNwWpHIfRQU9lX6B3xderinoue45LyOwIbDZN2O3bJouyVk3hspCubI89mUD4zxeLEfGhK9-7dYBdPWEgLwclcETVELE5TgYXTlpjLseUqW6Mk_-Q45NCbd240sZxxTxSW-FoQ5I0pPd4D-NvAt2nWmLGNzZuLw45UtDE2E4zSexVhEUoF0nwXsFdy7FQeG6U_8PIbTAJHWuWanoQiIVeXK3Fqw8knLnn91fH7U_qEJvKYCGyinNPq5f9F2tpoDP-GngcnrIj9kPBeo6jG97-xfASP83W5qlyyqN0JLIqP1DcOk_stsj4j7OzTW_ND3B7BZ3RX3t0qPprr19LIBKr9tk9phlaoIg/YdCmQgero1UTc_eW5BtCz7FDnb0nXds6/19">Insurance Market</a></li>
+<li>BISTRO、CDO、SRT。 <a href="https://links.message.bloomberg.com/s/c/CLGRWTesoqJ8NrRTqUNNGOzR4EZvJcRf6SPYbfcBLM6F0nhc9sX-ntKyvwBaT0v4Newjqod9zgwKcOCkLSvT-U56jnub6u235z5kK8-ujJcgWCo_uqo8Bi0fECSKGOeHMScVtCjs14FYKkJrDRR01WMZ6OmNEpiLMxG6SyxfmOnKtCxD8gjkNZFuBN8q36Oxf_Y7-yFTtwMoNpawxYYRVbEGow4B9xOQv2kv0toJbhZOVOFGEjXLm8HlNfRryT74cBOmR4VYmQTT3bMtr5oCmetCjWmCf1QmboDdRZ-waeHWRBVYlSprF0jVM3XxpcRR7-hKi4e1_tv28LryiLHdDD-PcXGarMbUFdLFn_OcvKGXQcvBQqP1Wuh69WE/99QASeNywrB93lA0-_VxrBsBmCT91_Q8/19">SRT</a></li>
+<li>焦虑的父母花费超过5万美元帮孩子找工作。 <a href="https://links.message.bloomberg.com/s/c/SwzkFyyEjP0y07UQOnCKzwfbiD1p6R2GiwdQlYmyNArXaIz7ZCa3pFVmad2heO3__f12kuyMmrMbnrPLLMcO8UnWeje23oz8axfoXuJUp9LJNRnKCDjAoPK_9ht0cYY0lIGVfqzEXIUZf8LTTSedyDl0l9rlunJp6C5PsnKm6HIrmt_AWaO3fHyV2lB-huA7hVbqJBNdM41Q2wuBeB3isQg8nOSZGXh0XVgaM2Uju0_-dQWRwT65g75WeUHOKEqBQk1BIJXcYgQAB-fY0U_mDB9nUPJjOUkt4CUFpzvCEHAa31l2l1NzVyi1brom21WltbLh049Hd-_04LHNzO9Pg9-2I6Kdkz9yLejOepRBHCQ69K3xUFSPdL8kLsA/P2s3oIleft8LTz_Qns7jZiLrXZzFINsy/19">Land Their Kid a Job</a></li>
+<li>有人向 OpenAI 首席执行官萨姆·奥特曼（Sam Altman）的住宅投掷燃烧瓶。 <a href="https://links.message.bloomberg.com/s/c/TZJRTbo__vwp3sBsqRnOudZ4AquzwRpGRHItuqF8F4G2f0gRqQTzW5yrjrlHjWIR916AiQtZariVSUcoCkha_egPuI4A5JFUZBDIIngHFjGc6D9m4qwNPVtuSHm0Eycw9pnP1U6BDwSjle_ItU359JY5VYvcnSaXSAjjZN5EhjSoUS2Pe2q98XNsNRPVFPX-YekawwBs8zHjjI1R7iD00nYkXTjePV2ZcSgYI0pUCo0x1eNqw9oaKtWJqdRBYD2QD-G64zXI6vEu9UlHraxHRtkg2MHZocqV5pDHKKTfzR2pE1uJG6yeVB5WE665I_MZoi61ZfLWIYCrJtby63EOdRskAHyiNWvMCJViFjX9NnHvUnX5RXOcBD11q7w/3RcuR7BCpy4ENnl4m-k2FtVgznHXTl_A/19">Sam Altman</a></li>
+<li>比尔·阿克曼（Bill Ackman）为200万美元发火后，亿万富翁们纷纷赶来安慰。 <a href="https://links.message.bloomberg.com/s/c/V_nf59GhPEDTqK9vrYvunrax9IVd2vcIBBL1T5adDWf5GYPX9DgpTc9nTCTlADmu8I6qIJvpDl6VE1KI1XMLNK1jvHcnEZbhHmk0JZqLwztlcLcUJjyp7mg9ggEZZFLBpt6l-HCskL-gjEyg38pMR6sCragxlNV0v3uF318rhgotjSjFQWoOuOManWEXO59yyfUTIg_vf0mCehymA8KaibAKHDuPSAf0_ScXgIEJNQVbDu3FDRLIXgVa06PdSCHON74OfSchvMPed8G6Lx9wkSDyq0yQL46GpqYvc0CgYtPu9RLj1LWItS6bAseHVFAaE-Jx38KlCsyex2pJd9UxOMJlW3azfVCh9hjHDeUbda16zw1qlLbtw3G8Y9U/UOnnhO4yKVltqFcurLNiqxcC04lz419Z/19">Rushed to Commiserate</a></li>
+<li>批评教皇之后，特朗普（Trump）发布了一张自己扮成耶稣式形象的图片。 <a href="https://links.message.bloomberg.com/s/c/j2C6JK72OKXdbZEHKAbv7KJlb5VpkgbtBpo2rNavC7MpTyJGBggSzlj1Zl5DbNsH5oQJWgSq2oow4RNgMQuahWfvElu6GeXr4vqEBJEGn4ylhJmx4bzbIAoTofaB-CxfZq0kDVcTqxdiLTSwVFYqt0fqACpgsOb2Rr1LVwEqW2dwtjW7ltnNsExLNyjc38bvRovIDpSLUPfFYbpIgIxY0BKdeVFkqLZlXxvYd_PbiNzqPpC3aDabozwaPc64TWNDub-LAuVrLvXUrJ1tUh9ZGsldsX23Dne6d8myzFvmQBQs64d_-3_6msC4fHMulmIH7IsgoENNk0l7Ig1ARp9ezDLPRWvmN_p6sAp4UclvPbk8nzArkaDyPmsTNVY/608OGD4HoUGIiq94Eh8hCtrlGdDb4PUz/19">Jesus-Like Figure</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>参见埃德·米勒（Ed Miller）和马修·大卫多（Matthew Davidow）的《体育博彩的逻辑》（The Logic of Sports Betting），特别是关于"做市"的章节。另见2022年《拉斯维加斯评论报》（Las Vegas Review-Journal）的一篇专栏，以及Altenar和Pinnacle的讨论。此处有一些简化，例如内特·西尔弗（Nate Silver）（沿用米勒和大卫多的分类）区分了做市型庄家（承担更多风险，不注重平衡）和零售型庄家（更多限制投注者，更努力地保持平衡）。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>这一点在串关（parlay）中最为明显——串关是现代博彩公司最大的盈利来源。串关是指，如果篮球比赛中12个事件全部发生，你10美元的投注赢得10,000美元，但只要有一个事件没发生你就输掉10美元。显然，博彩公司不会用1,000个其他投注者各押10美元、只要有一个事件没发生就赢0.001美元的方式来平衡你10美元的串关——博彩公司自己承担了这个风险。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>"自营交易公司"（prop trading firm）是这些公司的通称，但"做市商"或"交易商"有时也用来描述这种提供流动性的功能。也有些自营交易公司完全不做市，只做方向性押注。&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>如果这一点是错的那就太酷了，如果你在用因子模型交易体育博彩，请联系我。&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Jane Street的印度期权交易可以有多种解读，但其中之一或许是"Jane Street喜欢对印度散户期权交易者做大额方向性押注，因为印度散户期权交易者系统性地犯错。"再说一次：也有其他解读方式。&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>非投资建议！"如果你不加修改地运行这个机器人，很多事情可能而且一定会出错，"Crispin提醒道。&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>或者说，多个委员会——一个负责体育，一个负责娱乐，一个负责选举，一个负责战争等等——各有相关的领域专长。&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
