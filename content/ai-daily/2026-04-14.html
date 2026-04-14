@@ -1,0 +1,81 @@
+<h1>📅 每日简报 | 2026-04-14</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 1条 | 模型发布 2条 | 国外公司动态 7条 | 中国公司动态 2条</p>
+</blockquote>
+<hr />
+<h2>💰 融资</h2>
+<h3>日本AI基础模型开发 — 软银、NEC、索尼、本田联合成立的AI模型开发公司</h3>
+<ul>
+<li><strong>软银等四日企联合成立公司，将开发万亿参数AI模型</strong><br />
+  软银、NEC、索尼集团与本田在东京共同出资成立新公司"日本AI基础模型开发"，计划在未来数年内构建参数规模约达1万亿的日本最大规模多模态基础模型，面向可自主控制机器人和机械的"物理AI"需求。三菱UFJ银行、三井住友银行、瑞穗银行、日本制铁、神户制钢所作为少数股东参与投资，技术方面将获得 Preferred Networks 的协助。新公司汇集约100名高级AI开发人员，由软银高管出任社长，目标到30财年实现AI与机械、机器人的协同工作。<br />
+  🔗 <a href="https://www.nikkei.com/article/DGXZQOUC1207B0S6A410C2000000/">来源</a></li>
+</ul>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>月之暗面</h3>
+<ul>
+<li><strong>Kimi 上线 k2.6-code-preview 编程模型</strong><br />
+  月之暗面宣布 Kimi Code 抢先体验计划测试结束，新模型 <code>k2.6-code-preview</code> 已面向用户开放。团队同期修复了 Claude Code 2.1.88 版本因工具 Schema 变化导致模型表现下降的问题，该修复已随新模型上线。<br />
+  🔗 <a href="https://x.com/Hx1u0/status/2043738521920516129">来源</a></li>
+</ul>
+<h3>OpenRouter — AI模型聚合路由平台</h3>
+<ul>
+<li><strong>上线新 stealth 模型 Elephant Alpha</strong><br />
+  OpenRouter 上线代号为 Elephant Alpha 的新 stealth 文本模型，拥有 100B 参数规模，具备 256K 上下文窗口及 32K 最大输出 Token 限制，支持函数调用、结构化输出和提示词缓存。目前免费开放使用，但提供商会记录所有提示词与生成内容用于模型改进。<br />
+  🔗 <a href="https://x.com/OpenRouter/status/2043714975756390844">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Cloudflare &amp; OpenAI</h3>
+<ul>
+<li><strong>Cloudflare 联合 OpenAI 将 GPT-5.4 及 Codex 引入 Agent Cloud</strong><br />
+  Cloudflare 与 OpenAI 达成合作，正式将 GPT-5.4 和 Codex 等前沿模型引入 Cloudflare Agent Cloud 平台，数百万企业客户可直接调用上述模型构建、部署和扩展 AI Agent。Codex harness 已在 Cloudflare Sandboxes 安全虚拟环境中正式商用，并计划近期登陆 Workers AI。<br />
+  🔗 <a href="https://openai.com/index/cloudflare-openai-agent-cloud/">来源</a></li>
+</ul>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>英国 AISI 报告：Claude Mythos 可完成32步网络攻击</strong><br />
+  英国 AI Safety Institute 评估报告显示，Claude Mythos Preview 模型在专家级 CTF 挑战中取得 73% 成功率，并成为首个能端到端完成 AISI 包含32个步骤的复杂企业网络攻击模拟靶场"The Last Ones"的 AI 模型（10次尝试中成功3次）。官方指出该模型已具备自主攻击防御薄弱企业系统的潜力，但测试环境缺乏现实世界中的主动防御机制。<br />
+  🔗 <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities">来源</a></li>
+<li><strong>回应提示词缓存时长争议：非隐私惩罚机制</strong><br />
+  针对开发者发现 Claude Code 关闭遥测后 prompt cache 时长从1小时降至5分钟的争议，Anthropic 工程师 Boris Cherny 澄清，这并非惩罚隐私保护行为，而是遥测关闭导致客户端实验开关失效、系统读取了5分钟的默认值。官方指出1小时缓存并非所有场景都更优（写入成本更高），实际12倍性能差距的说法被明确驳斥。团队计划后续提供环境变量，允许用户手动强制切换缓存时长。<br />
+  🔗 <a href="https://x.com/bcherny/status/2043715713551212834">来源</a></li>
+</ul>
+<h3>Cursor — AI代码编辑器</h3>
+<ul>
+<li><strong>回应内置 Claude Agent SDK"套壳"争议</strong><br />
+  开发者逆向 Cursor 3.0 后发现其打包了完整的 Anthropic Claude Agent SDK 和 CLI 工具，通过本地 HTTP Proxy 实时将"Claude"相关标识替换为 Cursor 标识并剥离 Anthropic 计费头信息。Cursor 创始人 Michael Truell 澄清，这是不到1%流量上进行的小范围 A/B 测试，旨在对比原生 Claude Code harness 与 Cursor 默认 harness 的表现差异，属于常规离线评估手段。<br />
+  🔗 <a href="https://x.com/dotey/status/2043588734952563180">来源</a></li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li><strong>AI Studio 引入 Tab Tab Tab 提示词自动补全引擎</strong><br />
+  Google AI Studio 上线"Tab Tab Tab"全新提示词自动补全引擎，开发者在 vibe coding 体验中只需输入初步模糊的想法，底层 Gemini 模型即可自动补充并完善提示词的具体细节，填补内容空白。<br />
+  🔗 <a href="https://x.com/miketaylorcai/status/204375326">来源</a></li>
+</ul>
+<h3>OpenClaw — 开源 AI Agent 命令行工具</h3>
+<ul>
+<li><strong>发布 2026.4.12 版，新增本地模型支持与安全修复</strong><br />
+  OpenClaw 发布 2026.4.12 版本，新增可选的 Active Memory 插件（主回复前自动提取相关偏好与上下文）、捆绑的 LM Studio 和 Codex provider 以强化本地模型支持，为 macOS Talk Mode 引入实验性本地 MLX speech provider，并增加 <code>openclaw exec-policy</code> 命令同步本地执行批准文件。同时修复大量涉及安全、Gateway 等组件的缺陷。<br />
+  🔗 <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.12">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>CEO Sam Altman 旧金山住宅再遭枪击</strong><br />
+  当地时间周日凌晨，Sam Altman 位于旧金山 Russian Hill 的住宅附近发生枪击事件。一辆载有两人的本田轿车驶过住宅后折返，副驾驶乘客向住宅开了一枪，监控摄像头拍下车牌号。旧金山警方随后逮捕25岁的 Amanda Tom 和23岁的 Muhamad Tarik Hussein，搜查时缴获三支枪支，两人因涉嫌过失开枪被拘。警方未公开说明事件是否针对 Altman 本人。<br />
+  🔗 <a href="https://www.sanfranciscopolice.org/news/sfpd-arrests-suspects-involved-shooting-26-044">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>Qwen（通义千问）</h3>
+<ul>
+<li><strong>下调 OAuth 免费配额至百次，服务即将停服</strong><br />
+  Qwen 官方在 GitHub 发布公告，将 Qwen OAuth 免费层每日请求配额从1,000次下调至100次，且该免费服务将于4月15日彻底停止。官方建议受影响用户迁移至 OpenRouter、Fireworks AI 等第三方平台或转用阿里云百炼，也可升级至"阿里云编码计划"获取更高配额。<br />
+  🔗 <a href="https://github.com/QwenLM/qwen-code">来源</a></li>
+</ul>
+<h3>MiniMax</h3>
+<ul>
+<li><strong>回应 M2.7 模型许可证变更争议</strong><br />
+  MiniMax 开发者关系负责人 Ryanlee 就 M2.7 模型许可证变更发表声明，称由于此前多次出现第三方托管服务提供劣质甚至虚假的模型接口严重损害公司声誉，决定对商业服务实施授权限制。模型仍允许免费下载权重、本地运行、微调及非商业项目使用；自托管编写代码和公司内部工作流不视为商业用途，完全免费；大规模商业目的的模型蒸馏则需获取许可。<br />
+  🔗 <a href="https://x.com/RyanLeeMiniMax/status/2043573044065820673">来源</a></li>
+</ul>
