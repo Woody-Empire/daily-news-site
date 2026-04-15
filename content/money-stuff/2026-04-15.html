@@ -1,0 +1,131 @@
+<h1>Money Stuff — 银行与私募信贷、BDC匹配引擎、碳信用、提及市场</h1>
+<blockquote>
+<p>本期讨论银行对私募信贷的风险敞口与"再分层"现象、非交易型BDC的流动性困局及二级市场雏形、微软暂停碳移除信用采购的逻辑，以及预测市场中的关联性模型。</p>
+</blockquote>
+<h2>银行与私募信贷</h2>
+<p>本周是银行财报周，而人们正在担心私募信贷。你可以想象银行幸灾乐祸的样子。"人们在担心私募信贷贷款的信用质量，"它们可能会说，"纷纷从零售私募信贷基金撤资。而我们从未卷入私募信贷的炒作周期，我们有堡垒般的资产负债表和大量廉价资金来源。这对我们是绝佳机会：随着私募信贷降温、收缩激进放贷，定价将更有利，我们将夺回市场份额。"</p>
+<p>也就是说：私募信贷的一种模型是，它是与银行<em>竞争</em>的信贷来源，私募信贷的坏消息就是其竞争对手——银行的好消息。</p>
+<p>但实际上，大量报道是这样的：</p>
+<blockquote>
+<p>富国银行（Wells Fargo &amp; Co.）表示，其对私募信贷公司的风险敞口在第一季度约为362亿美元，公布了这一受投资者密切关注的类别的详细信息。</p>
+<p>商业服务、软件和医疗健康行业的公司约占抵押品总价值的一半，其中软件公司占17%。</p>
+<p>在这些交易中，超过98%的情况下，如果底层资产的信用表现恶化，富国银行可以调整保证金。据周二的投资者演示文稿，证券化贷款将有约40%的缓冲，这意味着银行放贷的基金将先吸收约40%的损失，然后损失才会传导至富国银行。</p>
+</blockquote>
+<p>或者这样的：</p>
+<blockquote>
+<p>华尔街银行报告了至少1000亿美元的私募信贷公司风险敞口，让外界得以一窥这个受到密切关注的行业——许多投资者正对信用质量以及人工智能日益增长的影响感到不安。</p>
+<p>富国银行表示其对私募信贷公司的风险敞口在第一季度约为362亿美元，而花旗集团（Citigroup Inc.）报告第四季度此类贷款为220亿美元，并指出该投资组合存续期内零损失。</p>
+<p>摩根大通（JPMorgan Chase &amp; Co.）将这一数字定为500亿美元，首席执行官杰米·戴蒙（Jamie Dimon）在与分析师的电话会议上表示，他"并不特别担心这个问题。"</p>
+<p>"私募信贷必须出现非常大规模的损失，银行才有可能受到冲击，"戴蒙说。"这不是说你不会感到一些压力和紧张，可能需要采取一些措施。但我并不特别担心。"</p>
+</blockquote>
+<p>也就是说，2026年私募信贷的故事，与其说是私募信贷和银行是两种截然不同的信贷来源，不如说是"银行在进行再分层（re-tranching）"：私募信贷公司向企业发放贷款，部分资金来自自己的投资者，另一部分——在富国银行的投资组合中占60%——来自向银行的借款。企业借钱，贷款被汇集到私募信贷基金中，如果贷款违约，私募信贷投资者承担前40%（大致如此）的损失，银行承担后面的60%。</p>
+<p>总体而言，这应该使金融体系更安全。银行杠杆率高，依赖活期存款融资；一旦人们紧张起来，可能会发生银行挤兑。私募信贷基金杠杆率较低（60%？），而且关键在于其投资者<em>无法</em>撤回资金。因此私募信贷不存在真正的挤兑，不存在贷款的真正抛售，也不存在因投资者反复无常而导致的信贷枯竭。"贝莱德（BlackRock）视私募信贷动荡为夺取市场份额的机会，"彭博今天报道，尽管贝莱德零售私募信贷基金的许多投资者本季度要求赎回。贝莱德直接拒绝了！问题解决。</p>
+<p>所以戴蒙对此保持乐观基本上是对的。不过，你可以想象这种再分层存在两个问题：</p>
+<ol>
+<li>
+<p><em>马虎</em>。如果你的模型是"银行不再直接借60美元给企业，而是借60美元给私募信贷基金，然后基金再借100美元给企业"，那么这种银行业务的再分层创造出了比银行自己放贷<em>更多</em>的贷款。系统如何发放更多贷款？也许是通过发放更差的贷款：贷给更高风险的公司，或者以更高的杠杆率放贷使公司变得更危险，或者贷给欺诈企业。对更差贷款的优先债权，可能还不如对更好贷款的完全敞口。</p>
+</li>
+<li>
+<p><em>相关性</em>。所有私募信贷贷款同时违约、导致私募信贷基金损失超过40%进而使银行遭受损失的概率有多大？通常情况下，相当低：这些是向许多不同公司发放的贷款池，经济整体还行，除非出现大范围经济灾难，否则一般不会预期损失超过40%。除非这些贷款在功能意义上都是一样的：如果每笔私募信贷贷款本质上都是"我们借了很多钱来资助对一家企业级软件即服务（SaaS）公司的杠杆收购"，而现代AI模型使所有企业级SaaS变得一文不值，那么，是的，所有这些私募信贷贷款可能归零，银行也会亏钱。这在几个方面看起来都是一个不太可能的情景，但出人意料的相关性确实会引发金融危机，我想这就是为什么富国银行费心解释其私募信贷贷款中只有17%是在软件行业。</p>
+</li>
+</ol>
+<h2>BDC匹配引擎</h2>
+<p>私募信贷的问题是一个令人恼火的市场失灵。大致正在发生的是：</p>
+<ol>
+<li>
+<p>很多私募信贷基金采取永久性非交易型商业发展公司（BDC，business development company）的形式。投资者（主要是个人）从BDC购买份额，BDC用他们的资金发放贷款。这些份额不在任何地方交易。投资者拿回资金的唯一方式是，BDC每季度提出以净资产价值（NAV）回购最多5%的份额。如果超过5%的份额持有人想要赎回，那就没办法了；他们只能赎回5%。</p>
+</li>
+<li>
+<p>大多数BDC（除了高盛的一只！）本季度都有超过5%的份额持有人要求赎回。</p>
+</li>
+<li>
+<p>这可能是出于普遍的紧张情绪，但一个简单的解释是投资者不信任BDC的净资产价值。BDC可能告诉投资者"我们所有的贷款表现良好，价值100美分"，但投资者可能不信；他们可能认为一些贷款会违约，实际只值80美分。（其他私募信贷基金，即<em>交易型</em>BDC，以市场价格交易，通常反映出NAV的20%折价。）如果你认为你的基金值80，但基金会以100的价格让你赎回，你当然应该以100赎回，所以人们就这么做了。</p>
+</li>
+<li>
+<p>与此同时，很多人——BDC管理人、博亚兹·韦恩斯坦（Boaz Weinstein）、一些机构投资者——认为所有这些担忧被过度渲染了，私募信贷运行良好，现在是逢低买入的好时机。但<em>他们买不到低价</em>。非交易型BDC通常只能以净资产价值进行交易。（而且净资产价值并没有大幅下降。）这意味着：（1）BDC本身无法以80美分的价格赎回想退出的持有人，即使很多BDC投资者愿意接受这个价格；（2）其他投资者也无法以80美分的价格<em>买入</em>：如果他们想投入资金，必须支付100美分。有些人确实这么做了！这些非公开BDC继续获得资金流入。但流入通常小于流出，因为显然市场出清价格低于100美分。</p>
+</li>
+<li>
+<p>显而易见的解决方案是建立某种二级市场，让想退出BDC的人与想以折扣价买入的人进行匹配。想要低价私募信贷的人可以以80美分竞价BDC份额，而该BDC中想退出、又无法通过正常5%要约回购拿回全部资金的现有股东，可以卖给这些寻找便宜货的人。</p>
+</li>
+</ol>
+<p>这大致就是韦恩斯坦正在做的事——以约65美分的价格对蓝鸮资本（Blue Owl）的一只BDC发起要约收购。但他只是一个买家。并不存在一个更广泛的双边市场来匹配打折非交易型BDC的买卖双方，因为这些BDC就是不交易的。这是它们的全部特点。有<em>公开交易型</em>BDC，任何人都可以买卖，它们确实以NAV折价交易，但那是另一回事。非交易型BDC不交易。</p>
+<p>但如果它们交易呢？上周五，彭博的娜塔莎·沃斯（Natasha Voase）和克劳迪娅·科恩（Claudia Cohen）报道：</p>
+<blockquote>
+<p>随着越来越多的法国房地产基金因客户大量外流而冻结赎回，流动性的真实成本正在变得更加清晰。</p>
+<p>在今年早些时候暂停赎回后，Praemia REIM France管理的一只基金已开始允许投资者在二级市场上挂出份额，撮合买卖双方。首批交易显示，一些股东为了拿回资金愿意付出高昂代价。</p>
+<p>Praemia旗下Priompierre产品的一位投资者，在3月最后一周进行的首笔二级市场交易中，接受了较基金上次认购价60%的折扣，该公司数据显示。迄今为止，试图从Perial Asset Management旗下Perial O2基金退出的客户收到的唯一买单，折价高达70%。</p>
+<p>一位发言人在电子邮件声明中表示，Praemia的二级市场交易仍处于起步阶段，交易量很低。</p>
+<p>"这第一次交易的价格应谨慎解读，因为它主要反映的是少量买卖订单之间的一次性撮合，而非投资组合的底层价值，"他们写道。</p>
+</blockquote>
+<p>显然法国房地产基金不是美国私募信贷基金，但基本逻辑是相通的。如果你运营一只非交易型基金，它有一个官方净资产价值，而在这个价值上想退出的人比想进入的人多，为什么不让想退出的人以市场出清价格卖给想进入的人呢？你知道谁想退出（他们在缠着你），你大概也知道谁想进来（你在缠着他们）；你最适合建立自己的非正式双边二级市场来撮合买卖双方。然后，显然，你发一份声明说市场出清价格不反映投资组合的底层价值。</p>
+<h2>碳信用</h2>
+<p>你可以建立一个关于碳移除信用的模型，大致如下：</p>
+<ol>
+<li>每向大气中排放一吨碳，将使人类的境况恶化X美元。</li>
+<li>微软（Microsoft Corp.）有许多人类客户、员工和股东，其办公室和数据中心所在地会受到气候变化的影响。因此，每吨碳将使微软的境况恶化Y美元。</li>
+<li>有人愿意以每吨Z美元的价格从大气中移除碳。</li>
+<li>如果Y大于Z，微软就应该付钱让这些人移除碳。</li>
+<li>即使Y不大于Z，也许存在某种集体行动的动态：微软和其他100家大公司各自付费移除一些碳，这些公司从移除所有这些碳中获得的集体收益将大于它们集体支付的金额。当然，不参与的其他公司也会受益，但像微软这样的重要大公司不能这样搭便车；微软的参与有助于鼓励其他人参与，因此对微软是有价值的。</li>
+</ol>
+<p>大致如此；第5步至关重要（没人认为<em>微软每吨的收益</em>大于每吨的成本），但相当模糊。不过这个模型似乎相当传统。</p>
+<p>你还可以建立另一个模型：</p>
+<ol>
+<li>对一家美国大公司来说，说"我们是碳中和的"是很好的公关。</li>
+<li>因此，微软将其碳排放加总，然后付钱给一些人以每吨Z美元的价格移除等量的碳，是有好处的：这样微软就可以说"我们是碳中和的。"</li>
+<li>如果说"我们是碳中和的"带来的公关收益大于Z乘以微软排放的碳吨数，它就应该这样做。</li>
+</ol>
+<p>这个模型也有点模糊（公关收益很难量化），我想它与前一个模型是叠加的（你同时获得公关收益<em>和</em>实质性的气候变化收益）。但如果你认为第二个模型<em>主要</em>解释了美国公司如何看待碳排放，那么你可能会做出以下预测：</p>
+<ol>
+<li>
+<p>随着微软自身的碳排放增加，它可能<em>更不愿意</em>为碳移除付费。说"我们是碳中和的"的成本等于每吨碳移除成本<em>乘以</em>微软自身排放的碳吨数。如果微软是一家软件公司——一些人在办公室里敲电脑——它自身的排放量会相当小，可以在不花太多钱的情况下获得碳中和的公关收益。如果微软是一个由耗能巨大的数据中心组成的庞大网络用于构建AI，它需要抵消大量排放，这很昂贵。而说"我们抵消了60%的碳排放"带来的公关收益，大概不是说"我们是碳中和的"收益的60%。</p>
+</li>
+<li>
+<p>随着说"我们是碳中和的"带来的公关收益下降，微软应该为碳移除支付的金额也会下降。在当前美国政治环境下，公关收益可能是负数。如果你现在是碳中和的，你可能会选择闷声不语。我几周前写过："在2026年，如果你真的找到了一种用藻类生产无限燃料的廉价、清洁、可再生方式，你会守口如瓶。'我们是用一种新方法烧煤制造的这种燃料，排放了额外的碳，保证！'"</p>
+</li>
+</ol>
+<p>总之，彭博的阿拉斯泰尔·马什（Alastair Marsh）报道：</p>
+<blockquote>
+<p>微软的员工已告知一些碳移除信用开发商，公司将暂停目前全球最大的大气CO2提取融资项目。</p>
+<p>据两位知情人士透露，这家软件巨头的员工近日致电多家碳项目开发商，表示微软将暂停采购。其中一位知情人士说，在一个案例中，微软员工表示这一决定出于财务考量。</p>
+<p>微软是目前移除信用市场最大的投资者，设定了到2030年实现碳负排放的宏大目标。该公司涉及多种技术的交易，彭博新能源财经（BloombergNEF）估计其2025年的采购占整个市场的96%。……</p>
+<p>虽然微软此前一直在扩大其碳移除计划，但由于投资建设为人工智能提供算力的数据中心，该公司的温室气体排放量已大幅增加。</p>
+</blockquote>
+<p>是的，我的意思是，如果你在碳移除上持续增加支出，但净碳排放却不断上升，这确实看起来像是一笔可以削减的开支？</p>
+<h2>提及市场的关联模型</h2>
+<p>我昨天写了关于预测市场和常规金融市场之间的一个区别，即常规金融市场彼此相关，而预测市场则不然：</p>
+<blockquote>
+<p>金融资产往往会基于底层经济因素一起波动；棒球比赛则不会。大都会队（Mets）的比赛结果没有明显理由能告诉你洋基队（Yankees）的比赛结果。</p>
+</blockquote>
+<p>在脚注中，我补充说"如果你在用因子模型交易体育博彩，请联系我。"有人发邮件指出，<em>如果大都会队和洋基队打的是同一场比赛</em>，那么大都会队的比赛结果确实能告诉你很多关于洋基队比赛结果的信息——但这并不是我的要点。</p>
+<p>不过，确实有很多领域，一堆预测市场事件合约会彼此相关，甚至可能与底层经济因素相关。有关于杰罗姆·鲍威尔（Jerome Powell）在新闻发布会上会说哪些词的"提及市场（mention markets）"，我想你可以建立一个宏观经济模型，既能预测国债价格，也能预测鲍威尔的用词选择。或者看看《华尔街日报》（The Wall Street Journal）的这篇文章，讲的是这类东西：</p>
+<blockquote>
+<p>在特朗普总统发表国情咨文演讲当天，福斯特·麦科伊（Foster McCoy）坐在两块发光的屏幕前"监控局势"。……</p>
+<p>28岁的麦科伊利用所有这些信息来下注：特朗普最小的儿子巴伦（Barron）会出现在观众席上。</p>
+<p>"人们得知巴伦·特朗普会到场的唯一途径是通过埃里克·特朗普（Eric Trump）的Instagram快拍，"这位明尼阿波利斯居民说。"如果你关注了他的Instagram，你会发现他发了一张与所有特朗普子女的自拍，所有人都穿着西装，准备出席国情咨文。"</p>
+<p>麦科伊说，巴伦的这一次露面会在其他相关市场引发连锁反应，比如特朗普是否会在演讲中提到他的孩子们，或者使用交易者可以押注的其他特定词汇。他说，他的组合押注净赚了约1万美元。</p>
+</blockquote>
+<p>这显然不是什么基本面经济模型之类的东西，但重点在于，很多预测市场的赌注都与"巴伦·特朗普出现在埃里克·特朗普的Instagram快拍上"这个因子相关。不是所有事件都与相同的基本面因子相关，而是你可以押注的每一个事件都与大约10个你也可以押注的其他事件相关，所以你至少需要某种直觉模型来交易相关市场。现代金融真是厉害。</p>
+<p>另外，这里有一篇2004年的论文，作者是史蒂文·莱维特（Steven Levitt），题为"为什么博彩市场的组织方式与金融市场如此不同？"摘要如下：</p>
+<blockquote>
+<p>在体育博彩中，庄家宣布一个价格，之后调整幅度小且不频繁。庄家并不扮演撮合买卖双方的传统做市商角色，而是就比赛结果持有大量头寸。利用一个独特的数据集，我证明这种特殊的定价机制使庄家能够获得显著更高的利润。庄家在预测比赛结果方面比投注者更有技巧，并通过选择偏离市场出清价格的定价来系统性地利用投注者的偏差获利。</p>
+</blockquote>
+<p>正如我们昨天讨论的，这都是程度问题：金融市场做市商有时也会持有头寸，体育博彩庄家有时也会试图平衡投注，但是，在预测市场本质上是体育博彩市场的范围内，其做市商确实需要持有方向性头寸。</p>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>摩根大通（JPMorgan）交易部门业绩远超预期，创下历史最高收入。 <a href="https://links.message.bloomberg.com/s/c/RwuGKTOVKXKYcUAWennrKTtl6YEJAhu2wDh4m8AdUZI9n2DLBvTrFFrhLoperb7vzzGgjK0_Hmz1yihwAt3RsIH8vzZ2Aqbcm6LDA-DGF-3iEts3fOCL72yANlNuRyWZR319yQ9iMaPeSWSPxG9rTESoLZCHS3rXA2GO0Tk9rFiTfre8lnr8cHMW9zRnQDaUPoWHiVMWhvXAvFXUm3pzueH33xp9jJJBGAZ3aDxStFjyX8QqjUnJ5QPC0ubiJSAl2s0hMbd448FYcY1BVlLQPbShkBcRmKtYj2KDpk1CCHPkjpAA8A9eJaH1yNNUOSQ-BAU05jvEgEKli-j6-rjpeVNBQlUHJZlyKUZgeUM-SY2qOnBEZk0Io99cYkI/J-jFCSCvDHiwo2UHkcRs9_dEDMNxtWgC/19">JPMorgan</a></li>
+<li>花旗集团（Citi）在转型推进下录得五年来最佳回报。 <a href="https://links.message.bloomberg.com/s/c/bZewcMXL-1V06mdOJeINuzGWZiO8G0-hF0XjRJKLfc0dvweHB-pBbOMzADd_UcXBraQN2cthykGTsvbshQuzYxrIsY41bS_khhJMIzXbge8FnUe8tez-J3GJrlQBU4BAd6K7UwmuZUJO-nSGSH9i7ZimP99bG2io58OqomuXK1c2wzDBKJhZ2kyUatibpx54LWFbGy7t5BM9lfHDPn5XJHdCYt8X3gpEdRbCBsWa_9la5MryfqDR141n9hpqkFR-XP1X25NvS1LKH6eDpdNX15n5723h48jEXLZqzxpPLy2oKOA7E7wCv4kp5cU-V2dock_FRtGGBmRL8tA1oxhWSMwrXnMm-BYZhzO-2V4KpT2uqqSsO647hBB5ZuI/16hxpFk_WClIjP9dFdG0bTW5b7puBcIH/19">Citi</a></li>
+<li>富国银行（Wells Fargo）因利率下降，贷款和手续费收入未达预期。 <a href="https://links.message.bloomberg.com/s/c/1uqUCdnm9Vf5zPC6ALL3teDIP8p6-2-CaMGeankpmASVfTyNjbmby22EzIxgNcVE7PIpGbpvTKg8qaqZKXXhh8dfYCW8veTr5nXizKHzvOm30O503i3ZgsFshZ4NoAx6OWTrikWspFch3yf5PgXmpum_ycNBVa7sL8UlRyLDoxtKMLd-RxMMCswpGJyNhADeuj0zV-LkhUI-BAT6YfoZo14AD0Gtk1dz92bUC3SWULlIMoAK57-96GBgcYYJ3qPY2a-vEhh5AKDCf1nLq5BizgYZdItLiVwOEa2Ic441zbDdqTZKOg6WJaTT7lfKr8np6U8TJNc4hXIjNwsrjJdwChVz6bpMhrFssu1KfRWtgNVH6k72nvUx7TWBwak/6BLiqiFPyduS8QF8UA-IsF0KTS1LW0_S/19">Wells Fargo</a></li>
+<li>贝莱德（BlackRock）吸引1300亿美元客户资金流入，费用收入大增。 <a href="https://links.message.bloomberg.com/s/c/2Cjrwqj8hOqGd05HCFZoyuAPu3xwxAWXeYULclI6pELCDtdwhYOlCxlDPNhcpUP0f1lmmP5TN9Zvn4hlgS7uIci5MU0hk2ytc69WHxuVEKCqZVRc53OFeLHs8yKdqVt2TM7o0dUsjfM_S6e0IusFYkt2zVsqD_k5r7xueY9EftlKornjxCX8MpYUDmiVAIcSrbLqktv_1_9yvPbnSzV-G2PuaqKAKWD4wDYAGQN7bK_9M4bJ3zvOFl_4BBZDhX3xocaVcvK3pqsTTXiPrP_lDVE_mH1QkVnAlWV9UWKteqFXPOvCug8GlIA4HlID6DvLoaWrYug2_wKUF9yyt7mbRNILWCUWr9V8uCvnfblcfoKdaHIx4d0JSt09Na0/MxFpAQvF4cmclmNakT4zQeQisjSf_A7N/19">BlackRock</a></li>
+<li>OpenAI 投资者因战略转向对8520亿美元估值提出质疑。 <a href="https://links.message.bloomberg.com/s/c/ZNfBcbiCuKxk0s5qmysEa2ABYM7rI8IXXPRr8JryecowLdbdbF_0zELhEvF1kSr3_G6DoZh-andj47xwZL5n6hrsqzsDYXb7GwbQgmDQfOgrTXyfJbKhiHVvMhK6iFyH7x2d8WYaLfe5sxhgbWqOEidZXPu2ttI7voBXB8rufuY_HYJSEkuQSAi3rYDQy94hYt3cNGbzlpqV6Uz7Rqi86e-qG8tg9hhZxaMOFT1m9Ad-jIYtSa3hPXiMKEZWF-Yv6NcFEVkYBwtWTz0kgm_FS4rukmrjHu8PewqjImVH00uWBm5gvYhEofFeEyze-mvAipf_ZZykEl5jc2xQoxr1eB8_TWYwPy_Y-7bjtfdaa3Q2L8Q06G0joDraZqQ/7cQAchw_8chuufYPkTsdrwe7_y3tWxkY/19">OpenAI</a></li>
+<li>亚马逊（Amazon）将以每股90美元的现金或股票收购卫星运营商 Globalstar。 <a href="https://links.message.bloomberg.com/s/c/fUWkeuT0UECY9Ewx8W8Mkn4-tdNpxvq0ammJA5XrJOJGW2KcBWFY3vZigIV46Kno9CMEzQcHX_DPqMiP8vW2qyvX2bCWqz-kDwW5VoAyEVMlctK9YsfOkY2lUh6kLsDQZw7VYNoN9IZoJot-wnIOByJPVzvnEmhvJb10w4ryqjh5TjshxgnkeL4FpmCNBg-Becv9TCc6KNVhZ-KTz4BEtNrIoB8wpBtacLxZzqvOOnxErHDV3-LBXaz_vM4Yu-h8725ITReKMAOaiZeNeuWfb2Wvt059o_HeE9EQ6LQEaNBPY0nzV3xcXMLllT7P2ZZMKzSyyxRtsrg2aayfvoiKo73G2wKeHV5813hC6ehq3RYsh6J2SMbimaTzXIk/duIIGvyPrRgNa8Edrnc14PzKa6xp-Lup/19">Globalstar</a></li>
+<li>美联航（United）首席执行官已就与竞争对手美国航空（American）的潜在合并进行试探。 <a href="https://links.message.bloomberg.com/s/c/xQA4UxnMGIACpZMdNw1otYJ8uhuDaaHECs6sG1170Byl-vuA0abqqUyZ1E1u-cYMM36v1wXukSZ2Ix4LBfFFd5116Xt8lNkrrY9Tf1cvkyukpvRm-daEK166F9kZIdlPWeu_WhoeM83RuehPvVx0JnrkxjRIVbxdgpx9XJh8OY2pWHmcd9UzWZCCinABMjsM_FZORDj9bfxnjFjP4KqnVJFNk-e4v13yMxcgidm9ESbwUQRaSDLx1HODolH8VqXubxWW5JolpidNNo0ouNjRdlbOTSr6N299V6NyJ2dgiB-80OJF8_T7bQbbAPv7K-l3RJHF3zRmmS4yS5Aih_sSdiXRNV8inSzK2znI5uLz1zFVlLKvcl-T_K-RAKI/ltdpiR5qFbp_NPnwqpCN7nKbbWcVoF92/19">Possible Tie-Up</a></li>
+<li>Meta 预计将取代谷歌（Google）成为全球最大数字广告平台。 <a href="https://links.message.bloomberg.com/s/c/L2Ul2dT9-IyvQVeHnyfUeu-qfMNYf3M0hsFfRud5eqd5Wf-ao9-XwWXQgplW6zNg7sA-EhmPMyEe7V4JBTVZZEe-TB6A0h1FQJKb54MU8HY0pd7JBXMreMvN0Jgw9WehiyggmrVYRxAr-drqRnYg22hjq_ATSOmqa_ORLr5bNh4RpB49AX_xpR5suKhQAvaAwEp8TLAAPXQhRoy5OsI61GlpmMnMYAoUY4OU8r22DDbX5eiVTOyPGruxH5kt5k8nj2ESqjG54ChOtZew2Q_ZcvXeMZQ-7NMKTHJj1e2XXwnWYTwy08F3Mb71FC_pBExBPgCWNEUZUUpks08ACzJJnaiInWkmR9BjZvezfFyU2er7-bKq_TDlpbW_Lc0/h6uyKU489WLcYOqwcPUVGLjx5g6L0vh7/19">Digital-Ad Player</a></li>
+<li>普华永道（PwC）计划全面改革全球咨询业务。 <a href="https://links.message.bloomberg.com/s/c/ALdKY598v7IXAVMXPktoF6bGNzgYqF--61sOuIIacbvTeqgxBGOGjh-aqAzxJyF9It2KnFJ25bYfUrmNTEDKOq-YY7b3g5p1G0ooVlCvzqs9kWGNgLlUjqApsW7aSetccXgjWHdADivEU2RjLS8PwqAWvN0jILH1KbwwxLdugAfnuC-84Ke427nWujuDnIuOf3V7knUnvSGKjKqWg_1Fb4D2RhO4h8rAgZolkaNkpTITjZg4e1smeR6GlDC8Pp16OJzlbvq4R2WNrq_e-_hpeMo4O_gvaiv_wZAzuf5YOOXzVc1o3tcRQLUy_0p7R5tj6CPJoODu29ApAioLNQ_yMHFxdpE3ICfA7klkuzmkk7FFOeJ0kI_yaWX_1Uk/ngN8sQACgcQt3gUKk5mUGt-kHPUpj-uZ/19">consulting business</a></li>
+<li>一位靠俄罗斯原油赚了2.5亿美元的年轻交易员，将目光投向圭亚那。 <a href="https://links.message.bloomberg.com/s/c/cTafypSZum7Ghqbf5hkIBsrL8ax-gjJZBhE1YGlQMpjaFDVcdbMXfs6JaLJmFRTH8KuwgKXMGY6s3_mTpjlAH3j3o5fVONtyA8PMgyppFR6FbvECJWrDmOTCsqKuoAZvT7WGTFMmbSnFSYH2OsT786ShhWH9qQXC_YEv7PI14H6MgAMlj_D9KgbtZ55_5SbSds_L9sGClThDAdjk3ChB1NMY0tMJDmvuZqKa-SXl5drTnH_7j-aqJn2C2PH1pIvZ-xrcSqg3BW4sNmIoGDOxsVgfY6ByEHiOBBZVFo4SZnZP9zlSYY11ryUa-CDV9ZCqYJZgsFuH0ncHnqSBeIgVZqDcwhvE8D0bFXfE1InCvl8hEBRED60kD62Ds9U/QBZyIFK4aQAfXOrch6jRTJtQkcOaXnh5/19">sets sights on Guyana</a></li>
+<li>中国启动影子银行中植企业集团（Zhongzhi）的破产清算程序。 <a href="https://links.message.bloomberg.com/s/c/WTiXeoJzZColDbW8hQvZ9PlIss42i1DCbscP33XzQH-MyWx8Wt0IGfLmcAe8USZFQkgxjUTSX6qYImXBJfS3X0zTVeZwMbr8Ehsba5ENCW6HcrrOY5subGshHFOROElpWynrP8eQkjVVHc396vY1MsfKUSsNM-KNWY8eWPBgGsa-_ZTkoRpp1Q0Pt4D4cXh1XGiYNrRJk5ycEkECyZRC5jqMapSnPcWUw7JwF4A-KM_YWTJmze7KCrWY5A6YxMThdkeQBhgInr4TPJF-p_ZmNzZFZDWOs4zlG3SsaFURfGlthji7gqXVO1oPqxOJrQKHIFVcmKFJ-t5KszaQNfOyk424W0ELux25DMsqUer7ors118faZsU9-5hUGlA/hmnVd5D-rjWa6x2sXqRlU3jHCE1EXmCH/19">Zhongzhi</a></li>
+<li>美联储主席提名人沃什（Kevin Warsh）披露个人资产超1.9亿美元。 <a href="https://links.message.bloomberg.com/s/c/qsnPhe7QULTuMxoqDvHTEl9mo4XXvVvO1iuiG3H3hCJKByYDZpMIEWrNb-5thFyg4lOJrmv6Cnd11fuPoUEVo_8uYUex059gFPyJ5l7hTcghC_4q5kpoBBVE6zGDHNCJEpX1C8iO-nuIwsw8tPg4FRQPswKvWw6H5RDC1nxTCoMs9G5E5FVl1YNIQYWobqaXw1wWYp2S-Qf_e-pbyYy_xdwQpPiZ1tjfuBLuVe833UUmjkHiBCoHRlg--RiUlVpoqcrw_h7y-HhHZjGB2-OjJvQ178Cdg1769ARtX6lJ1iI_ZOfNMr0e3C181WcDz5-nnRsHTjfO1hThdpEHukBipg7uYUM4bt0GIBLcB0HEspmXT_qyHa0PuKgnpBg/8ACRko2PuD6QAmUyLCceNIU_BuOWfjKp/19">Warsh</a></li>
+<li>TCW 旗下私人信贷基金将 Red Lobster 的股权价值削减98%。 <a href="https://links.message.bloomberg.com/s/c/eW8RvzanDUVmR_LGbwvhc8agMpEjAsy-yq5M36d_JFo1s6_T66pMaJomk70DVwT4h2RQxg7VCGUiHDlJq7pK6MKvxN73Y6xa83kHAabRUiIbvk4dIgQpDefs2QAecqWpFiSjKRPuVclrH7LYKv8lXXelIAyP9yfvA21prItGqouCFqAdN1sytnE_t9E3fNI0Atf0rgl19IBV18l1QgfgRiloWDmjRgas9Ypa3JVNaSCsHI2D8L1II-z5gFb6yv1vTLjyItyIDpO9vEx_tuy04UZAT9WP_DPdlv1gxvC9puNElThQoP6tsuFAnOk53di13pNQwX7GoO7GdnBAy7eZ7blITRwD56TkgmK4oEglc8d4a5RIk4UqphPJLbQ/9sjPlbtsaaEwwUb7KKuLZi_FJpJuCr6z/19">Red Lobster Equity Value</a></li>
+<li>研究发现，AI 聊天机器人在超过80%的早期医疗病例中给出错误诊断。 <a href="https://links.message.bloomberg.com/s/c/rGwifY8ra2huA7J5eHoxgT4xh8A7YdKyHq7_8dMLQV0nZC_Mv0z_oCON1J174TPh8-X4BhRFhRdO_1_iHcGpFmyR-Z-VAH66nl3pTbRlIMxDFhjCX7U8L7CTJ-H9OG1vvN1cEoHlBsxP2AMfBwQODu1mWS3B8xFEBQnP0ebdUZQZN7troruvcmRAU63UzT-L8kTaysUQUCnts2lYNBlIWn--iO03pGiNovPNiAL_iijv8HdStlFLHTZ89rrn-At7Y4cSuBW87phP6jmPECnmxpMRJ9tkxGJ_-BxOuRwCb1aMCsHfQsvC922JNPFxJx5vxKGxoWgy8XhHdv7-SE8RAqhu757fY-OjZ3LKS0xe8YBFS4KuFPVfV_iipOA/NZHKGHadq5wQUux9Cm3plVB4iSgeKrXC/19">misdiagnose</a></li>
+<li>与小特朗普（Trump Jr.）关联的格斗选手向美国军方推销训练项目。 <a href="https://links.message.bloomberg.com/s/c/w7xKkq4bnoQWKICBfkHYCpg-QAMnq-Ok_QngFeyMAlBHbTcE1X5Me2iR0CoGzEuJnKi4KYxGWq58-qC-8A_Bv7_y1DcxfFNcdV4rTNgbCTIR9WPaEzSOhfSq3oWhxIO8CwLqZMDXpGhFaGL785GyFWXkvAiHnmbUQDNBgXSl5FzdacauZt3TZgOs-kMrL4bMeJLUy_CgaFfgjXi9UekbW-bjKBXcAeVA6mS2102aI6EeHgspa53WkpUlWnM-QgSN1LfCsdyYY4xRg34k-g_82egWF2Os6qpQxkzuYOrCOBwgk0Ni2m3vRQZOqf8nSwGmExnNpHvbud_4RjlxZ3iYBeDjE-N2q-0-l5sqASXaOvo_ZaNuSMVTSo872C4/pNWA1gdanWOqmioi5Kw1QB0_44R3C1x4/19">Trump Jr.-Linked Cage-Fighters</a></li>
+<li>冻酸奶欺诈案。 <a href="https://links.message.bloomberg.com/s/c/INO44bF_S1kaSfLeNnW8RhZcx14wz31fnXumYVcYwXtjrnwvjIRRIJNEeM8WFJkkp5QRvQT5Pr1vCPNyrRjMf0JNMWOOcknqWXc8Rd7vD8cjYMTMVJ5gFbM8XAGg1pBWzh7oXd9G2pOEs-jVtk_EoWXrzR_SsEIl8_i6Gv1F5MTj7bpAp0i-jBVj1Qk6xsquEy57nerOXW7LA4oys28oDJHUG1dIVwwxayZVIawMseOkcrRzF3izWxnKbk5Ya2XNyBy50zve2RI0d6x70Rs5JtCYsi01QK8Bqxiy_8EcI5PoCaEYJssLeS4o9Uhn_iFA776FYcwX9cfW8sr4CkViqCdfhvwRxVSNn7E3tmqejbAI1owcAN-VS0e6K5c/cV3AxAc1lmksVcrWC73upJ45CGxmUPGO/19">Frozen yogurt fraud</a></li>
+</ul>
