@@ -1,0 +1,87 @@
+<h1>📅 每日简报 | 2026-04-16</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 4条 | 国外公司动态 9条 | 中国公司动态 0条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>Google</h3>
+<ul>
+<li><strong>发布 Gemini 3.1 Flash TTS 文本转语音模型</strong><br />
+  Google 发布 Gemini 3.1 Flash TTS，号称其最自然、最具表现力的 TTS 模型。原生支持多说话人对话及超过 70 种语言，创新引入 Audio Tags 功能，允许通过自然语言指令精细调控声音风格与语速。在相关基准测试中取得 1211 Elo 分。所有生成音频自带 SynthID 水印。现已进入预览阶段，开发者可通过 Gemini API、Google AI Studio 接入，企业用户可在 Vertex AI 使用，Workspace 用户可在 Google Vids 中调用。<br />
+  🔗 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts">来源</a></li>
+</ul>
+<h3>NVIDIA</h3>
+<ul>
+<li><strong>发布 Lyra 2.0，支持单图生成可探索 3D 世界</strong><br />
+  NVIDIA Research 发布 Lyra 2.0 框架，实现从单张图像大规模生成持久且可探索的 3D 世界。该框架结合摄像机控制的视频生成与前向重建技术，确立"生成式重建"新范式，克服了复杂大场景中的空间遗忘与时间漂移难题。利用逐帧 3D 几何进行信息路由，依托自增强历史记录训练纠正合成误差。用户可通过交互式 GUI 实时规划摄像机轨迹，系统迭代生成视频片段并转换为 3D 点云，最终输出可导出至 NVIDIA Isaac Sim 等物理引擎的 3D Gaussians 或 meshes。代码与模型均已公开。<br />
+  🔗 <a href="https://research.nvidia.com/labs/sil/projects/lyra2/">来源</a></li>
+</ul>
+<h3>World Labs — 由李飞飞创立的 AI 世界模型公司</h3>
+<ul>
+<li><strong>开源 Spark 2.0，支持网页端亿级 3D 场景渲染</strong><br />
+  World Labs 开源其动态 3D 高斯泼溅渲染器 Spark 2.0，基于 THREE.js 和 WebGL2 构建，通过连续细节层级树、全新 .RAD 数据格式及 GPU 虚拟内存管理三项核心技术，能在任意浏览器设备（含 iOS、Android、桌面端及 VR）上以固定显存流式传输并流畅渲染超过 1 亿个高斯泼溅的超大 3D 场景。该技术已与其创作平台 Marble 深度绑定，形成从内容生成到网页端交付的完整闭环。<br />
+  🔗 <a href="https://www.worldlabs.ai/blog/spark-2.0">来源</a></li>
+</ul>
+<h3>Nucleus AI — 开源图像生成模型初创公司</h3>
+<ul>
+<li><strong>开源 Nucleus-Image，17B 参数激活 2B</strong><br />
+  Nucleus AI 发布完全开源的文本生成图像模型 Nucleus-Image，采用 MoE 架构，总参数 17B，激活约 2B，官方称参数效率比同类主流模型高 10 倍。作为未经任何后训练优化（无 DPO、无强化学习、无人类偏好微调）的基础模型，在 GenEval、DPG-Bench 和 OneIG-Bench 等评测中匹配或超越 GPT Image 1、Imagen 4 及 Qwen-Image。采用 Apache 2.0 协议，公开完整模型权重、训练代码及数据集配方。</li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Google</h3>
+<ul>
+<li><strong>发布 macOS 版 Gemini 原生桌面应用</strong><br />
+  Google 推出 macOS 版 Gemini 原生桌面应用，采用原生 Swift 构建，面向 macOS 15 及以上用户免费开放。支持全局快捷键（默认 Option + Space）在任意界面唤出 AI 助手，可通过屏幕共享功能让 Gemini 读取本地文件或实时画面获取上下文，直接生成针对当前工作内容的回答、图像或视频。<br />
+  🔗 <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/">来源</a></li>
+<li><strong>扩大 Personal Intelligence 功能开放范围</strong><br />
+  Google 宣布向全球更多用户推广 Personal Intelligence 功能，率先在 Gemini App 上线，本周晚些时候集成至 Chrome。该功能可安全跨应用（如 Gmail、Google Photos）建立连接并梳理信息脉络，用户无需反复提供背景信息即可获得高度个性化的响应。<br />
+  🔗 <a href="https://x.com/GeminiApp/status/2044439179225190906">来源</a></li>
+<li><strong>为 Gemini API 推出预付费计费功能</strong><br />
+  Google 在 Google AI Studio 为 Gemini API 推出预付费计费功能，开发者可预先购买积分调用 API，避免意外高额账单，支持余额不足时自动充值。目前面向美国地区新启用 API 的 Google Cloud Billing Accounts 上线，未来几周全球推广。建立付款记录并升级 Usage Tiers 后可切换至标准后付费账户以解锁更高速率限制。<br />
+  🔗 <a href="https://blog.google/innovation-and-ai/technology/developers-tools/prepay-gemini-api/">来源</a></li>
+</ul>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>为 Claude 平台启用身份验证机制</strong><br />
+  Anthropic 正在 Claude 平台逐步推行身份验证（KYC）机制。当用户访问特定功能或触发安全合规验证时，需通过第三方合作伙伴 Persona Identities 提供实体政府签发证件（如护照或驾照）并拍摄实时自拍，不接受复印件或数字证件。验证数据仅用于确认身份、防欺诈及法律合规，由 Persona 加密持有，不用于模型训练或第三方营销。据社区反馈，开通 Claude Max 时已有概率触发此验证。<br />
+  🔗 <a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude">来源</a></li>
+<li><strong>调整 Claude Enterprise 计费模式为按量计费</strong><br />
+  Anthropic 将 Claude Enterprise 从最高 200 美元/人/月的固定订阅制改为按量计费：每月 20 美元/人基础席位费加实际算力消耗额外计费。官方称此举是为适应工作负载向代理式使用转变的趋势，直接因素是 Claude Code 和 Claude Cowork 等产品算力消耗激增。目前适用于 150 人以上企业客户，Team 订阅及 150 人以下企业不受影响。</li>
+<li><strong>Claude Code 更新支持自主配置 Prompt Caching TTL</strong><br />
+  Claude Code 2.1.108 版本新增环境变量支持自定义 Prompt Caching TTL。引入 ENABLE_PROMPT_CACHING_1H 变量，允许在 API key、Bedrock、Vertex 及 Foundry 模式下启用 1 小时缓存；新增 FORCE_PROMPT_CACHING_5M 变量用于强制 5 分钟 TTL。此前 Bedrock 专用变量已弃用但仍兼容。<br />
+  🔗 <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>升级 Agents SDK，引入沙箱环境保障安全运行</strong><br />
+  OpenAI 对 Agents SDK 进行重大升级，支持在受控 Sandbox 中运行 Agent。采用 Harness 架构将状态保存与计算执行分离，容器崩溃时可快速恢复任务，通过状态外置保护敏感数据。新增 Manifest 统一配置层支持 S3、GCS、Azure Blob 等存储，内置 MCP 工具调用、Skills 渐进式能力暴露、AGENTS.md 自定义指令、Shell 工具、Apply Patch 文件编辑及灵活记忆系统。目前支持 Python，TypeScript 开发中。<br />
+  🔗 <a href="https://x.com/OpenAIDevs/status/2044497392557560165">来源</a></li>
+<li><strong>计划为 ChatGPT 广告业务引入按点击计费</strong><br />
+  OpenAI 计划在 ChatGPT 广告试点中引入 CPC（按点击计费）模式并规划转化导向广告，与 Meta 和 Google 竞争。该业务始于 2026 年初，面向美国免费版及 Go 订阅用户，广告展示于回答底部。试点启动不到两个月已实现超 1 亿美元年化经常性收入，初始定价约 60 美元/千次展示。计划向加拿大、澳大利亚和新西兰扩张，2026 年广告收入目标 24 亿美元。用户对话内容不与广告商共享。<br />
+  🔗 <a href="https://x.com/theinformation/status/2044419664810283500">来源</a></li>
+</ul>
+<h3>Windsurf — Cognition 旗下 AI 编程工具</h3>
+<ul>
+<li><strong>发布 2.0 版本，集成 Devin 解决多 Agent 管理瓶颈</strong><br />
+  Windsurf 发布 2.0 版本，引入 Agent Command Center 看板视图集中监控所有本地和云端 Agent 状态，Windsurf Spaces 支持按项目对会话、PR、文件和上下文分组并无缝继承。自主云端 Agent Devin 直接集成到编辑器中，可在独立云端虚拟机中运行端到端复杂任务，关闭设备后仍继续执行，生成的 PR 可在编辑器内审查测试。云端功能包含在所有订阅计划中，48 小时内逐步开放。<br />
+  🔗 <a href="https://windsurf.com/blog/windsurf-2-0">来源</a></li>
+</ul>
+<h3>Cursor</h3>
+<ul>
+<li><strong>最新版上线交互式画布功能</strong><br />
+  Cursor 3.1 推出交互式画布功能，用可视化界面替代纯文本交互。底层使用基于 React 的 UI 库渲染，原生支持表格、框体、示意图和图表等组件，作为持久化产物与终端、浏览器等工具集成在智能体窗口中。用户可通过 canvas 指令或自定义"技能"让智能体生成包含图表的自定义数据看板，适用于 PR 代码审查、学习新库及生成交互式架构图等场景。<br />
+  🔗 <a href="https://cursor.com/cn/blog/canvas">来源</a></li>
+</ul>
+<h3>Cloudflare</h3>
+<ul>
+<li><strong>发布 Mesh 服务，支持 AI Agent 安全私有网络访问</strong><br />
+  Cloudflare 上线 Cloudflare Mesh 安全私有网络服务，通过单一轻量级连接器构建双向多对多零信任网络，为用户、节点及 AI Agent 提供统一网络访问。直接集成 Cloudflare Developer Platform，基于 Workers、Durable Objects 和 Agents SDK 构建的 Agent 可通过 Workers VPC 直接访问私有数据库、API 及 MCP，无需手动配置隧道。每个账户免费支持最多 50 个节点和 50 个用户。<br />
+  🔗 <a href="https://blog.cloudflare.com/mesh/">来源</a></li>
+</ul>
+<h3>OpenRouter — AI 模型统一 API 路由平台</h3>
+<ul>
+<li><strong>视频生成功能正式上线</strong><br />
+  OpenRouter 上线视频生成功能，开发者可通过单一标准化 API schema 访问顶级视频模型，统一了原本碎片化的分辨率、时长、宽高比及音频生成等参数，支持在调用前以编程方式查询模型具体能力，并与现有文本、图像、音频、嵌入和重排器功能结合使用。<br />
+  🔗 <a href="https://x.com/OpenRouter/status/2044501484050472972">来源</a></li>
+</ul>
