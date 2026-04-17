@@ -1,0 +1,115 @@
+<h1>📅 每日简报 | 2026-04-17</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 7条 | 国外公司动态 9条 | 中国公司动态 4条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Anthropic 发布 Claude Opus 4.7 模型</strong><br />
+  Anthropic 发布旗舰模型 Claude Opus 4.7，在高级软件工程与复杂长流程任务的自主执行能力上大幅提升。SWE-Bench Verified 达 87.6%，SWE-Bench Pro 64.3%，TerminalBench 69.4%。图像输入分辨率提升逾三倍，支持最高 2,576 像素长边（约 375 万像素）。新增自适应思考机制、全新 tokenizer、介于 high 与 max 之间的 xhigh 推理力度等级，API 侧公测任务预算功能。训练期间刻意弱化网络安全能力并配套自动拦截机制。API 定价与前代持平（输入 $5/M tokens、输出 $25/M tokens），上下文窗口维持 100 万 token。已同步登陆 Amazon Bedrock、Google Cloud Vertex AI 和 Microsoft Foundry，并为所有付费用户永久上调速率限制。<br />
+  🔗 <a href="https://www.anthropic.com/news/claude-opus-4-7">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>OpenAI 发布 GPT-Rosalind 生命科学专用推理模型</strong><br />
+  OpenAI 发布专为生命科学打造的推理模型 GPT-Rosalind，融合更强的工具调用能力与对化学、蛋白质工程及基因组学的深刻理解。在 BixBench 上取得已公布模型中的领先性能，LABBench2 的 11 项任务中 6 项超越 GPT-5.4，RNA 序列预测任务中超越 95% 的领域人类专家。目前以 Research preview 形式面向符合条件的美国企业客户开放，同步推出免费的 Codex Life Sciences research plugin，支持接入超 50 个公共多组学数据库。预览期间不消耗现有额度。<br />
+  🔗 <a href="https://openai.com/index/introducing-gpt-rosalind/">来源</a></li>
+</ul>
+<h3>Qwen（阿里）</h3>
+<ul>
+<li><strong>Qwen 开源 Qwen3.6-35B-A3B 模型</strong><br />
+  阿里 Qwen 团队发布并开源 Qwen3.6-35B-A3B，为 Qwen3.6 首个 open-weight 版本，原生多模态稀疏 MoE 模型，总参数 35B、激活参数 3B。支持思考与非思考两种模式，重点强化 Agentic Coding、前端工作流、仓库级推理及多模态感知能力，新增 preserve_thinking 选项用于智能体任务。权重已上线 Hugging Face 与 ModelScope，支持本地部署。<br />
+  🔗 <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">来源</a></li>
+</ul>
+<h3>腾讯</h3>
+<ul>
+<li><strong>腾讯发布并开源混元世界模型 HY-World 2.0</strong><br />
+  腾讯混元发布并开源多模态世界模型 HY-World 2.0，支持通过文本、图像和视频等多模态输入自动生成可交互的完整 3D 世界。与仅生成像素级视频的模型不同，该模型直接输出 Mesh、3DGS 和点云等可编辑持久化 3D 资产，可无缝导入 Unity、Unreal Engine 等主流引擎。内置物理碰撞和物理感知移动的交互式角色探索模式。WorldMirror 2.0 推理代码与权重已开源，其余模块即将释出。<br />
+  🔗 <a href="https://github.com/Tencent-Hunyuan/HY-World-2.0">来源</a></li>
+</ul>
+<h3>阶跃星辰</h3>
+<ul>
+<li><strong>阶跃星辰发布 StepAudio 2.5 TTS 语音生成模型</strong><br />
+  阶跃星辰发布新一代语音生成模型 StepAudio 2.5 TTS，围绕全局语境控制、文中语境控制及零样本复刻三项核心能力构建。摒弃传统标签控制方式，支持用户通过自然语言描述设定整段语音情绪基调，精准调节句中语气、停顿、角色心理活动及潜台词等细节。零样本复刻功能允许任意用户音色无需重训即可高品质生成。已上线阶跃星辰开放平台和 Step Plan。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/8SKwa5105umsFeIiUz-eEg">来源</a></li>
+</ul>
+<h3>Google DeepMind</h3>
+<ul>
+<li><strong>Google DeepMind 发布 TIPSv2 模型，入选 CVPR 2026</strong><br />
+  Google DeepMind 推出基础图像-文本编码器模型 TIPSv2，基于蒸馏学生模型在块级文本对齐上超越教师模型的发现，提出 iBOT++（将掩码图像建模损失扩展至所有 token）、Head-only EMA（减少 42% 训练参数）及利用 PaliGemma 和 Gemini 生成多粒度标题的监督策略三大升级。在涵盖 9 个任务和 20 个数据集的评估中表现卓越，零样本分割任务增益显著。已入选 CVPR 2026，代码与模型以 Apache 2.0 许可开源。<br />
+  🔗 <a href="https://gdm-tipsv2.github.io/">来源</a></li>
+</ul>
+<h3>阿里</h3>
+<ul>
+<li><strong>阿里推出开放式世界模型 Happy Oyster 启动早期体验</strong><br />
+  阿里巴巴 AI 创新事业部推出开放式世界模型产品 Happy Oyster，基于原生多模态架构，支持多模态输入与音视频联合生成。提供 Directing（导演模式，最长 3 分钟，480p/720p，实时文本指令交互）和 Wandering（漫游者模式，最长 1 分钟，480p，WASD 键控制）两种模式。与传统一次性生成不同，可在生成全过程中持续响应指令。目前已启动内测申请。<br />
+  🔗 <a href="https://www.happyoyster.cn/">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>OpenAI 发布 Codex 桌面端重大升级</strong><br />
+  OpenAI 为 Codex 桌面端推出重大更新，现支持在 macOS 后台通过专属虚拟光标并行操作无 API 软件（Computer Use）。新增支持精准批注的内置浏览器、基于 gpt-image-1.5 的图像生成功能，以及 90 多款集成插件（含 MCP 服务器）。引入能保留长期上下文并自我排程唤醒的"Heartbeats"自动化线程与经验记忆系统。已面向 ChatGPT 桌面端用户逐步推送。<br />
+  🔗 <a href="https://openai.com/index/codex-for-almost-everything/">来源</a></li>
+<li><strong>OpenAI 构建网络防御生态，授权安全机构访问 GPT-5.4-Cyber</strong><br />
+  OpenAI 通过"Trusted Access for Cyber"计划向美国 CAISI 和英国 AISI 提供 GPT-5.4-Cyber 模型访问权限，用于网络能力与安全评估。通过 Cybersecurity Grant Program 提供价值 1000 万美元 API 额度。已有美国银行、贝莱德、花旗、思科、CrowdStrike、高盛、摩根大通、摩根士丹利、英伟达、甲骨文等 14 家企业与机构签署协议支持该生态。<br />
+  🔗 <a href="https://openai.com/index/accelerating-cyber-defense-ecosystem/">来源</a></li>
+</ul>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Claude Code 新增 ultrareview 命令，桌面端开放蓝牙 API</strong><br />
+  Claude Code 新增 /ultrareview 命令可自动捕捉代码审查中的潜在问题，auto mode 已向 Max 用户开放。更新 claude-api 技能以支持 Opus 4.7。桌面应用引入 Bluetooth API，允许构建可与 Claude 交互的硬件设备（仅开发者模式启用）。因速率限制错误，Anthropic 重置了订阅用户的速率限制。<br />
+  🔗 <a href="https://x.com/ClaudeDevs/status/2044872737672646716">来源</a></li>
+<li><strong>Claude Code 工程师分享上下文管理策略</strong><br />
+  Claude Code 团队工程师 Thariq Shihipar 发文阐述 100 万 token 上下文窗口后的会话管理策略。建议优先使用 /rewind 回退纠错，利用 /compact 和 /clear 精简冗长对话，指派 Subagents 在独立环境中处理仅需最终结论的繁杂任务，开启全新任务时果断新建会话，以避免"上下文腐烂"问题。<br />
+  🔗 <a href="https://x.com/trq212/status/2044548257058328723">来源</a></li>
+<li><strong>Anthropic 拟向美政府和英金融界开放 Claude Mythos</strong><br />
+  据彭博社报道，Anthropic 计划在未来一周内向英国金融机构开放 Claude Mythos 模型，白宫正准备让美国各政府机构获得访问权限。此举为「Project Glasswing」计划的一部分，旨在向特定机构提供早期访问。<br />
+  🔗 <a href="https://www.bloomberg.com/news/articles/2026-04-16/anthropic-plans-to-bring-mythos-to-uk-banks-within-the-next-week?taid=69e0adaabd318b0001e84068&amp;utm_campaign=trueanthem&amp;utm_content=business&amp;utm_medium=social&amp;utm_source=twitter&amp;embedded-checkout=true">来源</a></li>
+</ul>
+<h3>Adobe</h3>
+<ul>
+<li><strong>Adobe 推出 Firefly AI 助手，集成 30 款模型及跨应用编排</strong><br />
+  Adobe 推出由 creative agent 驱动的 Firefly AI Assistant，用户通过自然语言描述需求，即可在 Photoshop、Premiere、Lightroom、Express 和 Illustrator 等多款应用中自动编排并执行复杂多步工作流，实现像素级精细编辑。作为 Project Moonlight 项目的演进，即将在 Adobe Firefly 平台开启公测。<br />
+  🔗 <a href="https://blog.adobe.com/en/publish/2026/04/15/introducing-firefly-ai-assistant-new-way-create-with-our-creative-agent">来源</a></li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li><strong>AI Mode in Chrome 上线侧边浏览及跨页搜索功能</strong><br />
+  Google 为 Chrome 浏览器 AI Mode 推出搜索体验升级，支持目标网页与 AI 对话界面并排浏览，解决传统"标签页跳跃"问题。引入跨标签页搜索功能，支持将最近访问的标签页、图片或 PDF 混合作为上下文带入 AI Mode，并可直接调用 Canvas 及图片创建工具。已在美国上线，即将扩展至全球。<br />
+  🔗 <a href="https://blog.google/products-and-platforms/products/search/ai-mode-chrome/">来源</a></li>
+<li><strong>谷歌 Gemini 推出限时优惠，AI Pro 享 YouTube Premium 一年半价</strong><br />
+  Google 面向美国、巴西、加拿大、德国、法国和日本用户推出限时优惠，4 月 29 日前升级至 AI Pro 计划可享 YouTube Premium 一年半价及更高级别 Gemini 功能访问权。优惠期结束后转为低费率捆绑自动续订。<br />
+  🔗 <a href="https://x.com/GeminiApp/status/2044555973021602288">来源</a></li>
+</ul>
+<h3>xAI</h3>
+<ul>
+<li><strong>xAI 宣布 Grok Build 应用下周上线 Beta 版</strong><br />
+  马斯克宣布 xAI 旗下编程工具 Grok Build 将于下周发布 Beta 版，同步推出桌面应用与终端命令行版本。<br />
+  🔗 <a href="https://x.com/elonmusk/status/2044681781816025139">来源</a></li>
+<li><strong>传 xAI 拟向 Cursor 提供算力训练 Composer 2.5</strong><br />
+  据报道，xAI 计划向编程初创公司 Cursor 提供数万块 GPU 算力，用于训练其模型 Composer 2.5。此举标志 xAI 转向云服务提供商，旨在利用闲置算力创收。xAI 内部备忘录承认当前模型 FLOPs 利用率仅约 11%，远低于行业正常水平。该公司去年拥有约 20 万块 Nvidia GPU，计划扩展至 100 万块。<br />
+  🔗 <a href="https://www.businessinsider.com/elon-musk-xai-compute-cursor-ai-model-training-2026-4">来源</a></li>
+</ul>
+<h3>微软</h3>
+<ul>
+<li><strong>微软 Fairwater 数据中心提前启用，集成数十万 GB200 芯片</strong><br />
+  微软 CEO Satya Nadella 宣布威斯康星州 Fairwater 数据中心提前上线，官方定位为全球最强 AI 数据中心，将数十万块 GB200 芯片汇聚为单一无缝集群。<br />
+  🔗 <a href="https://x.com/satyanadella/status/2044767391293509761">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>MiniMax</h3>
+<ul>
+<li><strong>MiniMax 推出云端沙箱智能体 MaxHermes</strong><br />
+  MiniMax 上线基于 Hermes Agent 的云端沙箱智能体 MaxHermes，具备学习闭环机制，完成任务后自动提炼可复用 Skills 并按需加载迭代，Skills 由 Agent 自主生成而非人工预设。支持持久化跨会话记忆、自然语言定时任务及多子代理并行运行，无需自备服务器及 API Key，打通主流 IM 渠道实现 7×24 小时响应，支持 Token Plan 抵扣。后续将连通 Skillhub 并支持 MaxClaw 配置迁移。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/gTUk7CpQYstYcAMzqClAow">来源</a></li>
+</ul>
+<h3>TRAE — 字节跳动旗下 AI 编程工具</h3>
+<ul>
+<li><strong>TRAE 发布 v3.3.51 支持自定义模型 baseURL 配置</strong><br />
+  TRAE 发布 v3.3.51 版本，新增自定义模型 baseURL 配置功能，用户添加或编辑自定义模型时可输入模型 ID 及完整网络地址。<br />
+  🔗 <a href="https://linux.do/t/topic/1979284">来源</a></li>
+</ul>
