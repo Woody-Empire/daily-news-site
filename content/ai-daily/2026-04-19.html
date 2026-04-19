@@ -1,0 +1,43 @@
+<h1>📅 每日简报 | 2026-04-19</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 1条 | 国外公司动态 4条 | 中国公司动态 1条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>xAI</h3>
+<ul>
+<li><strong>Grok 4.3 非1T，1T版Grok 4.4预计五月初发布</strong><br />
+  xAI 已向 SuperGrok Heavy 订阅用户开放 Grok 4.3 (beta) Early Access。马斯克澄清该版本仍为 0.5T 参数模型，并非外界猜测的 1T。真正的 1T 旗舰模型距完成初始训练还需约 5 天，基于 1T 架构的 Grok 4.4 预计 5 月初发布，1.5T 规模的 Grok 4.5 有望 5 月底推出。马斯克还表示 SpaceXAI 模型工厂已跑通，未来计划每两周下线一版改进后的基础模型。<br />
+  🔗 <a href="https://x.com/elonmusk/status/2045590599206875216">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>三名核心高管同日宣布离职</strong><br />
+  OpenAI 于当地时间周五发生重大人事震荡，前首席产品官兼 OpenAI for Science 负责人 Kevin Weil、Sora 负责人 Bill Peebles 以及 B2B Applications 首席技术官 Srinivas Narayanan 同日宣布离职。背景是公司正整合内部资源、削减边缘项目，将战略重心转向企业级 AI 业务及拟议中的"超级应用"。Weil 负责的科学项目将分散整合至其他研究团队，其旗下科学家工作区 Prism 将并入 AI 开发者助手 Codex；Sora 已于上月因成本和算力限制被彻底关停。<br />
+  🔗 <a href="https://www.businessinsider.com/openai-executive-departures-shake-up-leadership-team-2026-4">来源</a></li>
+</ul>
+<h3>Cloudflare</h3>
+<ul>
+<li><strong>推出网站AI Agent适配程度检测工具</strong><br />
+  Cloudflare 推出检测工具 isitagentready.com，帮助站长评估网站对 AI Agent 的就绪程度。基于对全网 20 万顶级域名的扫描数据，当前互联网的 Agent 就绪度普遍极低。该工具从可发现性、内容可访问性、Bot 访问控制和协议发现四个维度评分，并单独检查 Agentic Commerce 支付协议兼容性。未通过检查的项目会直接生成提示词，供开发者交给编码 Agent 自动修复。<br />
+  🔗 <a href="https://isitagentready.com">来源</a></li>
+<li><strong>推出 Agent Memory 托管服务</strong><br />
+  Cloudflare 发布名为"Agent Memory"的托管服务私有测试版，旨在解决 AI Agent 长期运行中的"上下文污染"问题。该服务从对话中提取关键信息并按需提供，赋予 Agent 持久化记忆能力，能记住重要信息、遗忘无用内容并随时间优化。支持单个 Agent 记忆、自定义 Agent 框架及跨人员与工具的共享记忆，已接入 Cloudflare Workers 并提供 REST API。<br />
+  🔗 <a href="https://blog.cloudflare.com/introducing-agent-memory/">来源</a></li>
+</ul>
+<h3>xAI</h3>
+<ul>
+<li><strong>推出Grok语音转写与合成两款音频API</strong><br />
+  xAI 正式推出 Grok Speech to Text (STT) 和 Grok Text to Speech (TTS) 两款音频 API，基于驱动 Grok Voice、Tesla 车载系统及 Starlink 客户支持的同一底层技术栈。Grok STT 已正式上线，支持 25 种以上语言无缝切换，提供字级时间戳、说话人分离及多通道支持，官方称词错率和定价均优于 ElevenLabs、Deepgram 和 AssemblyAI。Grok TTS 支持通过内联或包裹式语音标签实现细粒度韵律和情感控制。<br />
+  🔗 <a href="https://x.ai/news/grok-stt-and-tts-apis">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>月之暗面</h3>
+<ul>
+<li><strong>联合清华提出Prefill-as-a-Service架构</strong><br />
+  月之暗面与清华大学联合发布预印本论文，提出 Prefill-as-a-Service (PrfaaS) 架构。该架构利用 Kimi Linear 等混合注意力模型大幅减小 KVCache 的特性，将超过阈值的长 Prefill 请求路由至独立的算力密集型集群，再经普通以太网将 KVCache 传回本地集群进行 Decode，打破了异构 Prefill/Decode 必须同处 RDMA 高带宽网络的限制。论文使用内部 1T hybrid model 进行验证，在 32 张 H200 的 PrfaaS 集群和 64 张 H20 的本地 PD 集群配置下，系统吞吐较同构 PD baseline 提升 54%，平均 TTFT 降低 50%，P90 TTFT 降低 64%。<br />
+  🔗 <a href="https://arxiv.org/html/2604.15039v1">来源</a></li>
+</ul>
