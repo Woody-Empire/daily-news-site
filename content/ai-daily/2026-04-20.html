@@ -1,0 +1,46 @@
+<h1>📅 每日简报 | 2026-04-20</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 2条 | 国外公司动态 3条 | 中国公司动态 1条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>DeepSeek</h3>
+<ul>
+<li><strong>传闻称 DeepSeek 本周发布 V4 模型，总参数或达 1600B</strong><br />
+  据非官方消息，DeepSeek 下一代旗舰模型 V4 预计本周发布，参数规模据称达 1600B（1.6T）。普林斯顿 AI Lab Fellow Yifan Zhang 披露新模型将采用 Sparse MQA、Fused MoE Mega Kernel 和 Hyper-Connections 三项关键技术优化长上下文推理与显存开销。另有消息称此前发布延期系内部测试未达预期，与国产 GPU 硬件及融资无关。上述信息均未获官方确认。<br />
+  🔗 <a href="https://x.com/yifan_zhang_/status/2045694320993276133">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>传闻称 ChatGPT 上正在测试 GPT-5.5 Pro</strong><br />
+  大量用户发现 ChatGPT 中 GPT-5.4 Pro 的响应速度和输出风格发生显著变化。OpenAI 员工 Eric Mitchell 随后公开询问模型质量，被视为变相承认灰度测试。据悉代号 <code>crest-pro-alpha</code> 的模型已在后台秘密路由上线，用户选择 GPT-5.4 Pro 时可能触发。社区推测该模型为 GPT-5.5 Pro，生成时间从数十分钟缩短至 5-20 分钟，编码及 SVG、Three.js 能力增强，但存在广度降低、跳过研究步骤等问题。<br />
+  🔗 <a href="https://x.com/ericmitchellai/status/2045742449939951699">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Google</h3>
+<ul>
+<li><strong>推出 Android 开发工具集，优化 Agent 工作流</strong><br />
+  Google 发布全新 Android 开发工具集，包含 Android CLI、Android skills 和 Android Knowledge Base 三大组件，支持 Gemini in Android Studio、Gemini CLI、Antigravity 及 Claude Code、Codex 等第三方 Agent。官方内部实验显示，通过 Android CLI 引导 Agent 进行环境配置和项目创建，可将 LLM Token 使用量降低 70% 以上，任务完成速度提升达 3 倍。Android Knowledge Base 提供来自 Android、Firebase 和 Kotlin 官方文档的实时权威参考。<br />
+  🔗 <a href="https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html">来源</a></li>
+</ul>
+<h3>browser-use — 开源浏览器自动化框架，让 AI Agent 控制浏览器执行任务</h3>
+<ul>
+<li><strong>推出 Browser Harness 开源工具</strong><br />
+  browser-use 团队推出 Browser Harness，基于 CDP 通过单一 websocket 连接 Chrome，可在任务执行中动态编辑并补充缺失代码，已支持接入 Claude Code 和 Codex。底层约 592 行 Python 代码。配套提供免费远程浏览器服务，免费层支持 3 个并发浏览器，无需绑定信用卡，用户可自行获取 API 密钥或让 Agent 自动注册。<br />
+  🔗 <a href="https://github.com/browser-use/browser-harness">来源</a></li>
+</ul>
+<h3>Vercel</h3>
+<ul>
+<li><strong>官方证实内部系统遭未授权访问</strong><br />
+  Vercel 发布公告确认部分内部系统遭未授权访问，已聘请事件响应专家协助调查并通知执法部门。此次事件仅波及一小部分客户，各项服务保持正常运行。官方建议所有客户审查环境变量、利用"敏感环境变量"功能，并按需轮换密钥。<br />
+  🔗 <a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>Cherry Studio — 开源跨平台 AI 桌面客户端，支持多模型接入</h3>
+<ul>
+<li><strong>被曝无视设置仍上传遥测数据</strong><br />
+  Cherry Studio 被曝在用户关闭数据收集开关后，仍向 analytics.cherry-ai.com 发送遥测数据。启动和更新检查时触发的事件绕过了 <code>enableDataCollection</code> 设置，导致匿名 UUIDv7 Client-Id、版本号和操作系统等信息被强制上传。早期版本迁移代码还被发现静默将数据收集选项设为开启。目前已有用户提交修复 PR，社区普遍呼吁官方对开关失效问题作出正面回应。<br />
+  🔗 <a href="https://github.com/CherryHQ/cherry-studio/pull/14390">来源</a></li>
+</ul>
