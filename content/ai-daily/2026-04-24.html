@@ -1,0 +1,135 @@
+<h1>📅 每日简报 | 2026-04-24</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 8条 | 国外公司动态 10条 | 中国公司动态 3条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>OpenAI 发布 GPT-5.5 和 GPT-5.5 Pro 模型</strong><br />
+  OpenAI 正式发布 GPT-5.5 及 GPT-5.5 Pro，定位为迄今最智能版本，主打 agentic coding、computer use、知识工作与科学研究场景。GPT-5.5 在保持与 GPT-5.4 同等 per-token 延迟的同时实现智力跃升，支持 100 万 token 上下文窗口（API）。ChatGPT Plus 及以上用户可用 GPT-5.5 Thinking，Pro/Business/Enterprise 用户可用 GPT-5.5 Pro。API 即将上线，GPT-5.5 定价为输入 $5/M tokens、输出 $30/M tokens；Pro 版输入 $30/M、输出 $180/M。模型在 Terminal-Bench 2.0、OSWorld-Verified、FrontierMath Tier 4 等多项基准取得领先，生物/化学与网络安全能力被内部评定为"High"级别。<br />
+  🔗 <a href="https://openai.com/index/introducing-gpt-5-5/">来源</a></li>
+</ul>
+<h3>腾讯混元</h3>
+<ul>
+<li><strong>腾讯混元发布并开源 Hy3 preview 模型</strong><br />
+  腾讯混元团队发布并开源新一代旗舰预览版 Hy3 preview，采用 MoE 架构，总参数 295B、激活参数 21B，支持 256K 上下文。该模型定位为混元大模型重建后首款产品，在复杂推理、代码及 Agent 任务上大幅提升，主打高性价比与实用性。权重已在 Hugging Face、ModelScope 等平台开源，同时通过腾讯云提供 API，并在 OpenRouter、OpenCode 开启限免。元宝、QQ、微信等内部产品线也已接入。<br />
+  🔗 <a href="https://hy.tencent.com/hy3-preview">来源</a></li>
+</ul>
+<h3>蚂蚁百灵 — 蚂蚁集团旗下大模型团队</h3>
+<ul>
+<li>
+<p><strong>蚂蚁百灵发布 Ling-2.6-1T 万亿参数模型</strong><br />
+  蚂蚁百灵发布 Ling-2.6-1T 万亿参数旗舰模型，不支持思考模式，采用"Fast-Thinking"机制实现 SOTA 级智能与超低 token 开销，性能媲美 GPT-5.4 非推理版，在 AIME26 非推理模型中领先。目前在 OpenRouter 和 Kilo 平台提供一周免费 API 试用，官方正准备开源权重。<br />
+  🔗 <a href="https://x.com/AntLingAGI/status/2047374871467012393">来源</a></p>
+</li>
+<li>
+<p><strong>蚂蚁集团开源 LLaDA2.0-Uni 统一多模态模型</strong><br />
+  蚂蚁百灵团队发布 LLaDA2.0-Uni，基于 MoE 架构，总参数 16B（每 token 激活约 1B），在单一模型中集成多模态理解与生成能力，支持文本到图像生成、视觉问答、指令编辑及交错生成与推理。引入 SPRINT 加速技术优化推理效率，基于 Apache 2.0 许可证在 Hugging Face 开源。<br />
+  🔗 <a href="https://github.com/inclusionAI/LLaDA2.0-Uni">来源</a></p>
+</li>
+</ul>
+<h3>小米</h3>
+<ul>
+<li><strong>小米 MiMo 发布语音模型系列，8B ASR 模型开源</strong><br />
+  小米 MiMo 团队发布面向 Agent 时代的语音模型系列。MiMo-V2.5-ASR 为 8B 参数端到端语音识别模型，在中英双语、方言、噪音等复杂场景达业界领先，已在 Hugging Face 和 GitHub 开源。MiMo-V2.5-TTS Series 包含基础 TTS、VoiceDesign 和 VoiceClone 三款模型，已在小米 MiMo 开放平台限时免费开放 API。<br />
+  🔗 <a href="https://platform.xiaomimimo.com/docs/usage-guide/speech-synthesis-v2.5">来源</a></li>
+</ul>
+<h3>xAI</h3>
+<ul>
+<li><strong>xAI 发布语音模型 grok-voice-think-fast-1.0</strong><br />
+  xAI 推出旗舰语音模型 grok-voice-think-fast-1.0 并开放 API，专为复杂多步骤工作流设计，支持后台实时推理且不增加延迟。该模型在 τ-voice Bench 排行榜登顶，原生支持 25 种以上语言，可处理噪音、口音及频繁打断等真实场景。<br />
+  🔗 <a href="https://x.ai/news/grok-voice-think-fast-1">来源</a></li>
+</ul>
+<h3>字节跳动</h3>
+<ul>
+<li><strong>字节跳动发布 Seed3D 2.0，3D 生成达 SOTA</strong><br />
+  字节跳动 Seed 团队发布新一代 3D 生成大模型 Seed3D 2.0，引入 Coarse-to-Fine 两阶段 DiT 策略优化几何细节，采用统一 PBR 生成模型与 MoE 架构提升纹理真实感。盲评中纹理 3D 内容生成偏好率超 69%，并拓展部件级分割、铰接资产生成等下游任务。API 已上线火山引擎。<br />
+  🔗 <a href="https://seed.bytedance.com/zh/blog/seed3d-2-0-released-higher-precision-and-greater-usability">来源</a></li>
+</ul>
+<h3>Google DeepMind</h3>
+<ul>
+<li><strong>提出 Vision Banana 模型，视觉任务达最优水平</strong><br />
+  Google DeepMind 发表论文提出通用视觉模型 Vision Banana，基于图像生成模型 Nano Banana Pro 经轻量级指令微调，将各类视觉感知任务统一重构为图像生成问题。在零样本迁移下，于语义分割、深度估计、表面法线估计等 2D/3D 任务达 SOTA，媲美或超越 SAM 3、Depth Anything 等专用模型，且微调未损害原有图像生成能力。<br />
+  🔗 <a href="https://vision-banana.github.io/">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li>
+<p><strong>承认 Claude Code 质量下降并重置用户额度</strong><br />
+  Anthropic 发布事后分析报告，确认 Claude Code 质量下降由三个独立变更引起：降低默认推理努力程度（从 high 降至 medium）导致智能感知下降；空闲会话缓存优化逻辑缺陷导致模型健忘并加速消耗额度；控制输出冗长的系统提示词导致性能下降 3%。所有问题已在 v2.1.116 及以上版本修复，API 和推理层未受影响。官方已重置所有订阅者使用限制作为补偿，并创建 @ClaudeDevs 账号加强沟通。<br />
+  🔗 <a href="https://www.anthropic.com/engineering/april-23-postmortem">来源</a></p>
+</li>
+<li>
+<p><strong>Managed Agents 内置记忆功能开启公测</strong><br />
+  Claude Managed Agents 的内置记忆功能进入公开测试，允许 Agent 从每次会话中学习。记忆存储为文件并挂载到文件系统，Claude 可利用 bash 和代码执行能力处理。开发人员可通过 API 导出和管理记忆，保持完全控制权。<br />
+  🔗 <a href="https://claude.com/blog/claude-managed-agents-memory">来源</a></p>
+</li>
+<li>
+<p><strong>Claude 桌面端支持配置第三方大语言模型接口</strong><br />
+  Claude Desktop 被发现支持接入第三方大语言模型，用户开启开发者模式后即可配置。官方称之为"Claude Cowork with third-party platforms"，面向 IT 管理员，支持接入 Amazon Bedrock、Google Cloud Vertex AI、Azure AI Foundry 或任何暴露 /v1/messages 接口的 LLM 网关，无需登录账户即可使用。<br />
+  🔗 <a href="https://claude.com/docs/cowork/3p/configuration">来源</a></p>
+</li>
+<li>
+<p><strong>Claude 桌面端支持 URL 协议唤起特定会话</strong><br />
+  Claude Desktop macOS 与 Windows 版本支持 claude:// URL scheme，可通过链接直接唤起应用并跳转至特定 Chat/Cowork/Code 会话，支持预填充提示词（上限约 14,000 字符）及附加文件路径，可用于工作流组合或添加"Open in Claude"按钮。<br />
+  🔗 <a href="https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link">来源</a></p>
+</li>
+<li>
+<p><strong>Claude 扩展 Connectors，新增 15 款日常应用</strong><br />
+  Claude 扩展 Connectors 功能，新增 AllTrails、Booking.com、Instacart、Spotify、Uber、Uber Eats 等 15 款日常生活应用集成，将 200+ 连接器的协同能力延伸至日常场景。支持根据上下文动态推荐已连接应用，承诺无广告无赞助、数据不用于训练，已面向所有订阅计划开放。<br />
+  🔗 <a href="https://claude.com/blog/connectors-for-everyday-life">来源</a></p>
+</li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li>
+<p><strong>Codex 上线 GPT-5.5，新增 Auto-review 模式</strong><br />
+  Codex 全面接入 GPT-5.5，支持 400K 上下文窗口，Fast 模式速度提升 1.5 倍（成本增加 2.5 倍）。该更新标志着 Codex 向全方位计算机操作 Agent 转变，新增浏览器直接操作 Web 应用、Microsoft Office/Google Drive 文档处理、Auto-review 模式（独立审查 Agent 在高风险操作前进行上下文检查）等功能。面向 Plus/Pro/Business/Enterprise/Edu/Go 用户开放。<br />
+  🔗 <a href="https://x.com/OpenAIDevs/status/2047381283358355706">来源</a></p>
+</li>
+<li>
+<p><strong>发布 ChatGPT for Clinicians 及 HealthBench 评测基准</strong><br />
+  OpenAI 推出面向美国境内医疗从业者免费开放的 ChatGPT for Clinicians，支持临床护理、文档撰写和医学研究，提供实时可信临床搜索、深度研究、CME 学分获取及可选 HIPAA 合规支持。同步推出 HealthBench Professional 评测基准，临床工作区内 GPT-5.4 表现超越基础版及人类专科医生。计划未来扩展至美国以外。<br />
+  🔗 <a href="https://openai.com/index/making-chatgpt-better-for-clinicians/">来源</a></p>
+</li>
+<li>
+<p><strong>联合 NVIDIA 部署 Codex，万名员工接入 GPT-5.5</strong><br />
+  Sam Altman 宣布已将 GPT-5.5 驱动的 Codex 部署至 NVIDIA 全公司，覆盖工程、产品、法律、营销等九大部门超 10,000 名员工。NVIDIA 方面称效果"令人震惊"，Sam Altman 公开邀请其他企业联系 OpenAI 进行类似部署。<br />
+  🔗 <a href="https://x.com/sama/status/2047395562501411058">来源</a></p>
+</li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li>
+<p><strong>Gemini 推出对话分支功能</strong><br />
+  Gemini 工作人员 Josh Woodward 宣布 Gemini 正式推出 Conversation branching（对话分支）功能，目前正逐步扩大推送范围。<br />
+  🔗 <a href="https://x.com/joshwoodward/status/2047147030351642914">来源</a></p>
+</li>
+<li>
+<p><strong>NotebookLM 优化分享流程，新增断点续学</strong><br />
+  NotebookLM 更新两项功能：协作分享方面，支持批量粘贴邮箱一键分享笔记本；学习功能方面，Quizzes 与 Flashcards 新增保存进度、断点续学、卡片随机排序与删除、已掌握/待复习内容追踪等功能。<br />
+  🔗 <a href="https://x.com/GoogleForEdu/status/2047341430352302176">来源</a></p>
+</li>
+<li>
+<p><strong>DeepMind 提出 Decoupled DiLoCo 分布式训练架构</strong><br />
+  Google DeepMind 发布 Decoupled DiLoCo 架构，通过解耦的"计算孤岛"和异步数据流实现跨数据中心大模型训练。实测用 2-5 Gbps 广域网在美国四个地区完成 120 亿参数模型训练，速度比传统同步方法快 20 倍以上，支持混合使用 TPU v6e 和 v5p 等不同世代硬件，已通过 Gemma 4 模型验证。<br />
+  🔗 <a href="https://deepmind.google/blog/decoupled-diloco/">来源</a></p>
+</li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>DeepSeek</h3>
+<ul>
+<li><strong>DeepSeek 近期多项技术与产品更新</strong><br />
+  DeepSeek 在 GitHub 开源高性能 GPU 算子库 TileKernels（MIT 协议），面向 LLM 训练与推理场景。同时发布完全重构的专家并行通信库 DeepEP v2，峰值性能达初代 1.3 倍、流处理器占用降低多达 4 倍。产品端，社区发现 DeepSeek API 疑似上线与官网快速模式一致的模型版本。<br />
+  🔗 <a href="https://github.com/deepseek-ai/TileKernels">来源</a></li>
+</ul>
+<h3>OpenClaw — 开源的多模型 AI 网关与聊天平台</h3>
+<ul>
+<li><strong>OpenClaw 发布 2026.4.22 版，扩展多模型与语音支持</strong><br />
+  OpenClaw 发布新版本，新增腾讯云 bundled plugin 及 hy3-preview 模型集成，为 xAI 引入图像生成/TTS/STT 支持，将 Deepgram、ElevenLabs、Mistral 纳入 Voice Call 实时转录。新增无需重启 Gateway 的 /models add 命令、本地 TUI 嵌入模式、自动安装缺失 plugin 及诊断导出等功能。<br />
+  🔗 <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.22">来源</a></li>
+</ul>
