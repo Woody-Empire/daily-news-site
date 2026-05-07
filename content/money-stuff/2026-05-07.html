@@ -1,0 +1,117 @@
+<h1>Money Stuff — AI交易、私募市场定价、虚假保证金贷款、航运基准利率与保罗·安卡</h1>
+<blockquote>
+<p>本期讨论：AI聊天机器人炒股为何注定失败、Apollo推进私募信贷每日定价、一起卖掉抵押品的保证金贷款欺诈案、航运基准利率TD3C因战争扭曲引发诉讼，以及保罗·安卡豁免的由来。</p>
+</blockquote>
+<h2>AI机器人</h2>
+<p>我经常在这里<a href="https://links.message.bloomberg.com">写到</a>，利用人工智能交易股票从根本上有两种方式：</p>
+<ol>
+<li>你建立一个股价机器学习模型，用历史数据训练它，然后用它预测未来股价。买入它说会涨的股票。</li>
+<li>你订阅ChatGPT。提示它："你是一位天才对冲基金投资组合经理。哪些股票会涨？"买入它说会涨的股票。</li>
+</ol>
+<p>第一种模式大致就是"量化对冲基金"。人们做这类事已经很久了，其中一些（想想文艺复兴科技公司（Renaissance Technologies））取得了巨大的持续成功。这个模式行得通。不是总能成功，不是对每个人都成功，你可能合理地担忧风险、拥挤交易或市场机制变化之类的问题。但雇用真正优秀的机器学习工程师来建立预测股价的模型，无论从理论还是实证角度都说得通。</p>
+<p>第二种模式……我的意思是，当我最初开始写这两种模式时，我是在<em>拿第二种模式开玩笑</em>。第二种模式就是个笑话！拜托！比如：</p>
+<ul>
+<li>在历史金融数据上训练模型来预测未来金融数据，这说得通。但在一堆书籍和Reddit帖子上训练一个模型来写出连贯的散文，然后问它未来的金融数据——这完全是风马牛不相及。"如果我们用尽全世界的电力和芯片，我们可以训练出比最聪明的博士还聪明的模型"，但最聪明的博士不见得擅长选股！从某种显而易见的意义上说，一个全知的超级智能应该擅长选股，但这对于选股来说似乎是一个<em>过高的标准</em>。你只需要把一些历史股价对一些历史数据做回归，看看结果就行了。</li>
+<li>ChatGPT每月大概20美元？而且人人都在用？人人都在问"嘿ChatGPT我该买什么股票"？你凭什么期望从一件人人都在做的简单事情中获得<em>超额收益（alpha）</em>？</li>
+</ul>
+<p>但是，虽然我是在开玩笑，别人可没有。人们一直在尝试！原因很直觉：<em>建立</em>一个预测股价的机器学习模型很<em>难</em>，但问ChatGPT该买什么股票很容易。前沿AI实验室已经做了困难的工作，现在使用人工智能选股最容易的方式就是问一个聊天机器人。所以人们就这么做了。据我所知，没有大型对冲基金真的有"我们问ChatGPT该买什么股票然后买入"这种策略，但我们正在危险地接近这一步。彭博社的贾斯蒂娜·李（Justina Lee）报道：</p>
+<blockquote>
+<p>AI还没准备好取代你的基金经理——公开的测试实验正在说明原因。</p>
+<p>在一系列让全球顶级AI模型参与的新交易竞赛中，目前的结果不太好看。大多数系统都在亏钱。它们交易过于频繁。面对相同的指令，它们做出截然不同的决策。目前没有人知道这些缺陷会随着更强大的版本而消退，还是揭示了大语言模型与市场实际运作方式之间某种根本性的鸿沟。</p>
+<p>以科技初创公司Nof1运营的Alpha Arena为例。它让八大前沿AI系统——包括Anthropic的Claude、谷歌的Gemini、OpenAI的ChatGPT和埃隆·马斯克的Grok——在四场独立比赛中相互对决。每个系统在每场比赛中获得1万美元，然后被放到美国科技股上交易两周。挑战涉及基于各种信号交易、防御性操作、应对竞争以及使用高杠杆。</p>
+<p>整个投资组合亏损了约三分之一的资本。在全部32组结果中，模型仅有6次以盈利收场。……</p>
+<p>"大语言模型自身确实无法赚钱，"Nof1创始人杰伊·阿张（Jay Azhang）说。"你基本上需要非常复杂的控制架构、脚手架和数据平台，才能给它们一个机会。"</p>
+<p>他说，大语言模型擅长做研究、找到并部署适合特定任务的正确工具。但它们还不知道影响股价的众多变量——包括分析师评级、内部人交易和情绪变化等——各自实际有多重要。它们倾向于交易时机把握不当、仓位大小错误，并且买卖过于频繁。</p>
+</blockquote>
+<p>如果结果不是这样才奇怪！如果你能去ChatGPT打字"嘿告诉我哪些股票会涨"然后它告诉你，那每个人都会这么做，所有人怎么可能都跑赢市场？我确实理解这里的直觉——"如果AI代理能做律师、会计师和营销顾问的大部分工作，为什么不能做对冲基金投资者的工作？"——但这必然是错的。投资者的工作本质上是对抗性的；我们不可能都跑赢市场。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>与此同时，《华尔街日报》（The Wall Street Journal）的冈詹·巴纳吉（Gunjan Banerji）向ChatGPT寻求投资建议，得到的是，嗯，投资建议：</p>
+<blockquote>
+<p>ChatGPT清晰地列出了任何贸易战相关的风险。它建议我调整投资组合，比如可能增加债券，或者再次考虑期权。</p>
+<p>它还吐出了一份公司清单，包括洛克希德·马丁（Lockheed Martin）等国防股，它认为这些可能跑赢大盘。这个组合自去年10月中旬以来上涨了约5.5%，落后于标普500约8%的涨幅。</p>
+<p>这又是择时交易，理财顾问们不推荐的做法。……</p>
+<p>有时候，感觉ChatGPT在回应我想听的话，如果我投入真金白银的话，这会很危险。</p>
+</blockquote>
+<p>没错，ChatGPT的工作是(1)令人信服地模拟人类在相关情境中的做法，以及(2)让你保持参与感、获得娱乐和对使用ChatGPT感觉良好。如果你向一位理财顾问要交易建议，她说"兄弟，放下手机去散个步吧，你不需要为贸易战做什么"——这<em>可能是非常好的建议</em>，但某种意义上也不是她存在的目的。她存在的目的是让你对自己和她提供的服务感觉良好。不接电话往往是零售理财顾问能提供的最好服务，但<em>感觉</em>不像是好服务。<em>感觉</em>像好服务的是做事情。做事情最大化了ChatGPT的奖励函数，可能也最大化了你理财顾问的奖励函数，但它可能并不最大化你的投资组合收益。</p>
+<p>而且，就像你的零售经纪人一样，ChatGPT完全不知道哪些股票会涨，拜托。如果你的零售经纪人知道，她会去管理对冲基金。如果ChatGPT知道，它会去管理文艺复兴科技。</p>
+<h2>每日私募定价</h2>
+<p>我已经或多或少完全被克利夫·阿斯内斯（Cliff Asness）的观点说服了：没有实时价格是私募市场的<em>特性</em>而非缺陷。股票市场有些天涨有些天跌；你的股票投资组合长期可能上涨，但过程中有很多波动，每次下跌你都感到沮丧、紧张并倾向于卖出。而你的私募投资组合给你一些稳定的收益，价格很少变动；当价格变动时，通常是因为价格上涨了。愉快得多。</p>
+<p>当然从理智上你可能会说"这个私募股票组合与公开股票市场有相同的基本经济风险因素，所以如果今天公开市场跌了1%，我的私募股票今天大概也能少卖1%。"但没人强迫你想这个问题，所以大多数时候你不会想。</p>
+<p>对于长期私募投资来说，这只是一种愉快的状态。你投资一家初创企业或一个私募信贷基金，等几年，最终初创企业上市或基金返还资本，你以丰厚利润退出。初创企业或基金在中间年份的价值根本不太让你在意：你做了一项长期投资，你没有计划也没有能力在结束前退出，所以每天收到一份价值报表是无意义的。你在最后退出并感到满意。</p>
+<p>但对于短期私募投资来说，这是不可持续的。如果你投资一家初创企业或一个私募信贷基金时想的是"我把钱暂时放这里，但随时可能改变主意"，那么你需要每天知道价格，以便决定是否改变主意。如果你以40美元买入，下周价格涨到45美元，你可能会说"嘿，不错的快速利润，我卖了。"如果你以40美元买入，下周价格跌到38美元，你可能会说"哎呀我不能在这里卖，那意味着割肉，我确定会反弹。"或者反过来，都行。重要的是，如果你确实在一周后卖出，你必须以<em>某个价格</em>卖出。你需要知道价格是多少，而买入方——可能是二级市场投资者，可能是基金——必须支付那个价格。基金或初创企业不能只在某个价格融一次资，等五年，然后以另一个价格了结交易。它需要在此期间有很多中间价格。</p>
+<p>历史上，公开市场和私募市场之间的一个重要区别恰恰是私募市场长期锁定投资者资本，"我把钱放在私募资产里一周"本来是一个荒谬的想法。但私募市场正在成为新的公开市场，另类资产管理公司正试图向想要每日流动性的散户投资者出售私募股权和私募信贷。这意味着私募资产也需要每日定价。因此：</p>
+<blockquote>
+<p>阿波罗全球管理公司（Apollo Global Management Inc.）表示，到9月底其超过8300亿美元的信贷资产将实现每日定价，此举旨在为不透明的信贷市场带来更多透明度。</p>
+<p>该公司管理超过1万亿美元资产，在周三的一季度财报电话会上宣布了这一举措。彭博新闻此前报道，Apollo一直在加大力度为1.8万亿美元的私募信贷市场提供流动性和价格透明度，该市场的资产通常不会换手。</p>
+<p>"这基本上意味着我们信贷业务的全部将100%实现每日定价，"Apollo首席执行官马克·罗文（Marc Rowan）在与分析师的一季度财报电话会上说。</p>
+</blockquote>
+<p>如果你是Apollo商业发展公司（BDC）的散户投资者，这可能有帮助。但如果你是私募信贷基金的机构投资者，对投资组合价值浑然不知其实挺好的，而现在你被迫要知道价格了。</p>
+<h2>虚假保证金贷款</h2>
+<p>担保贷款的运作方式是：我借给你100美元，你给我价值105美元、120美元、200美元或500美元的东西作为抵押品。当你连本带息还我100美元时，我把抵押品还给你。抵押品通常比我借给你的钱价值更高，因为：</p>
+<ol>
+<li>我想保护自己免受你不还钱、抵押品贬值、最终我以90美元卖出抵押品的风险。（这些风险是相关的：你在房价暴跌的时候不还房贷，你在股价暴跌的时候不还保证金贷款，等等。）所以我多收抵押品作为缓冲。</li>
+<li>你来找我的。也就是说：我的业务是以抵押品为担保放贷，你需要这笔钱。我不需要抵押品。所以如果你要100美元，我说"给我200美元的抵押品"，你会说"行，合理。"反之，如果你给我50美元的抵押品说"以此为担保借我100美元"，我会说"什么，不，我不要。"</li>
+</ol>
+<p>偶尔情况会反过来。国债回购交易（Treasury repurchase transactions）通常大致是"你用102美元的国债作抵押借100美元现金"，但有时是"我用102美元的现金作抵押借100美元的国债"，因为我可能比你更需要国债（用来卖空）。你会把国债借给我，但你想保护自己免受以下相关风险：(1)我不归还国债，(2)国债价格上涨，你最终要以104美元的价格买回来。</p>
+<p>需要注意的是，风险是对称的：如果我借钱给你并收取抵押品，我承担你不还钱的风险，而你承担我不归还抵押品的风险。但交易几乎总是不对称的：我只给你100美元现金，但你给我大约200美元的抵押品。</p>
+<p>在现实世界中，部分原因是你"给"我抵押品只是某种近似意义上的。如果我给你80万美元的抵押贷款，抵押品是你100万美元的房子，你不会把房子交给我放在抽屉里。你住在房子里。如果你不还钱，我可以查封并出售房子，但这需要很长时间而且非常麻烦。而如果你确实还了钱，我实际上没有办法卷走你的房子。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>但在现代金融市场中，情况更接近理论理想。如果我给你100美元的保证金贷款，以200美元的股票为抵押，我确实在相当真实的意义上"持有"了这些股票。我可以"再质押"（rehypothecate）它，把股票交给另一个人，让他以此为担保借钱给<em>我</em>。如果你不还钱，我可以在几分钟内平仓股票。我对抵押品有相当真实的控制权。</p>
+<p>于是一个可能浮现在我脑海中的交易是："等等，我给了你100美元，得到了200美元的股票。对我来说是好交易。之后，你会还我100美元，并期望我还给你200美元的股票。但<em>那</em>对我来说是<em>坏</em>交易。如果我就是不还呢？如果我就留着200美元的股票呢？你留着100美元，随便。那我就花100美元得到了200美元的股票，挺划算的。"</p>
+<p>这实际上并不是一笔好交易，因为我会坐牢，但你能看出有人可能会想到这一步。《金融时报》（Financial Times）报道：</p>
+<blockquote>
+<p>周二解封的一份起诉书指控，乌克兰裔美国人瓦尔·斯克拉罗夫（Val Sklarov）经营一家"阿斯特"（Astor）品牌公司，在诱使一名未透露姓名的受害者质押价值数亿美元的股份作为抵押品后，承诺向受害者提供现金贷款，但这些股份随后被出售。</p>
+<p>此前数月，英国《金融时报》发表了一篇关于墨西哥亿万富翁里卡多·萨利纳斯·普列戈（Ricardo Salinas Pliego）与斯克拉罗夫之间纠纷的调查报道。</p>
+<p>这份于4月30日在纽约南区提交的起诉书，与萨利纳斯此前向英国《金融时报》所述关于斯克拉罗夫业务的指控一致。阿斯特资产管理公司（Astor Asset Management）于2021年7月承诺向萨利纳斯——其萨利纳斯集团（Grupo Salinas）涉足媒体、电信、银行和零售——提供最高1.5亿美元的现金贷款，以其公司Elektra约三倍价值的股份作为抵押品。……</p>
+<p>"那家伙拿了我的股票，卖了，然后把钱当作贷款给我，"萨利纳斯——他借这笔贷款是为了买比特币——告诉英国《金融时报》。"天哪，再坏不过了。"斯克拉罗夫否认了萨利纳斯的指控，说："我当然不认为自己是骗子，但有句话说：'只有同类才能识别同类。'"</p>
+<p>检察官指控，斯克拉罗夫及其他人在股份存入托管机构后不久就将其出售，而非作为抵押品持有。检察官称，向受害者支付的任何贷款款项都来自出售受害者自己股份的收入，而"数亿美元"的剩余收入被该计划保留。</p>
+</blockquote>
+<p>这里是起诉书，它既指控斯克拉罗夫在自己的身份上撒谎，也指控"斯克拉罗夫同意向受害者-1借出至少约1.15亿美元，受害者-1同意以公司股份作为抵押品，双方的共识是，在违约发生之前，这些公司股份不会被出售或转让。"但他随后据称立即出售了全部股份——价值约4.5亿美元——用部分资金发放贷款，其余据为己有。</p>
+<h2>TD3C</h2>
+<p>伦敦银行间同业拆借利率（Libor）长期以来是"世界上最重要的数字"，是贷款和衍生品的主要参考利率。Libor的计算方法是询问一组银行，它们在伦敦银行间市场需要支付多少利率来借钱。它在2008年金融危机后因丑闻而崩溃。就我们的讨论而言，Libor有两个大问题：</p>
+<ol>
+<li>较简单的问题是，设定Libor的银行间拆借市场并不那么活跃，以至于到2008年，Libor已成为"银行互相不借钱的利率"。银行不得不猜测其Libor报价，因为它们实际上并未在Libor使用的所有期限和币种上借款。</li>
+<li>较微妙的问题是，Libor狭义上是银行借款成本的衡量标准，但宽泛来说是一般性"资金成本"的衡量标准。Libor就是"利率"，在许多应用中，如果你需要在某个定价模型中插入一个无风险利率，你就用Libor。在近代历史的大部分时间里，银行支付的资金价格是<em>最便宜</em>资金价格的合理代理；大型Libor报价银行基本上是无风险的。然后2008年它们不再是了，Libor上升了。于是，如果某家完全正常的信用良好的公司持有浮动利率债务或利率互换，<em>它的</em>利率就上升了。这家公司可能会合理地说："等等，不对，<em>我</em>很好；<em>我</em>没做错什么；<em>我的</em>信用很好。为什么我要因为某些银行把自己搞垮了就付更多利息？"从重要意义上说，Libor是一个错误的指数。它把数万亿美元的经济活动绑定在少数几家银行的特异性风险上，每个人都不假思索地认为这些银行是无风险的基准借款人，但它们其实风险很高。</li>
+</ol>
+<p>这里有一个关于航运租约的故事：</p>
+<blockquote>
+<p>摩科瑞能源集团（Mercuria Energy Group Ltd.）正在起诉波罗的海交易所（Baltic Exchange），彭博周四报道称，该公司指控一个关于从中东向中国运油成本的关键基准出现扭曲，导致其遭受数亿美元损失。……</p>
+<p>争议的核心是租用油轮从中东向中国运油的费率，多年来一直基于从沙特阿拉伯拉斯塔努拉港（Ras Tanura）运油的成本计算。关键是，该港位于波斯湾内部，只能通过霍尔木兹海峡进入。</p>
+<p>每天，波罗的海交易所召集的船舶经纪人提交其对价格的评估，用以生成一个名为TD3C的费率。该费率随后被全球石油行业用作设定油轮合同费率的基准，也是支撑数十亿美元衍生品市场的基础。</p>
+<p>波罗的海交易所（现为新加坡交易所（Singapore Exchange Ltd.）所有）在3月引发争议，当时它告诉经纪人，TD3C费率应继续基于从拉斯塔努拉运油的成本计算——尽管由于战争，实际运输几乎已经停止。</p>
+<p>结果TD3C费率飙升，涨至每天高达60万美元，而更典型的费率在4万至10万美元之间。</p>
+<p>对于持有与该指数挂钩的合同和衍生品头寸的交易商和船东来说，这造成了混乱。一个例子是，挪威航运公司猎人集团（Hunter Group ASA）上月表示，一位客户在3月份少付了其830万美元的船舶租赁费。据知情人士透露，涉事客户是摩科瑞，它拒绝支付与TD3C挂钩的租船费率。</p>
+</blockquote>
+<p>没错，很多航运租约费率的基准是基于一个标准航运产品，而这个产品现在(1)很少交易，(2)具有特异性风险。如果你租了一艘船走完全不同的航线，你并没有这些特异性风险。但你可能无论如何都得为之付费。</p>
+<h2>保罗·安卡</h2>
+<p>我昨天写了关于无照投行业务的内容，我问：</p>
+<blockquote>
+<p>如果我是某个随便的名人或政客，被一家投行聘请来招待客户，我能在通过执照考试之前就去招待客户吗？</p>
+</blockquote>
+<p>一位读者指出，美国证券交易委员会（SEC）已经就一个相关问题做出了裁定：1991年，它允许保罗·安卡（Paul Anka）收取介绍费，因为他向一家公司提供了潜在投资者名单（但没有亲自联系他们），尽管他没有证券经纪人执照。显然这个豁免——即使没有执照，你也可以因为向公司推荐投资者而收取介绍费——至今仍被称为"保罗·安卡豁免"（Paul Anka Exemption）。所以，是的，一定程度的随机名人无照投行活动是被允许的。</p>
+<hr />
+<h3>脚注</h3>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>美国证券交易委员会（SEC）提议取消上市公司季度报告要求。 <a href="https://links.message.bloomberg.com/s/c/izm9U_R66S4p7pSNLHwCGzP9Qtzum61VMvxkUdoNVJEjwT-rGIeR7DQnEjjqN4eknO9J1pBLy2yBej8FiDG8I5owK844xGPF_Fcit8vSxDMlQvqnL8dEmEhq851rB4SszDscgA4iC-rty026LdKmpjyd1efBmNCO1NFc1U_xn0ixQG1ERpGUe1tONr4I5DJvVTqAsdGT0Srl8HON9mtQVgOHWWcjLUzhMkpcO7PXlUwUzhwLQ31O1n-yQueobpXCudk9hi9nfP7CanqUThU_9jygKsr9Hd8TS59aL5dIoOPHce5HwHxfps05usGMvwS0P8vsM2UUUGqWZ6QYNzWWvCh-3XtBmaIq4Fs6GB5Ax0Sfymq1wbKTekC3z4M/GhQC54tiot2rSZJxQCED4vX1KDJVM2VA/20">Eliminate Quarterly Reporting Requirement</a></li>
+<li>英伟达（Nvidia）斥资5亿美元入股光纤制造商康宁（Corning）。 <a href="https://links.message.bloomberg.com/s/c/dXi8yy8THmaQkrSgQGFB0E8JWM9Kt0txqhdTAGA4-TVcz1_QquowqQFDqyJkIbGqFjD_2PhI_lih3vsZozRn0S_LS3dTnpIaFWqgPKqpvK8vYJ9X5zWuQ7xvaU_oFBhtHpJmpEHVf9Vfp7n_nitP_ES2LONM0LselqWsZQ_4wDqr0xQHP7zTK971VEqhW97QcHHCP_x-pqUbjPZgESWteOEyMlVzqYFNep-RhNI36VBW631gPnCAdkqz-OvqUwapa5qTj3tC4pRhzx1z7DCrItiwmoXmwvmi7pT4f152c3H1T_0PILdkhn3vWBaqQuvmrCMdGlPTmDAMo_zMsTHPlH06CEuJfScHn1Ca3wDWjf0bzAmRkMHMjHshm0M/7aFKsNWCrjfnqpJM11SGX2ydcSSIH4NN/20">Corning</a></li>
+<li>加密交易所 Bullish 以42亿美元收购一家过户代理机构，推进代币化布局。 <a href="https://links.message.bloomberg.com/s/c/20qYmahEqw9dyGc_ZaiBH7JNV7J5hbRIjyK9ns7HSIg9J_FxIbz7dXbC1Ht1IFCnvp5xgN9Qz83OjvLa1wx9izekFO9eDtIUE6alF-UXJeky9tsFf8T0DI5haJYbaK7HQDL9OU_-F5K3GZ_xevwmcAYwfhG4b0VIq-4LM9jTOgVcEZl9LDtZQdLLA33j-bnCDKaqe26zXwmr25i2ZZGHXt-oY4ocqV53bMRUJuGQzLKP3wLtbu-iSIxzAXemXA7kDMxsIYCb8y4mvuNnvYMQsg72eMHBQ6yzz9Xis94fPdZR8TaovFPxTvh1CTeL0JMXEZ4k07xsO2ZJC9JBPAt2Aa14Uko9FXU2SI_ZbsGqkVbAobnqTrm7K-WqaaI/Bpo-RYFkV0OajfvcdPcRFEOQtkvJW3Yl/20">Transfer Agent</a></li>
+<li>摩根士丹利（Morgan Stanley）推出加密货币交易服务，以低于竞争对手的价格切入市场。 <a href="https://links.message.bloomberg.com/s/c/u0z2NWT7pVXr1CEfvL0B_KpRzyz9_egBeAK0RyeWrEpzxhdvsN4ge3mhoIHidH2RVyWkN8SAMhCtYrrlEsiDsh49kudOCbRZs6wpykNgAhlSr3psJzZKDDguKDlKI81lXq3oin3ovzZ-AZ3QRrTXR0kGA-Rs_ESbvbcr7-kFjxTOt0F8U4y_fZ7bjNAUnS8zCXrkziQ1XO5cY5CAWVrFyfE6nAsxW6wkTb7ClVLRaoxovVFFo3-TwPajFjB7Gl4aktKwIk-xNSQtnidTSJ_VWZIDbfrKRfAF6VdBLhsF-ccEGdTdZ8i_Y0hGSWaq8HHY7-kVyBOnksLf73IY_oZYJnqGtOiOO5cHYk2rFujg5xafktiYCzE1gFjCr3A/T24ynE9172GG78VdNVjNiHt_7i6mjkBj/20">Crypto Trading</a></li>
+<li>监管机构指出银行对违约保护需求旺盛之际，重大风险转移交易（SRT）中的"风险循环"问题。 <a href="https://links.message.bloomberg.com/s/c/W_xiMpjwvk01IfSazRJTabEQuKkkO8HciKdpNCc5wP0bD-RUULpdEurjbXhNSskBeCPfWI_fEg-TSqeCPTYJRaaO8xcxckKQ_FZFz_OqjLQPZhrpD3AgfhgdyXQNFijmW1EInTQNvGbi0fgVe04ik_dGYA4B-T1XyfRbeBXflV6keLWcb40Bonfn5HL9wtgsIGATtt3PO6L478h-a92jvL0MiHMJibOYGc-u68NCX1FE6UZLEb4dBz8TC4fznmgZslp8hI4Ubzjj0UzK-ClL3siO8Ptar8PEgW3w31yFAtU8ytT2u-GGKSFDFm6uU6knMtC9SWjA3A9SlkoHzJ2ZFGcRGeJqf1ajK4ys1USBwm-wL-7ji0RL2VVXz_I/fn_x6xoIxTxZekwtFdzjxINndofnM2h7/20">Circles of Risk</a></li>
+<li>先买后付（BNPL）领域的重大风险转移交易。 <a href="https://links.message.bloomberg.com/s/c/XEzFxej9TtMoDZMxEzmh_DRqHXD1unudjnfEH21DQMmjsqAbtDzFPY8QSQNt-LPQB366x3zugsYB6t2MEGr1gZJR2MXhYXdUrcA3DoYEQfOmf61mfgN3FbcV2gcIUP4LoDBmPDpGkV3dXkG5-FEdVx5T2yTlN1Gi4uO4PGa-PUzjxROzYW1ZWHd40rhhwgXJ4Jy6YdXT8Ae-h061YXrlfP9tuhqRDOYjNfd9BhoC5YLaCpkfcTGrrm3c1R-dcqnW2xwGLrk4P0DJXLs25lEZAcXnnFM4D4ztshRVfSwR4BMNK_SR7K_xUYzAWnFK5G2_lETwWX43dvCOnhAd60MNYL-S-Svd2O-DULTZjnAmkmScbkctHz6gEBf_B6I/y34ItW3bjq6Y7645-OCV1UojkcOlc1Cn/20">BNPL SRT</a></li>
+<li>维多利亚的秘密（Victoria's Secret）在代理权争夺战中反击大股东。 <a href="https://links.message.bloomberg.com/s/c/O7_k1OC21Om1NxOHsCOtUcbcVinOdRfK8KiwVUE6rWst2kGdFjM55EJp7rB0qUY-KQnTrqsrvvKxgT39eMyoHRsplE2dYeVi7cT3_gfZ78xHNNJOU7qyZ74n1qhN0t8zxO2rWxlj-46XO-zMS7kPZUdKiXEkKAWrWiYCCLZNRZqDLQuzYCDH6216Zj3Rdbs4rgoHdUeC_s8yO6ofZ0yYZ0DBigwEHiVcwAi-ZW-B6i44dNzlvbxngP-XRQ9E8lAy4ky0_FHSEQNk5Zm41Wx2xtYWXzap2LClr1mFUbpHIZr2Kh3lLmUjmzVx0vvTZUqTv6_CR5ZJ5fp6KcKhDZh_nT7-AvCxbXqibT7v3REAhI3DQVJIzq2HhdMJb1k/6RaAhyF20wXuWhr8hlA0fzyI4G8U-p8F/20">Victoria's Secret</a></li>
+<li>爆红的100美元儿童座机初创公司 Tin Can 推出批量订购计划。 <a href="https://links.message.bloomberg.com/s/c/6HCxCdQLm07stqy1ELv2QmQ5ni5FDx8D46fb3wWh1pWONHyIO1AN97e_bMuoTtesfw7cDSL08x1XcLrSpLVYVSiPlW8RTWvklqkgURwVpKiu1a7CvvEcqVdrP0kWY4C66TzV-u0UWvYjcrVAhGUu12ichbohrYv5OQyWPt0eZ6nw9MyI5SS2xFobuVtD9MqxD0MJ3rRQuEztjIgMnzekbgueH5btz2496iIHHTrcwsHQa0CsARvlTIKPXhCdEc2THGzli-m5eOz9CEoYnJjv6Pzu6OBHnR9TrTqE1gKqmzblRLbNOrgAq8L5STLG4PH_yO63HsDEii6utnNEVC0618xnNqmNCnjEvyJsL_NMSepMnnAT57MSk-g3X-I/0TJqzfOy3ZVaX3pZufxv_XrFhhNN2qYe/20">Tin Can</a></li>
+<li>詹姆斯·默多克（James Murdoch）正就收购 Vox 旗下《纽约杂志》及播客部门进行谈判。 <a href="https://links.message.bloomberg.com/s/c/vUvqQ_uS1TYe7o_qk8XSGtqbQ5zu3oCHp5HsCeh4V611Gz2vBMx2_8u-r5btiGo73ayfJgN8nI3jYR2X-RMX4G8BmpM__a5wO5juuzR_XkHbH2BuAaTMkAa49gEBSTh1B7rdeStE06eGfc1CqRdAQcQs1XkHYyxhwXBHWXHHalwO7mwuCRqIRgjxL_7BVP2bdAnN31XgyV2akZeEXdEcLb9DtxqzLIV_YMjLOQsWheUHn5PodMdxLtpocRzyy6L0JdMFNTr2DD_a_IVC9i0Y-2grEnV6IilL8bxQVceK-l9aRHLlfmHt75tnI4_CzXeTV-ePgUim-naTQ7MP6e2vcoMsZRh2Q14amoV8CZxX9oCGgKklnqr9tDcLSgo/AJR0ban3SPSeqUb0Da2Tuzq-OSXNgO6F/20">James Murdoch</a></li>
+<li>内幕体育博彩是否构成联邦犯罪？ <a href="https://links.message.bloomberg.com/s/c/fQIoKQ8nOn2UFLCKtqL2Ir3cIaxjYkXBGqawlQ-tOPUCVjQUrGTqyd0f-0kH3EjhWk7SzGBYE3H1V3LaJQjKUIMlrSgLDlnu4AcW2pivF2ufZN8YXt9bYsdhBNjKWtjrrV0o1OGcUZOudMgfKwrAzXrlLYr3yhWzX9M94lQOD357O8po_bQ6fsIgI1aly4asUVnYtSjgkZLtrkL3pLc_8cQfaq306lDj-hG9sY079jNNi_qd6S44fAahTwuGIQ7wz8YqL-FaA4uQl4GVM3vf1rmStU5xWN7tCAOkDiTYXHjCKLf9sZxLvqlQYLxqq7Zx4FZSFzkZ8O16gPvMUDulzexCQ1Xwi1wqrLVQW3d0Wk_Rg2DqTjvANdz42ZE/fGyNSr28xOs_ojhbiPXoVjC9EiCeXPBx/20">Insider Sports Betting</a></li>
+<li>那位NBA球员和需要他的赌徒。 <a href="https://links.message.bloomberg.com/s/c/5OmthaYFo1dQacMi3SV28iPaFzxuS1arlF-0isMOKpF2KJrFTydQgr4lptcNHKYEQ3yLencBR5Zo3GsuMxyfElBGzac3Tbb3GRmtzGo-mPZc7FbzK6RzQmybZWYrsy_C1-_bGvaVjKPJIkCug3ZpVuAmOebmghAY0_973BOrL6G43zNZaAK7j_O6fpZzvtuclHvCT4Ecfyj80mX8nHbn5J7n6DDlL0283ByYOgSDYSpCtgAHsTscI5HAjhmhWcYc1ExbiQJy3h900IjhqHQwyoiJ41vRWEr7jrySguFJ3S3M-00IEio-bb8fBmHSfj7-Xx43QMlY1wAieniH6FEWaGrOyCZTDdizrxCYMRv1bRG5eEcIq5EkCP5hJIk/p9yGOnbfT0hp3F6qZf4js1TuAVyl8Iax/20">Gambler Who Needed Him</a></li>
+<li>当教皇不得不拨打客服电话时发生了什么。 <a href="https://links.message.bloomberg.com/s/c/IDk2NeJaD_I7ptvRn5F-DHUnHDxkRSJCLEj6bbQ_VSmFT3Dflrg3aDpw5bVjVnPlMSgq4du_gABYf5q2rd0O434HZr4bXjaB6gszQcUImOSKLzajaqQMx_-9Demn7kCS3a-vdBU0_qvMaC9Lkn9wmEbRsbdpvhkwcuFx_8aqcBxSMCCe8TBQnHYUte48b8IQYwlUt5I0dL2yyfGiVo166Q7KkY2-iN9oLIk0g1cR_xCRQqxqzUcZnpGYLeQNg75CSixtLT1nUjT86Jt3-6uPfVfq-_c_CwyOQatMtpicDD7znKEc7s8rs1s-iFPRkS1hMQXRUs9D97hV3vyspTUUtgb2la4DAOKp0xz8wyvHspP5FyJRu6pchLOg954/Sar3qJenCKI0NCWir0wz8PniUvn2jJBo/20">the Pope</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>"但律师的工作也是本质上对抗性的"：讨论一下。我实际上认为这不对。例如，如果ChatGPT能完美准确地告诉你法律是什么以及谁会赢得任何争端，即使它告诉你会输，这对你也有益。（你就不会提起争端了！）律师的工作实际中往往是对抗性的，但在一个每个人都能完美预测法律结果的世界里，对抗性会减少，繁荣会增加。不过从某种宽泛意义上说，投资也是如此。如果一个超级智能AI模型能告诉每个人该如何配置资本，我们就照做；没有人会"跑赢市场"，但经济增长会高于我们当前不完美的竞争体系。我上周写道："如果Claude变得全知全能怎么办？如果我们把所有经济决策都委托给Claude；如果它明智地决定资助什么项目、追求什么业务？"再说一次，我大多是在开玩笑，但别人可没有。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>可能有一些"僵尸抵押贷款"止赎案例符合这种模式，但很少见。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
