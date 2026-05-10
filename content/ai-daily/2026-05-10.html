@@ -1,0 +1,66 @@
+<h1>📅 每日简报 | 2026-05-10</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 1条 | 模型发布 2条 | 国外公司动态 4条 | 中国公司动态 2条</p>
+</blockquote>
+<hr />
+<h2>💰 融资</h2>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Anthropic 与 Akamai 签署 18 亿美元七年云服务合同</strong><br />
+  据报道，Anthropic 已与云服务商 Akamai Technologies 签署总额 18 亿美元、为期七年的云基础设施服务合同，以满足其 AI 软件日益增长的算力需求。Akamai 在 2026 年 Q1 财报中披露了该笔交易（未点名客户），随后被媒体确认合作方为 Anthropic，双方均未置评。受此消息提振，Akamai 股价连续大涨。<br />
+  🔗 <a href="https://www.globenewswire.com/news-release/2026/05/07/3290507/0/en/akamai-reports-first-quarter-2026-financial-results.html">来源</a></li>
+</ul>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>百度</h3>
+<ul>
+<li><strong>文心 5.1 模型正式上线</strong><br />
+  百度宣布文心 5.1 大模型正式上线，用户可通过官网或星河社区 Playground 体验。该模型总参数压缩至文心 5.0 的约 1/3，激活参数压缩至约 1/2，预训练成本仅为业界同规模模型的约 6%。在 Arena 搜索榜以 1223 分取得全球第四、国内第一，创意写作能力接近 Gemini 3.1 Pro。技术上引入多维度弹性预训练、Once-for-All 弹性训练框架、FP8 训推一致性优化及多教师在线策略蒸馏后训练管线。该模型将陆续上线数十个创作类 Agent 平台。<br />
+  🔗 <a href="https://yiyan.baidu.com/blog/zh/posts/ernie-5.1-0508-release/">来源</a></li>
+</ul>
+<h3>HiDream-ai — 专注图像生成的开源 AI 团队</h3>
+<ul>
+<li><strong>开源 HiDream-O1-Image 图像生成模型</strong><br />
+  HiDream-ai 开源了 8B 参数的图像生成模型 HiDream-O1-Image（代号 Peanut），包含未蒸馏（full）和蒸馏 Dev 两个变体，并同步发布推理驱动的 Prompt Agent。该模型基于像素级统一 Transformer（UiT）架构，无需外部 VAE 或分离式文本编码器，直接在单一共享 Token 空间中编码原始像素与文本，支持文生图、图像编辑、主体驱动个性化等任务，原生分辨率可达 2048×2048。在 Artificial Analysis Text to Image Arena 首次上榜即位列第 8。代码与权重以 MIT 许可证发布。<br />
+  🔗 <a href="https://github.com/HiDream-ai/HiDream-O1-Image">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>公开内部 Codex 安全运行实践</strong><br />
+  OpenAI 发文分享其内部安全部署编程 Agent Codex 的技术实践。措施包括：沙箱限定可写路径与网络访问、审批机制区分高低风险操作、Auto-review 自动批准常规请求、网络策略默认不开放任意出站仅允许经批准域、CLI 和 MCP OAuth 凭据存入安全密钥环并强制绑定企业工作区。遥测方面支持通过 OpenTelemetry 导出提示、工具审批、MCP 服务器使用及网络代理事件日志，已集成至合规平台。相关配置方案已面向企业及教育用户开放。<br />
+  🔗 <a href="https://openai.com/index/running-codex-safely/">来源</a></li>
+</ul>
+<h3>Perplexity</h3>
+<ul>
+<li><strong>公开内部 Agent Skills 设计维护指南</strong><br />
+  Perplexity Research 公开了源自 Perplexity Computer 产品实践的 Agent Skills 设计、优化与维护指南。Agent Skill 由 SKILL.md、scripts/、references/ 等文件组成，依靠"Load when..."描述进行隐式路由匹配，通过索引、加载、运行时三层渐进式上下文按需调用。开发理念强调先编写评估再构建 Skill，利用层级结构和迭代来组织复杂知识，并通过"gotchas 飞轮"和跨模型评估套件进行持续维护。文章特别指出每个新 Skill 都会对全局上下文构成成本，可能干扰已有 Skill 的路由。<br />
+  🔗 <a href="https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity">来源</a></li>
+</ul>
+<h3>OpenRouter — AI 模型聚合路由平台</h3>
+<ul>
+<li><strong>推出 Pareto Code 实验性编码路由</strong><br />
+  OpenRouter 推出实验性编码路由 Pareto Code。开发者设置 min_coding_score 参数后，系统根据 ArtificialAnalysis 排名自动将任务分配给满足分数要求且成本最低的模型。设 3 个质量频带，共含 13 个模型，最高支持 2M 上下文，另提供牺牲多样性换取速度的 Nitro 变体。官方称因模型迭代加速，数月内各频带成本降 10 至 100 倍，该产品旨在顺应此趋势。<br />
+  🔗 <a href="https://x.com/OpenRouter/status/2053170520087024109">来源</a></li>
+</ul>
+<h3>Nous Research — 开源 AI 研究组织，主导 Hermes 系列模型</h3>
+<ul>
+<li><strong>Hermes Agent 登顶 OpenRouter 应用用量榜</strong><br />
+  Nous Research 宣布旗下 Hermes Agent 在 OpenRouter 平台全球 token 排名中超越 OpenClaw 登顶，成为该平台所有 AI 应用中用量第一。团队向近 1000 名贡献者和用户表达感谢，并公开征询社区对后续功能方向的意见。<br />
+  🔗 <a href="https://x.com/NousResearch/status/2052904761087729897">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>百度</h3>
+<ul>
+<li><strong>文心 5.1 模型正式上线</strong><br />
+  （详见"模型发布"板块）<br />
+  🔗 <a href="https://yiyan.baidu.com/blog/zh/posts/ernie-5.1-0508-release/">来源</a></li>
+</ul>
+<h3>字节跳动</h3>
+<ul>
+<li><strong>今年 AI 基建支出超两千亿元</strong><br />
+  据《南华早报》援引知情人士报道，字节跳动今年 AI 基础设施支出将超过 2000 亿元人民币，较去年底 1600 亿元的原计划至少增加 25%。增资原因包括 AI 投入加大和存储芯片成本上涨，且更大比例预算将分配给国产 AI 芯片。<br />
+  🔗 <a href="https://www.scmp.com/tech/article/3352736/tiktok-makes-record-us25b-investment-expand-digital-infrastructure-thailand">来源</a></li>
+</ul>
