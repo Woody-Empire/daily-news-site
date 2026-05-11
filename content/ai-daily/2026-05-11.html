@@ -1,0 +1,45 @@
+<h1>📅 每日简报 | 2026-05-11</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 0条 | 国外公司动态 5条 | 中国公司动态 1条</p>
+</blockquote>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>OpenAI</h3>
+<ul>
+<li>
+<p><strong>Codex 周安装量达 8610 万，12 倍于 Claude Code</strong><br />
+  据 a16z 引用 TickerTrends 数据，截至 5 月 3 日当周，OpenAI Codex 的 npm 周安装量达 8610 万，较此前约 1000 万急剧攀升，仅 5 月 2 日一天就新增 4600 万。同期 Anthropic Claude Code 周安装量为 720 万。媒体分析认为用户迁移主要由 Claude Code 遭遇的"智能降级"和混乱配额策略引发，OpenAI 则通过桌面应用、多 Agent 并行与超过 90 个插件的生态加速追赶。<br />
+  🔗 <a href="https://www.a16z.news/p/charts-of-the-week-it-was-a-good">来源</a></p>
+</li>
+<li>
+<p><strong>OpenAI 终止开发者自助微调通道</strong><br />
+  OpenAI 通过官方邮件宣布全面关停面向开发者的自助微调 API。即日起新用户无法创建微调任务，现有用户可使用至 2027 年 1 月 6 日，已部署的微调模型推理服务与底层基座模型生命周期绑定。OpenAI 给出的理由是新一代基座模型在指令遵循方面已极为强大，Prompt 配合 RAG 足以覆盖绝大多数场景。<br />
+  🔗 <a href="https://startupfortune.com/openai-is-winding-down-fine-tuning-and-that-changes-the-startup-playbook/">来源</a></p>
+</li>
+</ul>
+<h3>Hugging Face</h3>
+<ul>
+<li><strong>推出 hf-sandbox，基于 Jobs 打造云端代码沙箱</strong><br />
+  Hugging Face 发布开源项目 hf-sandbox，这是一个基于其 Jobs 服务构建的 Modal 风格沙箱 API。通过快速启动 HF Job，自动安装基于 FastAPI 的 RPC 服务器，再通过免费 Cloudflare Tunnel 暴露服务，实现远程代码执行和文件读写。目前主要用于原型验证而非生产环境。<br />
+  🔗 <a href="https://github.com/huggingface/hf-sandbox">来源</a></li>
+</ul>
+<h3>Nous Research — 开源 AI 研究组织，开发 Hermes 系列模型及 Agent 框架</h3>
+<ul>
+<li><strong>Hermes Agent 新增 LINE 网关通道</strong><br />
+  Hermes Agent 宣布新增 LINE 作为官方支持的交互渠道，用户可通过 LINE 平台与自己的 Agent 进行互动。已安装用户可运行 <code>hermes update</code> 命令立即启用该功能。<br />
+  🔗 <a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/line">来源</a></li>
+</ul>
+<h3>Bun — 高性能 JavaScript/TypeScript 运行时</h3>
+<ul>
+<li><strong>创始人透露正在将 Bun 从 Zig 重写为 Rust</strong><br />
+  Bun 创始人 Jarred Sumner 透露已开始将 Bun 运行时从 Zig 重写为 Rust，涉及约 96 万行代码迁移。重写版本已能在 Linux x64 glibc 上通过 99.8% 的现有测试套件。此举主要出于对内存泄漏和稳定性问题的长期担忧，希望利用 Rust 编译器强制生命周期管理来提升系统稳定性。Sumner 强调合并前必须确保性能、内存和稳定性均显著优于现有 Zig 实现。<br />
+  🔗 <a href="https://x.com/jarredsumner/status/2053063524826620129">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>AI API 灰色市场</h3>
+<ul>
+<li><strong>调查曝光"中转站"利用被盗凭证和模型替换盈利并出售用户数据</strong><br />
+  据 Tom's Hardware 报道，牛津中国政策实验室研究员 Zilan Qian 发布调查显示，灰色市场中形成了被称为"中转站"的 API 代理网络，以低至官方价格 10% 的费用转售 Claude 模型 API 访问权。这些网络通过使用被盗凭证、模型替换以及收割用户提示和输出转售为 AI 训练数据等方式维持极低定价。<br />
+  🔗 <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-grey-market-sells-claude-api-access-at-90-percent-off-through-proxy-networks-that-harvest-user-data">来源</a></li>
+</ul>
