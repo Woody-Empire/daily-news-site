@@ -1,0 +1,123 @@
+<h1>📅 每日简报 | 2026-05-12</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 2条 | 模型发布 2条 | 国外公司动态 8条 | 中国公司动态 6条</p>
+</blockquote>
+<hr />
+<h2>💰 融资</h2>
+<h3>快手</h3>
+<ul>
+<li><strong>消息称快手计划分拆可灵AI，寻求200亿美元估值IPO</strong><br />
+  据报道，快手正计划将旗下视频生成业务"可灵AI"分拆，寻求高达200亿美元估值的IPO前融资，为明年一季度潜在上市做准备。可灵AI今年Q1收入达7500万美元，大部分来自海外市场，预计启动上市时年化收入将达约13亿美元。快手近期已注册并更名成立两家可灵AI相关子公司，快手方面对此不予置评。<br />
+  🔗 <a href="https://zhidx.com/p/557037.html">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>OpenAI 成立 Deployment Company，获超40亿美元投资</strong><br />
+  OpenAI 正式启动由其控股的独立业务单元 OpenAI Deployment Company，旨在解决企业将AI投入生产时的工程、合规与传统系统集成难题。该公司获得由 TPG 领投、贝恩资本等机构参与的超40亿美元初始注资，并宣布收购AI咨询公司 Tomoro，初期即获得约150名资深工程师支持。通过 Forward Deployed Engineering 模式，团队将深入企业一线构建定制化系统，目前已在 BBVA 和 John Deere 等客户中实现AI原生化改造。<br />
+  🔗 <a href="https://openai.com/index/openai-launches-the-deployment-company/">来源</a></li>
+</ul>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>Thinking Machines Lab — 专注实时多模态交互模型研发的AI实验室</h3>
+<ul>
+<li><strong>发布实时多模态"交互模型" TML-Interaction-Small</strong><br />
+  Thinking Machines Lab 发布交互模型（Interaction Models）研究预览，推出名为 TML-Interaction-Small 的模型，包含2760亿参数（MoE架构，每次推理活跃120亿参数）。其核心设计为"时间对齐的微轮转"（Time-Aligned Micro-Turns），能持续接收并理解音频、视频和文本流，实现近实时响应。官方称该模型在智能性与交互响应性上取得当前最优综合表现，未来数月将开放有限研究预览，更大规模模型计划今年晚些时候推出。<br />
+  🔗 <a href="https://thinkingmachines.ai/blog/interaction-models/">来源</a></li>
+</ul>
+<h3>OpenBMB — 清华大学支持的开源大模型研究组织</h3>
+<ul>
+<li><strong>发布开源端侧多模态模型 MiniCPM-V 4.6</strong><br />
+  OpenBMB 发布并开源了1.3B参数量的端侧多模态模型 MiniCPM-V 4.6，基于 Apache 2.0 协议开放。模型基于 SigLIP2-400M 与 Qwen3.5-0.8B 构建，采用 LLaVA-UHD v4 架构，将视觉编码计算量降低55.8%。官方数据显示，该模型在多项基准测试中以极低token消耗超越 Qwen3.5-0.8B，原生支持在 iOS、Android 和 HarmonyOS 平台端侧部署。<br />
+  🔗 <a href="https://huggingface.co/openbmb/MiniCPM-V-4.6">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li>
+<p><strong>Claude Code 上线 Agent view 功能并新增 /goal 指令</strong><br />
+  Anthropic 推出 Claude Code 新功能 Agent view（研究预览版），用户通过运行 <code>claude agents</code> 命令即可在单一界面集中调度和查看所有并行会话的状态（运行中、等待输入或已完成），支持内联回复或使用 <code>/bg</code> 将任务置于后台。该功能已面向所有付费套餐开放，随 v2.1.139 版本发布，同时引入 <code>/goal</code> 等新指令并修复多项终端UI兼容问题。<br />
+  🔗 <a href="https://claude.com/blog/agent-view-in-claude-code">来源</a></p>
+</li>
+<li>
+<p><strong>推出 Claude Platform on AWS</strong><br />
+  Anthropic 宣布 Claude Platform on AWS 正式全面可用，AWS 客户可通过现有 IAM 身份验证和统一账单直接访问完整的原生 Claude 平台功能，支持 Claude Opus 4.7、Sonnet 4.6 与 Haiku 4.5 模型，提供 Managed Agents、代码执行及 MCP connector 等全套工具。不同于由 AWS 处理数据的 Amazon Bedrock，此平台由 Anthropic 负责运营，数据在 AWS 边界外处理，计费可直接抵扣现有 AWS 承诺。<br />
+  🔗 <a href="https://claude.com/blog/claude-platform-on-aws">来源</a></p>
+</li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li>
+<p><strong>推出 Daybreak 网络安全愿景</strong><br />
+  OpenAI 发布 Daybreak 网络安全愿景，将 GPT-5.5 推理能力与 Codex Security 智能体工作流结合，基于代码仓库和系统上下文构建可编辑的威胁模型，帮助团队发现、验证和修复漏洞。为适应不同安全场景，划分三种访问级别：通用默认的 GPT-5.5、面向经验证防御工作的 Trusted Access 版本，以及面向授权红队和渗透测试的 GPT-5.5-Cyber 预览访问。<br />
+  🔗 <a href="https://openai.com/daybreak/">来源</a></p>
+</li>
+<li>
+<p><strong>为 Codex 推出 OpenAI Developers 插件</strong><br />
+  OpenAI Developers 宣布 Codex 已上线 OpenAI Developers 插件，旨在通过快捷调用 OpenAI APIs 加速AI应用和Agent构建。但有社区开发者指出，官方展示用例中存在以明文形式生成并存储 API 密钥的操作，引发安全担忧。<br />
+  🔗 <a href="https://x.com/OpenAIDevs/status/2053925962287583379">来源</a></p>
+</li>
+</ul>
+<h3>Google</h3>
+<ul>
+<li><strong>首次发现攻击者利用AI开发零日漏洞</strong><br />
+  Google 威胁情报小组（GTIG）发布报告，首次观察到攻击者试图使用被认为由AI开发的零日漏洞策划大规模攻击，Google 的主动反制发现可能已成功阻止该事件。Google 通过分类器和禁用恶意账户等方式缓解 Gemini 模型滥用，并利用 Big Sleep 和 CodeMender 等AI Agent 进行漏洞检测与自动修复。<br />
+  🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access">来源</a></li>
+</ul>
+<h3>Artificial Analysis — 独立AI模型性能评测与分析平台</h3>
+<ul>
+<li><strong>发布 Coding Agent Index 评测编程工具组合</strong><br />
+  Artificial Analysis 发布 Coding Agent Index，通过 SWE-Bench-Pro-Hard-AA、Terminal-Bench v2 和 SWE-Atlas-QnA 三项任务评估模型与编程工具组合的综合能力。Opus 4.7 搭配 Cursor CLI 以61分居首，GPT-5.5 搭配 Codex 和 Opus 4.7 搭配 Claude Code 并列60分。开源模型方面，GLM-5.1 搭配 Claude Code 以53分最高。各组合在经济性和效率上差异显著，单任务API成本差异超30倍，执行时间差异超7倍。<br />
+  🔗 <a href="https://artificialanalysis.ai/agents/coding-agents">来源</a></li>
+</ul>
+<h3>Windsurf — AI驱动的编程IDE</h3>
+<ul>
+<li><strong>将 Kimi K2.6 免费期再延长一个月</strong><br />
+  Windsurf 因 Kimi K2.6 在推广期间反响热烈，宣布将该模型对 Pro、Teams 和 Max 付费用户的免费使用期再延长一个月。该模型最初于4月下旬上线时提供两周免费期。<br />
+  🔗 <a href="https://x.com/windsurf/status/2053895578946531518">来源</a></li>
+</ul>
+<h3>Unsloth — 开源LLM训练加速工具</h3>
+<ul>
+<li><strong>宣布正式加入 PyTorch 生态</strong><br />
+  Unsloth 宣布已正式加入 PyTorch Ecosystem。该项目利用定制化 Triton 内核，在无精度损失的情况下将训练速度提升约2倍、降低约70%显存占用。最新发布的 Unsloth Studio 支持在 Windows、Mac 和 Linux 环境中训练和运行超500种模型。团队表示加入生态后项目路线保持不变，将继续维持开源并按计划推出桌面端应用。<br />
+  🔗 <a href="https://unsloth.ai/blog/pytorch">来源</a></li>
+</ul>
+<h3>OpenCode — AI编程辅助工具平台</h3>
+<ul>
+<li><strong>宣布 DeepSeek V4 Flash 开启限时免费</strong><br />
+  OpenCode 宣布 DeepSeek V4 Flash 模型即日起开启限时免费。该模型作为 OpenCode Go 订阅目前最受欢迎的模型，因卓越性能和极低使用成本受到开发者青睐。<br />
+  🔗 <a href="https://x.com/opencode/status/2053887208688431179">来源</a></li>
+</ul>
+<h3>Nous Research — 开源AI模型研究与API服务平台</h3>
+<ul>
+<li><strong>Nous Portal 限时免费提供 Qwen 3.6 Plus</strong><br />
+  Nous Research 宣布阿里旗下 Qwen 3.6 Plus 现已在 Nous Portal 平台限时免费开放，免费或付费订阅用户均可体验。Nous Portal 是一项整合型订阅服务，提供超300个模型的访问权限。<br />
+  🔗 <a href="https://x.com/NousResearch/status/2053876496045920601">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>阿里（千问/Qwen）</h3>
+<ul>
+<li>
+<p><strong>千问与淘宝全面打通，开启AI购物体验</strong><br />
+  淘宝"AI低价帮抢"功能接入支付宝"AI付"能力实现安全支付验证，同时千问App与淘宝全面打通。用户更新千问App至6.9.1及以上版本后，可直接在千问内完成淘宝商品挑选、比价及下单购买。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/10VoJmPCkk4yOm2fJLk0EQ">来源</a></p>
+</li>
+<li>
+<p><strong>Qwen 官宣全球 Ambassador 计划</strong><br />
+  Qwen 正式启动全球大使计划，面向全球招募开发者大使（需月产至少4篇内容）和活动大使（需月办至少1场活动并发2篇帖子）。入选者可获专属徽章、Qwen模型内测资格、每月50至100美元API额度及年度周边礼包等。申请结果将在15个工作日内通知，连续2个月未履行考核将自动退出。<br />
+  🔗 <a href="https://qwen.ai/ambassador">来源</a></p>
+</li>
+</ul>
+<h3>腾讯（QClaw）</h3>
+<ul>
+<li><strong>QClaw 发布「文件空间」功能，打通腾讯文档与ima知识库</strong><br />
+  QClaw 上线「文件空间」功能，通过底层账号与权限的深度集成，一次性打通用户的本地文件、腾讯文档和ima知识库。用户授权后可在QClaw内直接访问腾讯文档中的文档、表格、思维导图等文件，支持AI生成文档以协作链接形式发送并多人协同编辑。同时接入ima知识库，实现收藏内容的调取和AI产出的双向沉淀。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/AgmVAhSl7BNSGxE0FBqa1g">来源</a></li>
+</ul>
+<h3>MiniMax</h3>
+<ul>
+<li><strong>发起 10x Team 计划招募行业专家</strong><br />
+  MiniMax 发起"10x Team"计划，招募各领域行业专家合作构建AI评测与工作流。官方透露过去数月已在工业软件、游戏引擎及金融等领域展开合作，成果将体现在后续模型中。官方提供多模态模型能力、研发环境及无限Token，评测将开源。支持全职或至少4个月线下Fellowship，工作地可选北京、上海、香港、旧金山或伦敦，提供有竞争力的薪酬及股票激励。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/G3m2xksI2jHAROhNdP7x2Q">来源</a></li>
+</ul>
