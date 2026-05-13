@@ -1,0 +1,159 @@
+<h1>Money Stuff — GameStop、算力期货、BuzzFeed与AI摸鱼</h1>
+<blockquote>
+<p>本期主要话题：GameStop收购eBay遭拒后的荒诞前景；CME推出算力期货市场；BuzzFeed以奇特结构被收购；Anthropic和OpenAI打击远期合约交易；亚马逊员工用AI假装忙碌。</p>
+</blockquote>
+<h2>游戏</h2>
+<p>GameStop竞购eBay的问题在于，交易对价是一半现金、一半股票。GameStop这家坐拥90亿美元现金、股票市值约100亿美元的公司，想要用280亿美元现金加280亿美元股票，去收购一家市值约480亿美元的公司eBay。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 现金部分勉强说得过去——GameStop的加拿大银行"高度有信心"能筹到这笔钱。至于股票部分，问题倒不是说一家100亿美元的公司不能发行280亿美元的股票：技术上GameStop确实<em>做不到</em>（它没有足够的已授权股份），但这是个可以解决的问题，而且也没有什么通用规则说公司不能发行超过当前市值的股票。如果股市认为你值100亿美元，但你想发行股票收购一项280亿美元的资产，那收购后你的市值应该是380亿美元，没毛病。</p>
+<p>问题在于，GameStop发行280亿美元股票来收购eBay，本质上是在发行280亿美元的<em>eBay</em>股票。现有eBay股东拿到的将是合并后公司的股份，而这家公司几乎全是eBay。eBay的企业价值（含债务）约510亿美元。GameStop的企业价值则<em>不到</em>100亿美元，因为它有90亿美元现金。（它约有44亿美元债务，企业价值约57亿美元。）你可以把GameStop的100亿美元市值理解为：(1) 50亿美元净现金，加上 (2) 50亿美元的GameStop业务本身。GameStop成功地将其迷因股（meme stock）地位逐步转化为了真金白银，这很厉害。但如果它在收购中<em>把这些现金交给eBay</em>，那你就是在把一家50亿美元的电子游戏零售商和一家510亿美元的互联网公司合并。这家合并后公司的价值几乎全部来自eBay的业务，而非GameStop的。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>因此，如果你是eBay股东，摆在你面前的提议大致是"你可以继续做eBay股东，但方式会比较诡异"。具体来说：</p>
+<ol>
+<li>你会得到一次杠杆资本重组（levered recap）：eBay将借入200亿美元并分配给股东。</li>
+<li>你将保留eBay的股份：大约一半的投资通过杠杆重组套现，剩下的留在公司里。这里的"公司"几乎全是eBay，但技术上GameStop也会被并入。</li>
+<li>新的"eBay加一点点GameStop"的<em>业务</em>模式会与原来的eBay略有不同。主体还是eBay，但现在你可以……去GameStop门店给你的收藏品做鉴定认证，然后在eBay上出售？GameStop提出了"一个覆盖全国的鉴定认证、收件、履约和直播电商网络"。好吧！</li>
+<li>新公司还会有完全不同的<em>管理层</em>：GameStop的首席执行官瑞安·科恩（Ryan Cohen）将接任合并后公司的CEO。</li>
+<li>新公司的股价交易动态或许也会有所不同——因为GameStop历来是一只迷因股，而eBay不是。</li>
+</ol>
+<p>换句话说，这笔交易对股东的吸引力不在于其标明的美元价值，不在于他们会在交易中<em>得到</em>什么。这笔交易对股东的吸引力在于：(1) 科恩的管理能力，以及 (2) 迷因股效应。<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 这有吸引力吗？我不知道。在其要约信中，GameStop论证了其管理团队将削减成本、比现任管理层更高效地运营eBay，并且他们在GameStop有这方面的业绩记录。迷因股的部分则更隐晦。我们上周聊过科恩在eBay上挂卖自己的袜子来为交易"融资"的事。独立运营的eBay可不会给你这种创意十足的……融资？炒作？</p>
+<p>GameStop实际上除了科恩之外什么也没给eBay股东。他们不会以溢价被收购；他们只是得到一次杠杆重组（eBay如果想做完全可以自己做，而且可能比GameStop做起来更容易），以及自己公司以更疯狂的方式运营的股份。很多人会接受这个提议！比如GameStop的股东们！我在这个专栏里花了大量时间写迷因股，我不会低估企业金融中"疯狂"的价值。</p>
+<p>但也有人不会接受。比如eBay的董事会：</p>
+<blockquote>
+<p>eBay公司拒绝了GameStop首席执行官瑞安·科恩提出的560亿美元收购要约，称该主动报价"既不可信也不具吸引力"。</p>
+<p>eBay董事会在考虑了融资方案的"不确定性"、涉及的运营风险以及GameStop的治理结构后，否决了这一要约，董事长保罗·普莱斯勒（Paul Pressler）在致科恩的信中表示。普莱斯勒还提到了GameStop的高管激励机制以及收购对eBay长期增长的潜在影响。</p>
+</blockquote>
+<p>这里是eBay的新闻稿，其中包含普莱斯勒给科恩的一封相当简短的信。该提议不"可信"是因为"你方融资方案存在不确定性"，不"具吸引力"是因为"你方提议对eBay长期增长和盈利能力的影响""合并实体的杠杆、运营风险和领导架构"，以及"上述因素对估值的综合影响"。科恩的提议包括给eBay股东 (1) 280亿美元现金——他手里没有这笔钱，以及 (2) 280亿美元他们自己公司的股票——eBay表示，在他的方案下这些股票会贬值。</p>
+<p>另外不知为何，eBay还公布了科恩的"高度有信心函"（highly confident letter），由TD证券（美国）有限责任公司（TD Securities (USA) LLC）出具，信中TD声称有信心，如果GameStop确实收购eBay，TD能够筹集200亿美元的投资级(?)债务来为交易融资。<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> 过去很多敌意收购都是靠高度有信心函完成的，但如今这种做法有些过时了，我也不确定自己是否真读过这样一封信。现在目标公司通常期望银行出具正式的承诺函（commitment letter）。在2026年冷静审视之下，我不确定这封信能让你对交易的融资可行性产生多高的信心。它对eBay董事会确实没有产生这种效果。</p>
+<p>接下来会怎样？一种可能是"哈哈算了"：没人真的认真对待这次收购，大家笑一笑，eBay也拒绝了。GameStop在宣布收购提议之前购入了eBay近5%的股份，目前账面利润可能已达九位数。（其买入价未披露，且其持有的2220万股中几乎全部是通过衍生品合成持有的，但至少一半的衍生品是在3月4日建仓的，当时eBay交易价约为91.03美元；昨日收盘价为108.13美元。即使假设平均买入价为100美元，账面利润也约有1.8亿美元。）它可以卖掉这些股份<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>获利离场。一般来说，买入上市公司股票、宣布一个虚假收购、然后卖股获利是会被唾弃的，但我认为这里的情况足够温和——收购提议至少有一层现实的外衣，而且股价上涨主要<em>不是因为</em>这个提议——所以没什么问题。</p>
+<p>另一种更有趣得多的可能是：</p>
+<blockquote>
+<p>被拒后，科恩可以选择发起代理权争夺战（proxy fight）来替换eBay董事会成员，这可能需要一年多时间。他此前曾表示，如果董事会否决他的要约，他准备直接把方案提交给股东。</p>
+</blockquote>
+<p>不会吧？我的意思是，我<em>希望</em>他这么做，但我表示怀疑。如果你追求的是疯狂，那么GameStop对一家规模十倍于己的公司发起代理权争夺战，差不多就是你想要的。作为一名财经专栏作家，我总在寻找疯狂的素材，据我了解GameStop的股东们也是。至于eBay的股东们嘛，可能就未必了。</p>
+<p>哦对了，另外，GameStop昨天披露将请求股东授权再增发最多15亿股。<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> 这也许（？）够覆盖eBay交易了。"董事会请求授权增加股份修正案，以使董事会能够为一般公司用途发行更多普通股，"GameStop说道，所以我觉得eBay恐怕不是他们最优先考虑的事。</p>
+<h2>算力期货</h2>
+<p>人工智能的基本经济学是这样的：</p>
+<ol>
+<li>公用事业公司、房地产开发商、芯片制造商和大型科技公司将投入数万亿美元建设计算基础设施。</li>
+<li>他们会把这些计算基础设施租给一些由应届毕业生组成的小团队——这些人六周前才认识彼此，刚刚融了10亿美元风险投资。</li>
+<li>这些年轻的毕业生小团队将构建AI工具来做各种事——治愈癌症、配置资本、取代所有专业知识工作、奴役人类，随便什么——创造出数万亿美元的价值，<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>足以偿还投入基础设施的数万亿美元投资。</li>
+</ol>
+<p>或者也许不是——也许这是一个错误和泡沫，数据中心最终将空置，成为我们集体愚蠢的纪念碑——但我们姑且假设前述逻辑是对的。如果是对的，那么在社会层面这一切都<em>行得通</em>：资金投入，建造生产性资产，这些资产产生利润，资金回流。投资回报率有吸引力，所以这些投资应该被执行。</p>
+<p>但薄弱环节是那些应届毕业生。薄弱环节在于：如果你是一个正在建设AI数据中心的开发商，去银行申请建设贷款，银行可能会问："嗯，你能找到租户来租用这些算力吗？"你会说："哦当然，人人都爱算力。"银行会问："好的，你的主力租户是谁？"你会说："哦他们还没成立呢；我们建这个数据中心要一年时间，到那时候所有AI公司都会不一样了。"银行会说："嗯……嗯……"</p>
+<p>也就是说：<em>从总体上看</em>，所有这些AI基础设施似乎是一个不错的信贷押注——这也是为什么它持续获得融资。但很难根据租户来为一个AI数据中心做信贷评估，因为AI行业太新、太草莽了。确实有一些信用良好的巨头公司在签约购买算力，但AI领域的很多行动确实发生在那些有风投资金支持的古怪毕业生小团队中。从某种意义上说，他们是购买你算力的最佳人选——他们有大量风投资金，也有很大机会真正做出改变世界、价值万亿的东西——但他们可能打动不了<em>银行</em>。他们邋遢、不商业化，没有经审计的财务报表，也没有利润。</p>
+<p>这个问题有一些标准解决方案。（基本上就是：一家大型科技公司用自己的信用来建数据中心，因为它了解这个行业并愿意押注未来能使用或出售算力。<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>）但更通用的解决方案是一个<em>市场</em>。你需要能对银行说："看，说实话我不知道一年后数据中心建成时谁会来买我的算力。在AI领域，一年就是永恒。但<em>总会有人</em>来买，也许是现在的某家科技巨头，也许是某个目前领先的AI实验室——到时候它会成为一家大型上市公司，也许是一家草创企业，说不定还可能是一个发了财的自主AI智能体。但总会有人来买，我能证明这一点，因为有一个一年后交割的算力市场，市场价格是X美元，如果我按X美元出售算力，就能偿还这笔贷款。"</p>
+<p>彭博社的希拉·布拉什（Silla Brush）和凯瑟琳·多尔蒂（Katherine Doherty）报道：</p>
+<blockquote>
+<p>美国衍生品交易所芝商所集团（CME Group Inc.）与指数提供商硅谷数据（Silicon Data）正联手打造一个算力期货市场——算力是推动AI热潮的关键资源。</p>
+<p>声明称，该期货产品将帮助交易员、金融机构、AI开发者和云服务商管理波动性和价格波动。市场情报公司硅谷数据的指数将为这些产品提供基准支撑。该项目仍待监管审批。</p>
+<p>算力（也称compute）需求旺盛，AI公司用它来驱动系统运行。贝莱德（BlackRock Inc.）首席执行官拉里·芬克（Larry Fink）上周表示，鉴于算力短缺和高需求，购买算力期货很可能会成为一种新的资产类别。</p>
+</blockquote>
+<p>这是新闻稿。"投资者需要一个可信赖的期货市场来提供透明度、流动性和有效的风险管理，"芝商所表示。如果你能锁定未来的算力价格，那么建设算力设施就不再是一件投机性那么强的事了。你不是在建一个数据中心、寄望于未来把算力卖给AI初创公司；你是在建一个数据中心，并且知道可以按已锁定的期货价格出售算力。</p>
+<h2>BuzzFeed</h2>
+<p>在奇特收购结构的领域还有另一个案例：</p>
+<blockquote>
+<p>BuzzFeed表示，媒体大亨拜伦·艾伦（Byron Allen）已同意以1.2亿美元收购该数字媒体公司的多数股权。</p>
+<p>艾伦旗下的艾伦媒体集团（Allen Media Group）拥有天气频道（Weather Channel）及30多个电视网加盟台。BuzzFeed周一表示，艾伦计划以每股3美元的价格收购4000万股。</p>
+<p>交割完成后，艾伦的关联公司Allen Family Digital将持有BuzzFeed已发行股份的52%。交易将以2000万美元现金和一张五年期、年利率5%的1亿美元本票出资……</p>
+<p>艾伦还将接任首席执行官和董事长，BuzzFeed创始人乔纳·佩雷蒂（Jonah Peretti）将转任新设的BuzzFeed AI总裁一职。</p>
+</blockquote>
+<p>截至昨日，BuzzFeed股价为每股0.73美元，约有3600万股流通在外，市值不到3000万美元。艾伦购买的是4000万股<em>新发行</em>的股份——从公司手中购买；现有股东保留其股票——因此他将持有多数股权。按昨天的市价，这大约要花3000万美元，但他支付的名义价格是每股3美元，合计1.2亿美元。不过这个价格由2000万美元现金（每股0.50美元）和一张1亿美元的<em>无追索权</em>本票构成。BuzzFeed的文件显示：</p>
+<blockquote>
+<p>在交割日，投资者将向公司开具一张本金为1亿美元的本票。本票年利率5%，利息每半年支付一次，于每年六月和十二月的最后一个工作日支付。本票在交割日五周年到期。本票以3330万股股份的第一优先担保权益作为抵押，公司了解到投资者目前除持有该等股份外不持有其他资产。</p>
+</blockquote>
+<p>"投资者"不是拜伦·艾伦本人或其公司，而是一家名为Allen Family Digital LLC的新空壳公司，该公司"除持有该等股份外不持有其他资产"。正如马丁·皮尔斯（Martin Peers）所指出的，"如果几个月后艾伦觉得不满意，他大概可以直接走人。"</p>
+<p>所以艾伦实际上是花2000万美元——每股0.50美元——来<em>租用</em>BuzzFeed的控制权，期限最长五年。（另外每六个月还要付250万美元利息。）如果他把公司整顿好，使其价值超过每股3美元，他将再付1亿美元——每股再付2.50美元，合计每股3美元——把这种"租赁"转化为所有权。（然后他大概可以以每股5美元左右的价格卖出获利。）这是一笔2000万美元的赌注，赌BuzzFeed至少能值2.4亿美元，或者更准确地说，赌<em>他</em>能把它做到那个价值。</p>
+<h2>转让限制</h2>
+<p>许多私人公司对其股票设有转让限制：投资者未经公司批准不得出售股票，而公司可能对审批很吝啬。如果我未经公司批准试图把股票卖给你，交易是无效的：公司不会在股东名册上登记转让，你实际上拿不到股票。公司希望掌握股东情况、避免意外、锁定员工股东等等，所以可能不会批准太多转让。</p>
+<p>上市公司基本做不到这一点。我是说，可以有一些限制：员工通常拿到的股票有归属期，一些大股东可能签署锁定协议，但总的来说，使一家上市公司成为上市公司的，正是其股票在证券交易所自由交易。</p>
+<p>目前有几家非常大的、家喻户晓的私人公司——SpaceX、OpenAI和Anthropic是最大的几家——预计将在明年上市。这就暗示了一种显而易见的变通方法：</p>
+<ol>
+<li>我有Anthropic的股票但不能卖。</li>
+<li>但它上市后我就能卖了。</li>
+<li>你非常想买Anthropic的股票。</li>
+<li>你现在给我一笔钱。</li>
+<li>我给你一张欠条，写着"Anthropic上市后我能卖股票时，把股票给你。"</li>
+<li>它上市了，我把股票给你。</li>
+</ol>
+<p>这叫"远期合约"（forward contract），相当常见。关于远期合约有几个基本事实：</p>
+<ul>
+<li>公司可以、而且很可能会禁止远期合约。转让限制通常写得很宽泛，如果Anthropic说"未经我们许可不得出售股票"，它大概<em>同时</em>也规定了"未经我们许可不得通过远期合约出售股票"。</li>
+<li>但人们有时会无视这个禁令，因为Anthropic能拿你怎样？如果我今天把股票卖给你，Anthropic可以拒绝登记转让，你就拿不到股票。Anthropic必然<em>参与</em>当前的股票转让。但远期合约只是你我之间的合同，Anthropic永远不需要知道。最终Anthropic上市了，我的股票解除限制，我在被允许的时候把股票给你。Anthropic永远不会发现我们的远期合约。有什么问题吗？</li>
+<li>话虽如此，这是有<em>风险</em>的。万一我通过远期合约把Anthropic股份卖给你，Anthropic上市了，你来取货，我说"不好意思我还是想留着"？你可以起诉我要求交付股份，但我可以拿出Anthropic的文件说"远期合约无效"；也许合同真的会被判无效。也许<em>Anthropic</em>会出庭说"不行，这些转让无效，所以股份现在归我们了"。通过<em>非法</em>远期合约购买的股份存在拿不到手的风险。</li>
+<li>还有一点，想想这个场景。我来找你说"嘿，我有一些Anthropic股份，现在不能卖但我可以卖你一份远期合约。"你说"这不是不允许的吗？"我说"哦当然不允许，但我是个叛逆者，那些烦人的规矩管不了我。"你想"好吧"，然后现在给我钱，换取未来的股份。你怎么知道我一开始就真的有这些股份？万一我在说谎呢？你已经知道我愿意违反一些规则了——万一我违反的是禁止欺诈的规则呢？</li>
+</ul>
+<p>我们在2024年讨论过这个话题，当时Stripe发布了明确警告：如果你通过远期合约购买Stripe股份，Stripe会把它们收回。现在Anthropic和OpenAI也更新了各自的披露，发出了类似的威胁。Anthropic：</p>
+<blockquote>
+<p>我们也知道有一些投资基金声称提供间接获取Anthropic股票的途径。这些基金通常这样营销："你不能直接投资Anthropic，但投资我们，我们会帮你获得。"这些基金最可能依赖的是试图规避我们转让限制的机制。任何声称向公众出售Anthropic股份的第三方——无论是通过直接出售、"远期合约"、代币化证券还是其他机制——很可能要么涉嫌欺诈，要么提供的投资因我们的转让限制而可能毫无价值。</p>
+</blockquote>
+<p>OpenAI：</p>
+<blockquote>
+<p>我们知道有一些公司以多种方式推销未经授权的OpenAI投资机会，包括：</p>
+<ul>
+<li>出售OpenAI股权；</li>
+<li>投资持有OpenAI股权的特殊目的载体（SPV）；</li>
+<li>OpenAI股权或持有OpenAI股权的SPV的代币化权益；以及</li>
+<li>"远期"合约和其他形式的所谓经济权益。</li>
+</ul>
+<p>OpenAI不支持也不参与上述任何交易，这些交易违反了我们的转让限制，并可能导致标的股权被作废。任何转让还可能违反美国联邦或州证券法——这些法律对私募股权的转让施加了重大限制。买方或卖方可能因这些违规行为承担法律责任，转让也可能被撤销。</p>
+</blockquote>
+<p>这些公司并非完全反对让其股票拥有一定流动性；我们周一刚讨论过OpenAI在最近一次要约收购（tender offer）中允许每位员工出售最多3000万美元股票的事。但这些公司也正在为首次公开募股（IPO）做准备，它们希望IPO时有尽可能多的需求。如果OpenAI和Anthropic的股票稀缺，那么很多人会在IPO时争相购买。如果任何想要其股票的人现在就能买到，到时候谁还会在IPO时买呢？</p>
+<h2>不必要的AI</h2>
+<p>许多白领工作包含两类任务：</p>
+<ol>
+<li>做推进公司使命的事：做销售、开发功能、写新闻通讯，等等。</li>
+<li>装忙：会见永远不会买你产品的潜在客户，做销售管道电子表格让老板知道你跟这些不会买单的潜在客户开过会，在办公室待到老板走，等等。</li>
+</ol>
+<p>第一类才是真正重要的，大多数CEO可能会告诉你他们只关心员工做实际工作，不在乎"刷脸时间"。但事实上大多数公司似乎都有大量的刷脸时间。有用的工作往往不如忙活更容易被看见和衡量，所以老板可能把忙活——仪表板、销售管道、在办公室待的时间——当作实际工作的粗略代理指标。而且员工可能低估了看似忙活的价值：经常在办公室确实有助于激发想法；参加大量看似没戏的销售会议有时确实能带来销售。</p>
+<p>一种可能是AI将完成所有有用的工作，这会<em>增加</em>装忙的重要性：白领员工将不得不把所有时间花在装忙上，以免被解雇并被AI取代。另一种可能是AI将完成所有有用的工作，这会<em>消除</em>装忙的必要：刷脸时间不再是衡量生产力的有效代理指标，"让AI干你的活然后回家"将成为新常态。</p>
+<p>但还有第三种更奇怪的可能：AI会<em>接管装忙的工作</em>。英国《金融时报》（Financial Times）报道：</p>
+<blockquote>
+<p>亚马逊（Amazon）员工正在使用一款内部AI工具来自动化非核心任务，以便向管理层展示他们更频繁地使用该技术。</p>
+<p>据三位知情人士透露，这家总部位于西雅图的集团近几周已开始广泛部署其内部产品"MeshClaw"，该产品允许员工创建AI代理，这些代理可以连接工作场所软件并代替用户执行任务。</p>
+<p>一些员工表示，同事们正在使用该软件来自动化额外的、不必要的AI活动，以增加他们的令牌（token）消耗量——令牌是模型处理的数据单位。</p>
+<p>他们说，此举反映了采用该技术的压力。亚马逊设定了每周80%以上的开发人员使用AI的目标，并在今年早些时候开始在内部排行榜上追踪AI令牌消耗量。</p>
+<p>"使用这些工具的压力实在太大了，"一位亚马逊员工对《金融时报》说。"有些人就是用MeshClaw来刷令牌消耗量。"</p>
+</blockquote>
+<p>在过去，人们试图装作加班的方式是，比如，下班时把外套挂在椅背上。但现在，自主AI代理可以把这件事也自动化了。</p>
+<hr />
+<h3>脚注</h3>
+<h2>动态（Things Happen）</h2>
+<ul>
+<li>摩根大通（JPMorgan）市场业务在创纪录季度后持续繁荣。 <a href="https://links.message.bloomberg.com/s/c/RWt3rWlaU8CHoySFvLtCNfI_-5ptgGrpor5bv_Xcei5egg4IHoymIP50j9UDoVeDjXgEMfkixUjUVD-u6JEUfde0VCRfjsT5Sqv9BzB-44YUmn6H9jmCK2jOSR5Z8UMNPVzon6WciC7Yx7nTyWSLEI9dZ7FeLPuwfgkX_7i6b-SG_b9aZuIZh1JqWnzeZPuzoXq5zJqc5-QbHlKA-ZY4YPfvkB_J62jF6FQFRjDliDJkjFkCxsg5LsSpll48VvZWMeq4uVxE0Cn9WTpL9BHNnTw0N8Ay0We-4ZvVRotr70TdbAiCqdziidyMSLV31PkiPHIueosNpSD_Yrbe0d6a63B2Jx12FShHwGe-KvRz9P2jD3D-mWDMpnK97Ag/eidgvLyY_FzR3MbeZzjSxIs4qB49kr07/20">Markets Business</a></li>
+<li>萨姆·奥特曼（Sam Altman）的商业交易在 OpenAI IPO 前遭共和党审查。 <a href="https://links.message.bloomberg.com/s/c/YR_RIcuV6FGp9uM4bAvZwGMnGjJ663oipbcQAH-awI29CpHAir4KEERJWxDbcWhiLUiXQ_hmIMvLmEosFB1xjkC7LR52cmz4eEea9pQx-Vi5EOMtcImaFKe6Kos59A1MXMRL5BAQ54Fk4R6FZYGk0xL4gg2kKB5cG2QsvwoxcfgHZz0izYIaZrJ1OZZp16v1ds-r2rRU8dA6ghV7kuo2Lgkuj2wi7XjMIE-sAR2jSGnLJhBVMJKaAnU2yw9V8vob20VFWy48nQ5hthaJYdbhTWj51ONqB2vUx9_prt5TO7Bd4GZYsHKffBvnnEtS66ivQ9A2BeKfUAIUZUCv_Qgvt3ZFa-pWqcrtYfNeAPwKZB1FRLjDwbsJbJB-GyI/3_DseMy52ATZCApbjtDVSbpcqfiNEuXb/20">GOP Scrutiny</a></li>
+<li>诉讼融资资产缩水，对冲基金趁机入场。 <a href="https://links.message.bloomberg.com/s/c/T6uqRY8uuVPqQYCQp7HAkeNI9OPNuEe6IcC4Phcry2oKLMODDWtGESOH8HoWmlX_dXTtyfuZZbICvhaBSO5_ebrTGYM-Bp7q7Ke9XPQiSi1qVf7SQbkZzMcBqa84uN_oAi7CKPWOJus-GW_LbpsmNEC2WUSY9OLpBAC9E4v1DNrsmfJx2ZSKPYQwwgj26W7BnJ23iXD2qMgcKbBkWcBtaLsGXP3w8kZ8Gb-Wsjo2mSNQ7VJf7cU2vuq1r_zcdOD6nBmaH6HjcQZGlNpHaSehl1N8VXvQuVpr1Z3K-eq7LB_70zAVagccIQFgW0rHR9a0pNO1gHfTtauBuWoAr7GD-_JYwnsIVvNzqH6yoLKMSEzdQRdqldKMDkP5EEo/fZWa5E9qXVvC8QFcIyaJo_mEGWNmZvCD/20">Litigation Finance</a></li>
+<li>对冲基金押注生物燃料，从伊朗石油价格冲击中获利。 <a href="https://links.message.bloomberg.com/s/c/xogQZOBUJ4pPc0DSUBQhu34lzfrDVyBg9GRAOfSV0O3SVG5FDX9OaNMaIp_ageQ2RKgcWA2-Rm9tueM_hyf96VnpCLi67VHn7dY5Neh-yC7cEfmlntwPbvd2z5E2lpold4TBTZttH1adPrv0diVjtuRhB7Cln-RzWO2dH6eMUg-mMjVYX2NAbvsaBQlKy4WVTXb6bttFhPwG3ZW1dhje8fXY9x6xdpnkmo1bwY_EeaN5Zdn3dHDl3CjBmV7zI9CfNJ6JwjHaPBCS4cfbFDxIGCHrnf4k3vzfu5_v-HOPzYcrdNeWw6QySh7DR8CunSfJCbGSjCs-efBMFEk6A4zfGBrmWtadjzTuok1Bx9cKYsf6QimUmAiNFI2eq-o/S71MvaZRVCtJn7aa4s52FgH81l0aYv1Z/20">bet on biofuels</a></li>
+<li>低调的代币销售为特朗普（Trump）的加密财富增加了6.6亿美元。 <a href="https://links.message.bloomberg.com/s/c/QpGHBFy_MEP3w8s8cKVmBkHavtFU6mDaCa1_MY9BblH9sY-BFaKsIZKNO5o8O2F8gtEigChvyXztKzjGjzrnqPiTnwOuGE4qJRIdLkzs4KmlpNx3dLeJwf_CWLJeTvY69-jVR6PfMaPnK3nWJ1t4CoS79EGyyUXaq4UQ2JJJj4g3OVR8ACkwWCBYkCqzPUj0nFpn8jjLzCFdJb-FnEvzW-MBLaDrwT9kh3IsMZBfcwJbYvZD7uF8pLf3uQOqXBXZigu1IS_MslYb4gMWeE3cobMkvWANBny5NfeRFdyWfPNOABgxNKOZlPoVaeq2hp7EuaFfVflaLfZV2E0SJXoPiVu0PVs037iRrhORaDFuSPF2nDQks3zB1E6ctEs/sTEoSp1o4wusjeAyXCxnS4QQYp0IJJi1/20">Trump Crypto Wealth</a></li>
+<li>纳尔逊·佩尔茨（Nelson Peltz）正就温迪（Wendy's）私有化收购进行融资谈判。 <a href="https://links.message.bloomberg.com/s/c/I1qDWq61hBYMD9oo39v3TbGG9L-q0XsB6Aip_jt74CAazS5i0WTTidfXupBSsfUMgkKEod2_bZijec9qcaXUpeF9z3jmNnuTpm-TSy8mcHNvZpEdQAZjoBzj8s33--lnLizpdfp9WKfbcrQuaLg2U7ElLT_2wf8w3S7ckb_cxRTopoQFOqP_O769fn2ZhZW3do2k2pbcRMQmIkQ6i9qBWNqQoDYAhpQYOFcTZq-CcL4YtPISqP06L50aX4uCi6YxveG_wztx5g4HPvcjtAunfYo1E_ygi_qJr_UwpRDPRwUhRuQOPzIQQh1ldhLiu-wDVz-aefZXKHMVQDnW3i4GfKvSWwKUE8Qk7GernJtPJLPf4wRW8BLOVH24Eh0/mchknP52qvQxCYBZOrls8U3qb-KX53UM/20">Wendy's</a></li>
+<li>NACHO 交易。 <a href="https://links.message.bloomberg.com/s/c/u0XBSrKyOT6imaIbOXwuvRs_AqUaqYKExs-f8OxCVyJl8wZxrl070GL75IXkqC79aH50KWowaRpTwdH4vJdt_n5PC1z6EF46Mv3zojtFTsWx8ClejIvxHEIyb5dIQ1ua7VDaRGML-m2uvWPBb0Fqqov6h2091jzIj8XpcoMM6gzlhPyE-NP-aeGkNh8pW8l_TWMumTQt4skUSMiEAOZ_D6NyFJFxbzOdwDd51iFx4HVfsRYfLzGBNT1sa2X16xZyy0Iv3sHECZkZIejUQRjImOQGwW3m7ZjnsGdzFoXfk2j-R_C7Uc7HmSh5eFLpb5WFFShRmUhflK12_beos6eC8A7a2r8NpSxghyCzxFKgNI3kRS5Kpv033mhtpuY/t1d_unXZo6pJsV15Kf-xBYyDj-TwtxhP/20">NACHO</a></li>
+<li>哈佛大学（Harvard）寻求整治分数膨胀问题，目前60%的学生获得最高成绩。 <a href="https://links.message.bloomberg.com/s/c/-j_oYTZ7KNVxdeBFH1VskmPkMOF3H79PBJtJ8Gk-C6KAMtic8bdO5SM2EkAnY6vWYzZ7C8aNWPpT24ZFMJIBAAo6XTAjlvqqvgRhklbSFneoGw_WY9oV9LtmoSc3s7oCyUo1fjLjZqqwtCN8M0Lis1HWK6HC3j9_mf_jQG-khHHpaEe_gOdu36l0isyPXEgr01paDOti6o7ALf6JRLiNGiou0fyS-s9qTd17f-rYgt4iw9Rge42yxWpZ4LAq-AIh3jhYixGTC4PLR77KIa8dSAJM6x5cXE07XBNQuzFUadSG_4FlJwE6MeuSyNjjB_6FSerM7sqfpDFcEK06ZG77DysaD-LVNec5rteQkXyUmw15Na64J-Th-g0s034/k0dWvmUS0LXUcK5d2LpwkOvMkrTWm02C/20">Crackdown on Grade Inflation</a></li>
+<li>韩国总统顾问表示，所有韩国人都应获得AI红利。 <a href="https://links.message.bloomberg.com/s/c/YkG9Ju0Dc9kNmyOnGPkNnbwaZFr-Un6Q_3M7qkWwdttcNyProYxzJ7dfWvU1JtY_B-iR8uJnbR54Vn49R17oHbjUkT_9u64GCd4aZxMvqPp1o-BOMztURwEgyBYHobgWvVk2MZlXkHL0zvhbOuAleROvlU4ei_iRMwR_YB6Oux9NJnTS5z7Z4E46Q8QOlzOsL52vYucKNgVvezXp6lNq8ZUIJfXhkGkZ2-daOnolixYmNgBwh44ueFQvxBDUiDwqorUxC8xV6lmezqtyS3UnPp4p7yF1NS9TBlzOUtrGwU7RD6zrQWBvqpJ7eFOUW7uM8_Zd3GYUxUryIinkF4p1ps6wpzepIeyUIHTc0ELDouPxr6mYPJhk1vLAvr4/6kY0zM1j39YkLV-rsej8cZ5JWIq-R3bD/20">AI bonus</a></li>
+<li>"Grok 下载量在一月份达到峰值，此前一次更新允许用户对照片中的人物进行虚拟脱衣。" <a href="https://links.message.bloomberg.com/s/c/NiiU5bKkKcC-ZfUUJ4rYTp8neEoTQsGj17qTSIby9I9e8o_1B_kMOdBFwzJeHgmUijjCNgUUtejlec1Dwr9kCjIeWwfxPcBG8al_iqMGOBjw-nBMdCEGXUwK2L7HoRlKcLJAG9XVr0n0T9Js7uToHMhKMjzdHzMFkglh-VeGcAztvI0jAAd_DyLEh-DyndeI0G1f98lNUJZ7kY13E0svE8vhBnCLB9ozg8sOixhLzrGquuLY5fbxhJqM0J_hZPW9MKBxOBRIKUVfQZdXW12LXnY-3JUU_UEYJeY6-rmHTKW-dR55eVMRA5qSVHI9mBEvVVqqMP3w4d9LvkUCtlUWMKB6Mj9RRjtBbXnX88moxRpt_3piGa3PYGhQ8eM/eKHOyly5kkRgJJOWC3Zo84O10TGtpyQd/20">Grok downloads</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>这些数字截至今天早上，但不必太当真；我们上周首次讨论这笔拟议交易时，GameStop市值约120亿美元，eBay约460亿美元。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>我听到有人把GameStop对eBay的准敌意竞购称为"敌意出售"（hostile sale）：即GameStop不是在试图敌意收购eBay，而是在试图让eBay收购GameStop，只不过是以敌意方式进行。这说法不完全准确——GameStop希望自己的管理层掌权——但作为一种理解方式还是有用的。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>这一切有点让人想起比尔·阿克曼（Bill Ackman）上个月竞购环球音乐集团（Universal Music Group N.V.）的提议，那个也被包装成"收购"，但实质上更像是一次杠杆资本重组、少数股权收购，外加一些关于公司经营方式的激进主义指指点点。&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>eBay目前在穆迪（Moody's）和标普（S&amp;P）的评级分别为Baa1/BBB，但拟议交易将大幅增加债务。穆迪的一份报告指出，该交易"将对eBay的信用产生负面影响，因为财务杠杆将大幅上升"，并至少暗示可能导致评级降至投资级以下（从而触发eBay部分债券的回售条款）。TD的高度有信心函"假设（除其他事项外），由TD证券自行判断：(i) 交易完成后，预计至少获得标普、穆迪或惠誉中两家的投资级公司信用评级或投资级无担保公开债务评级。"&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>严格来说是"在某个平均期间内对那些看跌/看涨期权组合进行现金结算"，但经济效果等同于卖出股票。&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>我上周的粗略计算是：GameStop约有4.5亿股流通股，将占合并后公司约三分之一，因此大约需要再增发10亿股左右。但这个估算偏乐观：按企业价值计算，GameStop约占合并后公司十分之一，而且它要把大量现金支付给eBay。合理推算GameStop可能需要发行约40亿股才能让数学成立，所以它授权的股份可能还不够。&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>在奴役人类的情况下，是"为它们自己"创造价值。&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Anthropic/SpaceX的Colossus交易的典型叙事可能是这样的：世界首富——以在物理世界中建造雄心勃勃的大型项目而闻名——花了数十亿美元为自己的AI实验室建造了一个巨型先进数据中心。等建好时，他自己AI实验室的模型已经落后了，他并不真正需要这些算力。与此同时，Anthropic的模型取得领先，但Anthropic刚刚脱离草创阶段，不具备与世界首富这位造车造火箭的企业家同等的基础设施建设能力。于是他们达成了一个折中协议，SpaceX将算力租给Anthropic。这样SpaceX的信用让Anthropic获得了基础设施。但这一切都有偶然性：如果埃隆·马斯克（Elon Musk）没有自己的AI模型公司，他会仅仅为了租给Anthropic就建一个巨型数据中心吗？&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
