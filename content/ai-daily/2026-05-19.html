@@ -1,0 +1,81 @@
+<h1>📅 每日简报 | 2026-05-19</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 1条 | 模型发布 2条 | 国外公司动态 7条 | 中国公司动态 2条</p>
+</blockquote>
+<hr />
+<h2>💰 融资</h2>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Anthropic 收购 SDK 供应商 Stainless，作价超 3 亿美元</strong><br />
+  Anthropic 宣布收购 SDK 及 MCP 服务器工具平台 Stainless，后者长期为 Anthropic 生成所有官方 SDK。据媒体报道，交易金额超过 3 亿美元。收购完成后，Anthropic 将逐步关停所有托管版 Stainless 产品，但现有客户可保留并修改已生成的 SDK。此举旨在强化 Claude 平台的开发者体验及 Agent 外部连接能力。<br />
+  🔗 <a href="https://www.anthropic.com/news/anthropic-acquires-stainless">来源</a></li>
+</ul>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>通义千问</h3>
+<ul>
+<li><strong>千问上线 Qwen3.7 Max Preview 和 Qwen3.7 Plus Preview</strong><br />
+  阿里通义千问团队在 Qwen Studio 及评测平台 Arena 上线了 Qwen3.7 预览版模型，包含 Qwen3.7-Max-Preview 与 Qwen3.7-Plus-Preview 两个版本。Arena 数据显示，Max 版在 Text 赛道总排名第 13，数学、编程等分项均进入前十；Plus 版在 Vision 赛道总排名第 16。正式发布预计将在即将举行的阿里云峰会上进行。<br />
+  🔗 <a href="https://x.com/Alibaba_Qwen/status/2056403591464984753">来源</a></li>
+</ul>
+<h3>Cursor — AI 编程工具，主打智能代码补全与生成</h3>
+<ul>
+<li><strong>Cursor 发布 Composer 2.5 并与 SpaceXAI 合训新模型</strong><br />
+  Cursor 发布基于 Moonshot Kimi K2.5 训练的编程模型 Composer 2.5，强化了长时间运行任务中的持续工作能力和复杂指令遵循表现，官方称效率最高可比同等能力模型提升十倍。模型已上线，提供标准版和快速版（默认），首周提供双倍使用额度。训练中引入了基于文本反馈的强化学习方法。同时，Cursor 宣布正与 SpaceXAI 合作，使用十倍计算资源在百万 H100 等效的 Colossus 2 集群上从零训练一个更大模型。<br />
+  🔗 <a href="https://cursor.com/blog/composer-2-5">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li><strong>Claude Design 各计划 token limits 翻倍</strong><br />
+  Anthropic 宣布已将 Claude Design 在所有订阅计划中的 token limits 翻倍，主要针对此前用户极易触及输出上限的痛点。<br />
+  🔗 <a href="https://x.com/claudeai/status/2056460045756309820">来源</a></li>
+<li><strong>Claude Code 上线基于 Opus 4.7 的 /fast 模式</strong><br />
+  Claude Code 的 Fast 模式现已默认使用 Opus 4.7 模型，官方称响应速度约为标准模式的 2.5 倍，质量与标准 Opus 相同，但按更高 token 费率计费，适用于快速迭代、实时调试等低延迟场景。用户可通过 <code>/fast</code> 命令启用。<br />
+  🔗 <a href="https://x.com/ClaudeDevs/status/2056454359685476491">来源</a></li>
+</ul>
+<h3>GitHub</h3>
+<ul>
+<li><strong>GitHub 发布多项 Copilot 更新，一键修复 Actions 上线</strong><br />
+  GitHub 针对 Business 和 Enterprise 用户推出多项 Copilot 更新。核心新功能是云 Agent 可一键修复失败的 GitHub Actions，自动完成代码调查、修复推送并标记审查，同时新增审计 Agent 配置的 REST API。此前测试阶段的 Spaces 编程管理 API、Copilot CLI 和 VS Code 会话的远程控制功能均已正式全面可用。Copilot Chat 也改善了交互体验。<br />
+  🔗 <a href="https://github.blog/changelog/2026-05-18-one-click-fixes-for-failing-actions-with-copilot-cloud-agent">来源</a></li>
+</ul>
+<h3>OpenRouter — AI 模型路由与聚合 API 平台</h3>
+<ul>
+<li><strong>OpenRouter 发布长周期 Agent 构建原语与 SDK</strong><br />
+  OpenRouter 推出用于构建长程、持久运行 AI Agent 的开发工具包与原语。通过该 Agent SDK，开发者可运行高步骤数、长超时的多步任务循环，利用 maxCost 和 stepCountIs 等条件限制成本与执行步数。支持持久化对话消息与工具结果，允许在系统崩溃或重部署后恢复长程任务，并原生集成语音输入输出端点。<br />
+  🔗 <a href="https://openrouter.ai/long-horizon">来源</a></li>
+</ul>
+<h3>Browserbase — 云端浏览器自动化平台</h3>
+<ul>
+<li><strong>Browserbase 推出 Browse.sh 技能目录</strong><br />
+  Browserbase 推出并开源名为 Browse.sh 的 Agent 技能生态系统，为 Agent 提供数百家网站的预设指南，并与 Ramp、Lovable 等平台合作创建了认证技能。该目录及配套 CLI 工具对所有人免费开放，支持社区提交技能或按需生成，但涉及 Browserbase 平台特定底层功能的技能仍需 API 密钥。<br />
+  🔗 <a href="http://Browse.sh">来源</a></li>
+</ul>
+<h3>SpaceXAI</h3>
+<ul>
+<li><strong>Grok Imagine 将提高速率限制并改进生成准确度</strong><br />
+  Elon Musk 表示 Grok 在图像与视频生成的准确度方面即将迎来重大改进，同时针对用户反馈的 Grok Imagine 频率限制过严问题，承诺将提高使用额度。目前官方尚未公布具体生效时间与详细额度。<br />
+  🔗 <a href="https://x.com/elonmusk/status/2056282453556240552">来源</a></li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>Musk 诉 OpenAI 案败诉，陪审团认定起诉超时</strong><br />
+  据媒体报道，Elon Musk 在针对 OpenAI 和 Sam Altman 索赔 1340 亿美元的诉讼中败诉。奥克兰九人陪审团经过三周庭审和仅两小时审议后，一致认定 Musk 的主张已超过法定诉讼时效。法官 Yvonne Gonzalez 支持陪审团决定，Musk 方面表示计划上诉。<br />
+  🔗 <a href="https://the-decoder.com/elon-musk-loses-his-134-billion-lawsuit-against-openai-after-jury-deliberates-for-just-two-hours">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>腾讯</h3>
+<ul>
+<li><strong>腾讯混元等机构发布古文字评测基准 Chronicles-OCR</strong><br />
+  腾讯混元、SSV 数字文化实验室等团队联合多家高校与中科院推出中国古文字感知评测基准 Chronicles-OCR，为业界首个覆盖甲骨、金文、篆、隶、楷、行、草"七体之变"的评测数据集，包含 2800 张专家标注图像。对 28 个主流多模态大模型的测试显示，GPT-5、Gemini 2.5 Pro 等模型在跨时代字符检测任务上得分接近零，且开启思维链推理模式反而导致识别表现下降。<br />
+  🔗 <a href="https://github.com/VirtualLUOUCAS/Chronicles-OCR">来源</a></li>
+</ul>
+<h3>DeepSeek</h3>
+<ul>
+<li><strong>DeepSeek 调研 V4 模型角色扮演及情感陪伴体验</strong><br />
+  DeepSeek 工作人员在小红书发布调研贴，向用户收集 DeepSeek-V4 模型上线大半个月以来的使用反馈，重点聚焦角色扮演与情感陪伴场景，同时接受小说、公文、幻觉、搜索和代码等领域的反馈。收集到的意见将用于指导模型的下次更新。<br />
+  🔗 <a href="https://www.xiaohongshu.com/explore/6a0ac4ce000000003601e8f6?xsec_source=pc_feed&amp;note_flow_source=wechat">来源</a></li>
+</ul>
