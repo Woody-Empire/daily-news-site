@@ -1,0 +1,95 @@
+<h1>📅 每日简报 | 2026-05-23</h1>
+<blockquote>
+<p>📊 <strong>今日概览</strong>：融资 0条 | 模型发布 5条 | 国外公司动态 6条 | 中国公司动态 3条</p>
+</blockquote>
+<hr />
+<h2>🤖 模型发布</h2>
+<h3>智谱</h3>
+<ul>
+<li><strong>GLM-5.1-HighSpeed 发布，官方称速度达 400 tokens/s</strong><br />
+  智谱发布旗舰模型 GLM-5.1 的高速版本 API，由 GLM 团队与 TileRT 团队联合打造，采用常驻 Engine Kernel 与异构 Worker 等系统级优化技术。官方称在完整保留原模型综合能力与 Coding 能力的前提下，输出速度达到 400 tokens/s。目前仅面向智谱 BigModel 开放平台的部分企业客户定向开放。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/FJn5athj8G4y2narTzMSyA">来源</a></li>
+</ul>
+<h3>阿里</h3>
+<ul>
+<li><strong>Qwen3.7-Max 上线千问，阿里云百炼提供限时五折优惠</strong><br />
+  阿里发布全新旗舰模型 Qwen3.7-Max，已接入千问 APP（需更新至 6.9.7 及以上版本）、PC 端及网页端供免费体验。阿里云百炼平台同步上线该模型，并提供限时五折优惠。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/eBQwL51ahGU2OgSuaYPGmQ">来源</a></li>
+</ul>
+<h3>OpenBMB — 清华大学与面壁智能联合发起的开源大模型研究社区</h3>
+<ul>
+<li><strong>开源基于昇腾 910B 原生训练的 BitCPM-CANN 模型</strong><br />
+  OpenBMB 联合面壁智能与清华大学开源 BitCPM-CANN 模型家族，涵盖 0.5B、1B、3B 及 8B 多种参数规模。官方称这是业界首个在华为昇腾 910B NPU 上完成端到端原生训练的 1.58-bit 三值模型，内存占用相比 BF16 降低约 6 倍，在 11 项基准测试中保留全精度 MiniCPM4 约 95%–97% 的性能。已在 Hugging Face 和 ModelScope 同步上线。<br />
+  🔗 <a href="https://x.com/OpenBMB/status/2057816337880355220">来源</a></li>
+</ul>
+<h3>网易有道</h3>
+<ul>
+<li><strong>推出 Confucius4-TTS，14 语言零样本语音克隆引擎即将全量开源</strong><br />
+  网易有道开放 Confucius4-TTS 开源项目，基于"语音编码器 + 大语言模型"架构，支持 14 种语言的零样本声音克隆与跨语言音色迁移，无需参考文本，可保留说话人情感。官方称克隆过程仅需 3 秒，准确度超 97%，相似度超 85%。目前代码仓库已公开，模型权重尚待完全释放，提供在线演示页面试用。<br />
+  🔗 <a href="https://huggingface.co/netease-youdao/Confucius4">来源</a></li>
+</ul>
+<h3>Google DeepMind</h3>
+<ul>
+<li><strong>发布 AlphaProof Nexus 数学证明框架</strong><br />
+  Google DeepMind 推出 AlphaProof Nexus 框架，结合大型语言模型与 Lean 形式化验证工具进行数学证明搜索。测试中其全功能 Agent 自主解决了 9 个 Erdős 开放问题、证明了 44 个 OEIS 猜想，并解决了优化论和代数几何领域的多个开放性问题。相关证明结果及代码已在 GitHub 公开。<br />
+  🔗 <a href="https://arxiv.org/html/2605.22763v1">来源</a></li>
+</ul>
+<hr />
+<h2>🌐 国外公司动态</h2>
+<h3>Anthropic</h3>
+<ul>
+<li>
+<p><strong>公布 Project Glasswing 进展，发现逾万高危漏洞</strong><br />
+  Anthropic 发布 AI 网络安全倡议 Project Glasswing 的初步更新，过去一个月与约 50 家合作伙伴利用未公开模型 Claude Mythos Preview 进行安全测试。官方数据显示该模型在关键软件中发现超一万个高危或严重级别漏洞，在一千多个开源项目中发现约六千余个此类漏洞，经独立评估确认真实漏洞比例达 90.6%。由于缺乏足够安全防护，Mythos 级模型暂不公开发布；官方已面向企业推出 Claude Security 公开测试版。<br />
+  🔗 <a href="https://www.anthropic.com/research/glasswing-initial-update">来源</a></p>
+</li>
+<li>
+<p><strong>Claude Code auto mode 面向 Pro 订阅用户开放</strong><br />
+  Claude Code 的 auto mode 现已面向 Pro 计划用户开放，同时新增对 Sonnet 4.6 和 Opus 4.7 模型的支持。用户通过 Shift+Tab 快捷键即可启动 auto mode，需运行 claude update 或将桌面应用更新至最新版本。<br />
+  🔗 <a href="https://x.com/ClaudeDevs/status/2057946803685974482">来源</a></p>
+</li>
+</ul>
+<h3>OpenAI</h3>
+<ul>
+<li><strong>测试 ChatGPT 简化版模型选择器</strong><br />
+  OpenAI 正在 ChatGPT 网页端小规模 A/B 测试名为"Intelligence Picker"的简化版模型选择界面，将原有 7 个复杂档位精简为 Instant、Medium、High 和 Pro 四个选项。针对社区担忧，官方确认并非移除手动选择能力，承诺全面推出前添加设置项让用户恢复指定常用的 Pro 选项。<br />
+  🔗 <a href="https://x.com/adamhfry/status/2057808938024817109">来源</a></li>
+</ul>
+<h3>Antigravity — AI 编程 IDE 与开发平台</h3>
+<ul>
+<li><strong>修复 2.0 IDE 争议，翻倍上下文长度并提升配额至 9 倍</strong><br />
+  Antigravity 针对用户反馈密集更新：将 Gemini 3.5 Flash 最大上下文长度翻倍，所有付费计划的每周 Gemini 配额累计提升至 9 倍并重置本周额度。产品层面澄清并未下线 IDE 支持，在项目级对话界面新增"Open IDE"与"Install IDE"按钮，修复 Windows 端故障并支持一键迁移旧版设置。CLI 发布 v1.0.1 版本，后续将上线模型思考层级选择器与配额进度条。<br />
+  🔗 <a href="https://x.com/_mohansolo/status/2057969609480032313">来源</a></li>
+</ul>
+<h3>Warp — 现代化终端工具，内置 AI Agent 功能</h3>
+<ul>
+<li><strong>开放免费 BYOK 功能，支持自定义端点接入</strong><br />
+  Warp 将自带密钥（BYOK）功能扩展至免费计划用户，并新增对兼容 OpenAI Chat Completions API 的自定义推理端点支持。用户可使用 OpenAI、Anthropic 或 Google 的 API key 驱动 Warp Agent。10 人及以下团队或个人使用自带推理不消耗 Warp credits；10 人以上企业需通过 Business 或 Enterprise 计划按较低费率消耗平台 credits。<br />
+  🔗 <a href="https://docs.warp.dev/agent-platform/inference/bring-your-own-api-key/">来源</a></li>
+</ul>
+<h3>Perplexity</h3>
+<ul>
+<li><strong>开源供应链扫描工具 Bumblebee</strong><br />
+  Perplexity 开源内部安全工具 Bumblebee，专为 macOS 和 Linux 开发者终端设计的只读供应链扫描器。能直接读取锁文件和清单等磁盘元数据，排查存在风险的语言开发包、MCP 配置及编辑器/浏览器扩展。扫描过程不调用包管理器、不执行代码、不读取源文件，严格保持只读特性。以 Go 语言静态单文件形式发布，暂不支持 Windows。<br />
+  🔗 <a href="https://github.com/perplexityai/bumblebee">来源</a></li>
+</ul>
+<hr />
+<h2>🇨🇳 中国公司动态</h2>
+<h3>DeepSeek</h3>
+<ul>
+<li><strong>V4-Pro API 2.5 折优惠转为永久定价</strong><br />
+  DeepSeek 宣布将 DeepSeek-V4-Pro 模型 API 的限时 2.5 折优惠转为永久正式定价，具体费率为每百万 tokens：缓存未命中输入 3 元、输出 6 元、缓存命中输入 0.025 元。该价格将在原定于 5 月 31 日结束的优惠活动后正式执行。<br />
+  🔗 <a href="https://api-docs.deepseek.com/zh-cn/quick_start/pricing">来源</a></li>
+</ul>
+<h3>TRAE — 字节跳动旗下 AI 编程工具</h3>
+<ul>
+<li><strong>中国版上线 Kimi 原生视频理解能力</strong><br />
+  TRAE 中国版内置的 Kimi-K2.6/2.5 模型现已支持原生视频理解能力，用户可向 TRAE 发送视频路径，由模型直接解析视频内容，支持视频动效转前端代码、Bug 视频转修复代码、流程视频转 RPA 脚本等应用场景。已面向 TRAE SOLO 和 TRAE IDE 中国版用户开放。<br />
+  🔗 <a href="https://mp.weixin.qq.com/s/TCkMqQGRoTewiHo6RnfQTw">来源</a></li>
+</ul>
+<h3>国产 AI 产业政策</h3>
+<ul>
+<li><strong>有关部门推进国产大模型适配国产算力芯片</strong><br />
+  有关部门在新闻发布会上表示，将指导国产大模型加大力度适配国产算力芯片以确保自主可控，已出台制造、医疗等十多个行业的"人工智能+"政策，正谋划进一步落地配套文件。基础设施方面将加快具身智能训练设施建设，科技再贷款额度扩大至 1.2 万亿元覆盖人工智能等领域，并启动集成电路企业税收优惠清单制定。此外明确否认"要求高科技企业不得接受美国资本投资"的网传消息。<br />
+  🔗 <a href="https://www.ndrc.gov.cn/xwdt/wszb/202605xwfbh/">来源</a></li>
+</ul>
